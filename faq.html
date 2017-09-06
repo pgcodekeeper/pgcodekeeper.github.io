@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FAQ</title>
+  <meta name="description" content="Frequently asked questions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.com/faq.html">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="FAQ">
+  <meta property="og:description" content="Frequently asked questions">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="FAQ">
+  <meta itemprop="description" content="Frequently asked questions">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#home">
+          <img class="media-object brand-image" src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left main-menu">
+          <li><div class="search hidden-lg hidden-md"><gcse:search></gcse:search></div></li>
+          <li><a href="/#home">Homepage</a></li>
+          <li><a href="/#services">Opportunities</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/#information">News</a></li>
+              <li><a href="/articles.html">Articles</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/index.html">pgCodeKeeper</a></li>
+              <li><a href="/pgsqlblocks.html">pgSqlBlocks</a></li>
+            </ul>
+          </li>
+          <li><a href="/doc/">User manual</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+        <ul class="nav navbar-nav main-menu navbar-right">
+          <li><div class="search visible-lg visible-md"><gcse:search></gcse:search></div></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /header -->
+
+  <div class="container">
+    <div id="faq-topic">
+      <p class="faq-title">F.A.Q. Frequently asked questions</p>
+
+      <blockquote>General questions</blockquote>
+
+      <ul>
+        <li><p><a href="#why-need-jdk">Where to get JDK? What is it for? How to install?</a></p></li>
+        <li><p><a href="#why-need-eclipse">What is the Eclipse for?</a></p></li>
+        <li><p><a href="#problem-with-interface">Problem with displaying a user interface in GNU/Linux</a></p></li>
+        <li><p><a href="#license">License file maintenance</a></p></li>
+        <li><p><a href="#encoding">Why do I need to specify the encoding when creating a project?</a></p></li>
+        <li><p><a href="#choose-time-zone">What time zone to choose?</a></p></li>
+        <li><p><a href="#line-breaks">Dealing with line breaks.</a></p></li>
+        <li><p><a href="#making-change">Making changes in the project, potential problems</a></p></li>
+      </ul>
+      <div role="presentation" class="line"></div>
+
+      <p class="question"><span class="anchor" name="why-need-jdk" id="why-need-jdk"></span>Where to get JDK? What is it for? How to install?</p>
+      <p class="answer">PgCodeKeeper is an addition to the Eclipse platform, which uses Java Virtual Machine for
+        application start. You can install both JRE and JDK depending on your Eclipse build. If you plan to develop
+        products in Java in your build, probably the best choice would be using JDK instead of JRE.
+        <br>
+        At the moment it is better to install JDK 1.8.
+        <br>
+        Learn more: <a href="https://wiki.eclipse.org/Eclipse/Installation#Install_a_JVM">https://wiki.eclipse.org/Eclipse/Installation#Install_a_JVM</a>
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="why-need-eclipse" id="why-need-eclipse"></span>What is the Eclipse for?</p>
+      <p class="answer">The Eclipse is a «tool for developing tools».
+        <br>
+        The Eclipse platform is a basis for constructing and starting the integrated development tools. It consists of
+        the components with the open source code.
+        <br>
+        Using the Eclipse allows us to concentrate on the implement of the requested product`s business functions
+        without the necessity to implement the application helper functions (provided by the Eclipse).
+        <br>
+        Learn more: <a href="https://www.ibm.com/developerworks/ru/library/os-eclipse/">https://www.ibm.com/developerworks/ru/library/os-eclipse/</a>
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="problem-with-interface" id="problem-with-interface"></span>Problem with displaying a user interface in GNU/Linux</p>
+      <p class="answer">Problems with displaying elements of the Eclipse user interface have been found out on some
+        working places running GNU/Linux and GTK3.
+        <br>
+        To troubleshoot you can forbid the Eclipse platform to use GTK3. You can do this setting the SWT_GTK3
+        environment variable equal to zero.
+      </p>
+      <pre><code>SWT_GTK3=0 eclipse</code></pre>
+      <p class="answer">Learn more:
+        <a href="https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3">https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3</a>
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="license" id="license"></span>License file maintenance</p>
+      <p class="answer">After getting the license file you must copy the license to some safe place on the local
+        computer, where pgCodeKeeper is run. In the application settings (Window — Preferences — pgCodeKeeper — License)
+        you need to choose the path to the preliminarily saved license file.
+        <br>
+        The license file is not maintained by the application (that is it is not copied into the internal application
+        structures); the responsibility for the license files safety rests entirely with the end user.
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="encoding" id="encoding"></span>Why do I need to specify the encoding when creating a project?</p>
+      <p class="answer">Project files are created with the encoding used by the operating system by default. It is
+        Windows-1251 for Windows and UTF8 — for GNU/Linux. If the DB encoding differs from the local one on the user's
+        computer, it can happen that the national symbols will be displayed in the project incorrectly or will be lost.
+        To avoid this make sure that the project files encoding corresponds with the database encoding.
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="choose-time-zone" id="choose-time-zone"></span>What time zone to choose?</p>
+      <p class="answer">If you develop on working places situated in different time zones, you should choose the same
+        time zone for all computers. Otherwise, part of the DDL code, received from the DB, can differ on the users'
+        computers (e.g. where the string literals are used in the function of time tag constants).
+        <br>
+        By default, JDBC-driver installs the connection time zone into the local computer time zone (not the DB server),
+        that's why it is important to set the same time zone in the project explicitly.
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="line-breaks" id="line-breaks"></span>Dealing with line breaks.</p>
+      <p class="answer">The project is created with the option of using the line breaks in the Unix style. It is done to
+        unify several users' work on the project files on potentially different operating systems.
+        <br>
+        If you use GIT, don't forget to switch on the line endings' convertion setting in your Unix-style project:
+      </p>
+      <pre><code>text eol=lf</code></pre>
+      <p class="answer">Note:
+        <a href="https://help.github.com/articles/dealing-with-line-endings/">https://help.github.com/articles/dealing-with-line-endings/</a>
+      </p>
+      <br>
+
+      <p class="question"><span class="anchor" name="making-change" id="making-change"></span>Making changes in the project, potential problems</p>
+      <p class="answer">Project files follow the predefined structure and naming rules. If you create project files
+        manually or edit the existing ones, you can potentially create a situation when the parser won't be able to
+        handle the modified files.
+        <br>
+        Anyway, if you want to use pgCodeKeeper in the function of an editor — create new objects in the DB, but edit
+        them in the project. It will save you from potential mistakes when creating files or DB objects' checksums.
+      </p>
+
+      <p class="no_answer">Haven't found the answer to the right question? Write to the
+        <a href="mailto:codekeeper@chelny.taximaxim.ru">technical support service</a>, and we will definitely reply.
+      </p>
+    </div>
+  </div>
+
+  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+
+  <!-- footer -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-lg-6">
+          <span>Share</span>
+          <div class="social-likes-custom social-likes">
+            <div class="facebook" title="Share link on Facebook">Facebook</div>
+            <div class="twitter" title="Share link on Twitter">Twitter</div>
+            <div class="plusone" title="Share link on Google+">Google+</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-6">
+          <p class="copyright">&copy; LLC "Technology" 2017</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.min.js"></script>
+  <!-- /footer -->
+
+  <script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

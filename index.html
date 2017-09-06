@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Product">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pgCodeKeeper</title>
+  <meta name="description" content="A tool for PL/pgSQL code maintenance and migration scripts generation considering the dependent PostgreSQL objects graph.">
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="290831601286325">
+  <meta property="og:url" content="http://pgcodekeeper.com/">
+  <meta property="og:image" content="https://pgcodekeeper.com/share_image_en.png">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="pgCodeKeeper">
+  <meta property="og:description" content="A tool for PL/pgSQL code maintenance and migration scripts generation considering the dependent PostgreSQL objects graph.">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="pgCodeKeeper">
+  <meta itemprop="description" content="A tool for PL/pgSQL code maintenance and migration scripts generation considering the dependent PostgreSQL objects graph.">
+  <meta itemprop="image" content="https://pgcodekeeper.com/share_image_en.png">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.com/">
+  <meta name="twitter:title" content="pgCodeKeeper">
+  <meta name="twitter:description" content="A tool for PL/pgSQL code maintenance and migration scripts generation considering the dependent PostgreSQL objects graph.">
+  <meta name="twitter:image:src" content="https://pgcodekeeper.com/share_image_en.png">
+  <link rel="image_src" href="images/share_image_en.png">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="https://use.fontawesome.com/1f41723852.js"></script>
+</head>
+
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgradeyour browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#home">
+          <img class="media-object brand-image" src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left main-menu">
+          <li><div class="search hidden-lg hidden-md"><gcse:search></gcse:search></div></li>
+          <li><a href="/#home">Homepage</a></li>
+          <li><a href="/#services">Opportunities</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/#information">News</a></li>
+              <li><a href="/articles.html">Articles</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/index.html">pgCodeKeeper</a></li>
+              <li><a href="/pgsqlblocks.html">pgSqlBlocks</a></li>
+            </ul>
+          </li>
+          <li><a href="/doc/">User manual</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+        <ul class="nav navbar-nav main-menu navbar-right">
+          <li><div class="search visible-lg visible-md"><gcse:search></gcse:search></div></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /header -->
+
+  <!-- Home -->
+  <section id="home" class="home_section">
+    <div class="container">
+      <div class="title">
+        <h1><span class="pg">pg</span><span class="codekeeper">CodeKeeper</span></h1>
+        <h3>Make the PL/pgSQL code maintenance easy</h3>
+        <button type="button" class="btn install-btn btn-lg" data-container="body" data-toggle="popover"
+                data-placement="bottom" data-animation="true" title="How to download and install"
+                data-html="true" data-original-title="Title"
+                data-content="
+                  <p>pgCodeKeeper is an addition to the Eclipse development framework. Please do the following steps  to install pgCodeKeeper:</p>
+                  <ol>
+                    <li>Install Java SDK for your platform (required for the Eclipse starting). Click this
+                      <a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html'>link</a> to download.
+                    </li>
+                    <li>Install the <a href='https://eclipse.org/downloads/'>Eclipse</a> platform.</li>
+                    <li>Start the Eclipse. Choose the menu option
+                      <span class='product-name'>«Help»</span> - <span class='product-name'>«Install new software»</span>,
+                      enter URL <a class='js-emaillink'>http://pgcodekeeper.ru/update/release/</a> in the opened dialogue
+                      in the field <span class='product-name'>«Work with»</span>
+                      <button class='copy-link-btn js-emailcopybtn' id='popoverbutton' data-toggle='tooltip' data-placement='top' title='Copy'>
+                        <i class='fa fa-clone' aria-hidden='true'></i>
+                      </button>
+                      press «Enter». Choose <span class='product-name'>pgCodeKeeper</span> from the list of available plugins
+                      and install the plugin according to the installation wizard prompts.
+                    </li>
+                    <li>Reload the Eclipse. Now pgCodeKeeper has been successfully installed.</li>
+                  </ol>
+                ">
+          How to install
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h2>A tool for an easy work with PostgreSQL</h2>
+          <p class="lead text-about">Monitores the changings in the DB and creates the selected objects migration
+            scripts both in interactive and automatic mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Product capability</h2>
+    </div>
+
+    <div class="container">
+      <div class="block">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <img class="media-object" src="images/bd1.png" alt="change-bd">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="text-content">
+              <p class="feature-title">Shows the changes between different DBs</p>
+              <p class="text-descr">
+                Finding out the DBs code differences is very easy now. It is possible to compare both the code of the DB
+                working instances and the code formed by pg_dump, as well as pgCodeKeeper project code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="block">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+            <img class="media-object" src="images/migration5.png" alt="create-migration">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="text-content">
+              <p class="feature-title">Generates the migration scripts</p>
+              <p class="text-descr">
+                Now you can generate the migration scripts by means of user-friendly interface. You can use both the
+                working DB and the DB dump as initial data. The comparison between the pgCodeKeeper projects is also
+                possible — it is convenient when working with versions control systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="block">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <img class="media-object" src="images/database3.png" alt="work with system of control version">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="text-content">
+              <p class="feature-title">Working with the versions control systems</p>
+              <p class="text-descr">
+                pgCodeKeeper is the Eclipse platform extension. The DB code is saved in the Eclipse project, and the
+                project code can be put into one of the versions control systems supported by the Eclipse — Git, SVN,
+                Mercurial, CVS and many others.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="block">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+          <img class="media-object" src="images/continious1.png" alt="work with system of continuous delivery">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="text-content">
+              <p class="feature-title">Working with the continuous integration systems</p>
+              <p class="text-descr">
+                <a href="http://pgcodekeeper.ru/cli/" data-toggle="tooltip" data-placement="top"
+                   title="pgCodeKeeper для  неинтерактивного режима работы вы можете скачать здесь">pgCodeKeeper-cli</a>
+                can work in the non-interactive mode, which is really convenient for the formation of the
+                continuous integration pipelines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information -->
+  <section id="information">
+    <div class="container">
+      <div role="presentation" class="line"></div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <h1>News</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-6">
+        <h4 name="pgCodeKeeper-3.11.0" id="pgCodeKeeper-3.11.0">pgCodeKeeper 3.11.0</h4>
+          <p class="date">Jule 11, 2017</p>
+          <ul class="short-article">
+            <li>Reworked CLI (command line interface). Changes include: option names, program arguments, the way lists
+              are passed and others. See CLI help for details (launch with --help).
+            </li>
+            <li>Project builder now looks for references to non-existent objects in project's sql files, those are
+              marked as errors.
+            </li>
+            <li>Fixed an error where JDBC performance-helper functions were accessed with no permission to do so.</li>
+            <li>Fixed an error in diff table filtering interface.</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-6">
+          <h4><a href="https://reestr.minsvyaz.ru/reestr/71688/">Registration in the unified register of the Russian programs for ECM and DB</a></h4>
+          <p class="date">April 18, 2016</p>
+          <p class="short-article">By order of The Ministry of Communications and Mass Media of Russia pgCodeKeeper is
+            <a href="https://reestr.minsvyaz.ru/reestr/71688/">registered</a>
+            in the unified register of Russian programmes for electronic computing machines and data bases.
+          </p>
+          <h4><a href="the-article.html">The taming of the scoundrel</a></h4>
+          <p class="date">February 1, 2016<span class="source"><a href="https://habrahabr.ru/post/276339/">Habrahabr</a></span></p>
+          <p class="short-article">Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned
+            relational ones, where you can describe the relations and the stored procedures for the data access and
+            logic <span><a href="the-article.html" class="more">[...]</a></span>
+          </p>
+          <p><a href="news.html" class="more">Other news</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Last -->
+  <section id="last">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <p class="last-text">Using pgCodeKeeper you will greatly ease your work on PostgreSQL data bases maintenance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contacts -->
+  <section id="contacts">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+          <h1>Contacts</h1>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+              <h4>Got questions, suggestions? Contact us.</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-5 col-sm-3 col-lg-2">
+              <img class="media-object logo-2" src="images/logo4.png" alt="">
+            </div>
+            <div class="col-xs-7 col-sm-3 col-lg-3">
+              <div class="row">
+                <p class="contact-label">Technical support email</p>
+                <p class="contact-value">codekeeper@chelny.taximaxim.ru</p>
+              </div>
+            </div>
+            <div class="col-xs-5 col-sm-3 col-lg-3">
+              <p class="contact-label">Company address</p>
+              <p class="contact-value">117/V, Koli Myagotina Street, Kurgan, Kurgan region, Russia, 640000</p>
+            </div>
+            <div class="col-xs-7 col-sm-3 col-lg-4">
+              <div id="social-icons-block" class="row">
+                <p class="contact-label">We are in social networks</p>
+                <div>
+                  <a href="https://www.facebook.com/groups/232557363774517">
+                    <img class="media-object social-icons" src="images/facebook_logo.png" alt="">
+                  </a>
+                  <a href="https://plus.google.com/u/0/communities/105435455575347873922">
+                    <img class="media-object social-icons" src="images/google+logo.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <p class="contact-label">
+                  Support channel in <a href="https://telegram.me/joinchat/Bxn1Zwh02WM96O-55GAryA">Telegram</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contacts -->
+
+  <!-- footer -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-lg-6">
+          <span>Share</span>
+          <div class="social-likes-custom social-likes">
+            <div class="facebook" title="Share link on Facebook">Facebook</div>
+            <div class="twitter" title="Share link on Twitter">Twitter</div>
+            <div class="plusone" title="Share link on Google+">Google+</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-6">
+          <p class="copyright">&copy; LLC "Technology" 2017</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.min.js"></script>
+  <!-- /footer -->
+</body>
+</html>

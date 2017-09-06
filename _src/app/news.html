@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pgCodeKeeper Releases</title>
+  <meta name="description" content="pgCodeKeeper 3.8.6 Added support for ENABLE/DISABLE RULE states...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.com/news.html">
+  <meta property="og:image" content="http://pgcodekeeper.com/images/logo1.png">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="pgCodeKeeper Releases">
+  <meta property="og:description" content="pgCodeKeeper 3.8.6 Added support for ENABLE/DISABLE RULE states...">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="pgCodeKeeper Releases">
+  <meta itemprop="description" content="pgCodeKeeper 3.8.6 Added support for ENABLE/DISABLE RULE states...">
+  <meta itemprop="image" content="http://pgcodekeeper.com/images/logo1.png">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.com/news.html">
+  <meta name="twitter:title" content="pgCodeKeeper Releases">
+  <meta name="twitter:description" content="pgCodeKeeper 3.8.6 Added support for ENABLE/DISABLE RULE states...">
+  <meta name="twitter:image" content="http://pgcodekeeper.com/images/logo1.png">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  //= templates/partials/header.html
+  <!-- /header -->
+
+  <div id="release-block" class="container">
+    <h1>Releases</h1>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.11.0" id="pgCodeKeeper-3.11.0"></span>pgCodeKeeper 3.11.0</h4>
+    <p class="date">Jule 11, 2017</p>
+    <ul class="short-article">
+      <li>Reworked CLI (command line interface). Changes include: option names, program arguments, the way lists are
+        passed and others. See CLI help for details (launch with --help).
+      </li>
+      <li>Project builder now looks for references to non-existent objects in project's sql files, those are marked as
+        errors.
+      </li>
+      <li>Fixed an error where JDBC performance-helper functions were accessed with no permission to do so.</li>
+      <li>Fixed an error in diff table filtering interface.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.10.0" id="pgCodeKeeper-3.10.0"></span>pgCodeKeeper 3.10.0</h4>
+    <p class="date">May 23, 2017</p>
+    <ul class="short-article">
+      <li>Ignored Objects list in program preferences can now be configured as white-list.</li>
+      <li>Tabs of the Project Editor have been merged into a single interface.</li>
+      <li>CLI build for Windows now includes a bat-script for launching.</li>
+      <li>Added support for TABLE OF type clause.</li>
+      <li>Added support for ALTER COLUMN SET (options) clause.</li>
+      <li>Added support for ALTER COLUMN SET STORAGE clause.</li>
+      <li>Improved dependency detection for expressions in SQL commands.</li>
+      <li>Improved handling of SQL keywords, parsing of built-in types and functions.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.6" id="pgCodeKeeper-3.8.6"></span>pgCodeKeeper 3.8.6</h4>
+    <p class="date">February 7, 2017</p>
+    <ul class="short-article">
+      <li>Added support for ENABLE/DISABLE RULE states;</li>
+      <li>Server-side JDBC helpers have been updated and need to be reinstalled;</li>
+      <li>Fixed a bug with getting data type names via JDBC;</li>
+      <li>User can now choose object types (--allowed-objects) to output into migration script.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.4" id="pgCodeKeeper-3.8.4"></span>pgCodeKeeper 3.8.4</h4>
+    <p class="date">December 22, 2016</p>
+    <ul class="short-article">
+      <li>Diff Wizard has been improved and updated. It can be launched using main menu item pgCodeKeeper - Diff Wizard
+        or via pgCodeKeeper item in the project's context menu. It allows users to compare and generate migration
+        scripts for DBs, loaded from different sources, without creating a project for them.
+      </li>
+      <li>CLI mode now allows users to connect to DB using JDBC connection string.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.0" id="pgCodeKeeper-3.8.0"></span>pgCodeKeeper 3.8.0</h4>
+    <p class="date">December 6, 2016</p>
+    <ul class="short-article">
+      <li>Another JDBC DB reader mode has been added. This mode usage increases the performance when working with DBs
+        containing a large number of schemes and while using limited bandwith connections. To use it, it is necessary to
+        install "helper" stored procedures in the DB being read. To do so, open pgCodeKeeper perspective (Window -
+        Perspective), choose pgCodeKeeper - Install JDBC Performance Helpers in the main menu and apply the script to
+        the DB in question. After this the new enhanced reader will be used automatically with this DB.
+      </li>
+      <li>Ignored Objects feature has been improved. It is now possible to define both black and while object lists that
+        can be used both in GUI and CLI modes.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.8" id="pgCodeKeeper-3.7.8"></span>pgCodeKeeper 3.7.8</h4>
+    <p class="date">October 25, 2016</p>
+    <ul class="short-article">
+      <li>Getting changes in the project editor now fills both of its tabs (Update Project and Update DB). Choosing a
+        different DB schema source in one tab also changes it in the other one.
+      </li>
+      <li>Manual Dependencies Dialog performance has been improved. Object lists in this dialog now contain all DB objects.</li>
+      <li>Ctrl+F5 hotkey now executes selected part of the script in Migration editor (or the entire script, if no text is selected).</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.5" id="pgCodeKeeper-3.7.5"></span>pgCodeKeeper 3.7.5</h4>
+    <p class="date">October 4, 2016</p>
+    <ul class="short-article">
+      <li>pgCodeKeeper editor interface has been improved and cleaned up.</li>
+      <li>DB schema sources (dump files or items saved in DB Store) are now selected using a single dropdown.</li>
+      <li>Manual connection parameters inputs have been removed to clean up interface and free screen real estate.</li>
+      <li>Selected elements panel has been merged into search text field area to free screen real estate.</li>
+      <li>Other minor corrections and performance improvements.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.2" id="pgCodeKeeper-3.7.2"></span>pgCodeKeeper 3.7.2</h4>
+    <p class="date">September 20, 2016</p>
+    <ul class="short-article">
+      <li>Option of opening pgCodeKeeper project editor by double clicking the «pgCodeKeeper project» item in Project Explorer has been added.</li>
+      <li>Build is no longer started for hidden files.</li>
+      <li>Images handling has been improved, resource leak error has been eliminated.</li>
+      <li>Receiving indexes via JDBC error has been eliminated.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.0" id="pgCodeKeeper-3.7.0"></span>pgCodeKeeper 3.7.0</h4>
+    <p class="date">September 7, 2016</p>
+    <ul class="short-article">
+      <li>Option to create markers of SQL syntax errors, detected by the parser, has been added. Errant files are
+        marked in the project tree, errant places are underlined in pgCodeKeeper SQL editor (enable pgCodeKeeper
+        SQL editor by clicking the file SQL — Open With — pgCodeKeeper SQL editor with a right mouse button). For
+        updating markers in the project make sure that pgCodeKeeper builder is enabled (how to enable: click the
+        project with a right mouse button — select pgCodeKeeper, then — Add builder).
+      </li>
+      <li>pgCodeKeeper builder operation has been improved: frequent updating and smooth progress bar displaying.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.6.2" id="pgCodeKeeper-3.6.2"></span>pgCodeKeeper 3.6.2</h4>
+    <p class="date">August 24, 2016</p>
+    <ul class="short-article">
+      <li>Full support of PostgreSQL operators syntax has been added. For more information please visit:
+        <a href="https://www.postgresql.org/docs/9.3/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS.">
+          https://www.postgresql.org/docs/9.3/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
+        </a>.
+      </li>
+      <li>Option of sending messages to the developers directly from the programme has been implemented. To send
+        messages use the pgCodeKeeper perspective in the Eclipse, choose the pgCodeKeeper menu option — Feedback.
+      </li>
+      <li>Interface for working with DB connection data has been improved.</li>
+      <li>The DB objects priviliges reading error has been eliminated.</li>
+      <li>Other correction.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.6.0" id="pgCodeKeeper-3.6.0"></span>pgCodeKeeper 3.6.0</h4>
+    <p class="date">August 12, 2016</p>
+    <ul class="short-article">
+      <li>Object dependencies storage method has been modified, which made it possible to add the object dependencies from the RULE statements.</li>
+      <li>When generating the migration script, the dependent columns indexes are now correctly taken into account.</li>
+      <li>The analysis of the type definition with the INTERNALLENGTH attribute has been updated.</li>
+      <li>The cases of false differences display in stored procedures that return the jsonb type and in the tables using
+        nextval with a value in double quotes as a default value have been updated.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.5.4" id="pgCodeKeeper-3.5.4"></span>pgCodeKeeper 3.5.4</h4>
+    <p class="date">July 25, 2016</p>
+    <ul class="short-article">
+      <li>Altered privileges handling has been improved: REVOKE is generated explicitly for remote GRANT.</li>
+      <li>The objects random shuffling bug occurring in the project when reexporting has been fixed — now the object
+        order in the table file is specified explicitly.
+      </li>
+      <li>Loading via pg_dump is hidden by default (you can enable it in the settings).</li>
+      <li>Clickthrough to types and domains has been implemented in the SQL editor, these objects have been also added
+        to the Outline list in the Eclipse.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.5.1" id="pgCodeKeeper-3.5.1"></span>pgCodeKeeper 3.5.1</h4>
+    <p class="date">May 18, 2016</p>
+    <ul class="short-article">
+      <li>PostgreSQL support of <a href="http://www.postgresql.org/docs/9.3/static/sql-createrule.html">RULE</a> (rules)</li>
+      <li>Optimizing and improving of operation speed, rework SQL parser. According to estimates, the parser working
+        time has decreased by factor of 4, the required memory (heap) has decreased by factor of 2.
+      </li>
+      <li>Optimizing and refactor of the SQL parser. The rules of parsing expressions and SELECT have been rewritten to
+        the left-recursive form. Parsing ambiguity errors in these rules have been eliminated.
+      </li>
+      <li>SELECT dependences analyzer has been entirely rewritten.</li>
+      <li>Reading of the compared DBs sources has been done in parallel.</li>
+      <li>You can copy the saved set of elements in the form of the RegEx filter.</li>
+      <li>Transition to the object definition in the SQL editor has been updated.</li>
+      <li>Colour highlighting of the editor tabs is optional.</li>
+      <li>Helpful information has been updated.</li>
+      <li>JDBC errors reports have been improved.</li>
+      <li>Other minor corrections, mostly connected with the parser.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.4.1" id="pgCodeKeeper-3.4.1"></span>pgCodeKeeper 3.4.1</h4>
+    <p class="date">April 29, 2016</p>
+    <ul class="short-article">
+      <li>ORDER BY parsing has been added to the aggregate functions.</li>
+    </ul>
+  </div>
+
+  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+
+  <!-- footer -->
+  //= templates/partials/footer.html
+  <!-- /footer -->
+</body>
+</html>

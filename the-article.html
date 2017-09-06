@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The taming of the scoundrel</title>
+  <meta name="description" content="Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you can describe the relations and the stored procedures for the data access and logic...">
+  <meta Name="keywords" content="PostgreSQL, DevOps, Continuous Delivery, psql, pg_dump, JDBC">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.com/the-article.html">
+  <meta property="og:image" content="http://pgcodekeeper.com/images/addoelephantpark.jpg">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="The taming of the scoundrel">
+  <meta property="og:description" content="Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you can describe the relations and the stored procedures for the data access and logic...">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="The taming of the scoundrel">
+  <meta itemprop="description" content="Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you can describe the relations and the stored procedures for the data access and logic...">
+  <meta itemprop="image" content="http://pgcodekeeper.com/images/addoelephantpark.jpg">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.com/the-article.html">
+  <meta name="twitter:title" content="The taming of the scoundrel">
+  <meta name="twitter:description" content="Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you can describe the relations and the stored procedures for the data access and logic...">
+  <meta name="twitter:image" content="http://pgcodekeeper.com/images/addoelephantpark.jpg">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#home">
+          <img class="media-object brand-image" src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left main-menu">
+          <li><div class="search hidden-lg hidden-md"><gcse:search></gcse:search></div></li>
+          <li><a href="/#home">Homepage</a></li>
+          <li><a href="/#services">Opportunities</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/#information">News</a></li>
+              <li><a href="/articles.html">Articles</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/index.html">pgCodeKeeper</a></li>
+              <li><a href="/pgsqlblocks.html">pgSqlBlocks</a></li>
+            </ul>
+          </li>
+          <li><a href="/doc/">User manual</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+        <ul class="nav navbar-nav main-menu navbar-right">
+          <li><div class="search visible-lg visible-md"><gcse:search></gcse:search></div></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /header -->
+
+  <div id="blog-image">
+    <div class="container custom">
+      <img class="media-object" src="images/addoelephantpark.jpg" alt="elephants">
+    </div>
+  </div>
+
+  <div  class="container custom">
+    <div id="the-article">
+      <p class="article-name">The taming of the scoundrel</p>
+      <p class="article-author">Saushkin Andrey</p>
+      <p class="article-date">February 1, 2016 </p>
+      <p>Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you
+        can describe the relations and the stored procedures for the data access and logic. May be you develop
+        databases for PostgreSQL? If so, that`s excellent — this post is definitely for you.
+      </p>
+      <p>I guess there is no use describing the advantages of <a href="http://www.postgresql.org/">PostgreSQL</a>. I
+        will just say in short that this is a modern fast DBMS with rich capabilities and it is definitely able to
+        compete with the commercial database management systems. The fact that PostgreSQL is released under the
+        <a href="http://www.postgresql.org/about/licence/">free license</a> similar to BSD license (that allows to use
+        it in the commercial projects without license fee and makes the source code fully accessible without the
+        necessity to open your code when making changes) and that it is actively developing at the moment (9.5 version
+        with some <a href="http://www.postgresql.org/docs/9.5/static/release-9-5.html">pleasant improvements</a>) has
+        been recently released, in January 2016) allows us to say that PostgreSQL could be one of the best DBMS for
+        now. So what prevents PostgreSQL from gaining popularity among the developers?
+      </p>
+      <p>
+        <a href="http://db-engines.com/en/ranking_trend">
+          <img class="content-image" src="https://habrastorage.org/files/0fe/fdc/1f7/0fefdc1f71084302a397e9e966c347a7.png"
+               alt="RDBMS rating" title="Picture from http://db-engines.com/en/ranking_trend">
+        </a>
+      </p>
+      <p>One of the factors is the quite limited number of tools both for databases development and for further
+        maintanence. There are, of course, JDBC drivers for PostgreSQL and all the JDBC using tools work with it, but
+        these tools are usually of general purpose and they are not always able to use the particular DBMS special
+        features.
+      </p>
+      <p>What development special features are we talking about? For example, when modifying the existing DB objects
+        (usually tables or views), you can quite often face the object change error as it is forbidden by PostgreSQL
+        because of the dependent objects presence.
+      </p>
+
+      <pre><code class="sql">  ags=# create table t1 (f1 text);
+  CREATE TABLE
+  ags=# create view v1 as select * from t1;
+  CREATE VIEW
+  ags=# alter table t1 alter column f1 type char(5);
+  ERROR:  cannot alter type of a column used by a view or rule
+  DETAIL:  rule _RETURN on view v1 depends on column "f1"</code></pre>
+
+      <p>Many developers have already got tired of this special feature, it is recorded in TODO
+        <a href="https://wiki.postgresql.org/wiki/Todo#Views_and_Rules">wiki.postgresql.org/wiki/Todo#Views_and_Rules</a>
+        and has some possible handling variants (for example:
+        <a href="http://mwenus.blogspot.nl/2014/04/postgresql-how-to-handle-table-and-view.html">mwenus.blogspot.nl/2014/04/postgresql-how-to-handle-table-and-view.html</a>).
+      </p>
+
+      <br>
+
+      <p>Here’s another example. Did you have situations like that: you’ve created a stored procedure, began actively
+        using it and, as it usually happens, you wanted to modify it after a while. Only when you began figuring out
+        why logic was working only partially, you noticed that in fact you’d created an additional procedure with a
+        new signature (which was being used by a code’s part) and the other code’s part used a negligently left old
+        procedure?
+      </p>
+
+      <pre><code class="sql">  ags=# \df f1
+                               List of functions
+   Schema |Name |Result data type       | Argument data types    |  Type
+  --------+-----+-----------------------+------------------------+---------
+   public | f1  | void                  |                        | normal
+   public | f1  | void                  | p1 integer             | normal
+  (2 rows)</code></pre>
+
+      <p>It is very easy to face such situation, and I think, lack of grouping objects like Oracle, that logically
+        unite the stored procedures and are installed to the base usually in one package, which excludes the
+        appearance of «forgotten» objects, enables such situations. It goes without saying, that if you’re testing
+        your code, probability of such objects change to real ones is low, however such actions encrease the
+        maintenance complexity.
+      </p>
+      <p>What should you do to compare two DBs and generate a script of transformation from one base to another? You
+        might likely want to use <a href="http://www.liquibase.org/">Liquibase</a>, however, you’ll get disappointed
+        when you’ll learn that Liquibase doesn’t know anything about the solution methods of dependencies problems
+        mentioned above.
+      </p>
+      <p>We faced the similar questions about three years ago when we began the migration process from
+        <a href="http://www.microsoft.com/ru-ru/server-cloud/products/sql-server/">MSSQL</a> to PostgreSQL. At the
+        time we were using
+        <a href="https://www.red-gate.com/products/sql-development/sql-source-control/">Redgate SQL Source Control</a>
+        to work with MSSQL, so we were really dissatisfied with the lack of a similar tool for PostgreSQL management.
+        We were so annoyed that we decided to create our own tool capable to monitore the changings in the DB and to
+        create the selected objects migration scripts both in interactive and automatic mode.
+      </p>
+      <p>The decision of development platform selection has come quite quickly as we programme mostly by means of
+        Java. The application began to develop as a set of Eclipse additions after some cut and try iterations.</p>
+      <p class="emphasis-sentence">That’s exactly how our product <span class="product-name">pgCodeKeeper</span> has
+        after a while come to life.</p>
+      <p>In a nutshell, its work can be described as follows: DB objects are saved to the disk in the form of the
+        Eclipse project, which can be put into the version storage system later on if you wish. By comparing DB with
+        the project or some project branch later on, it is possible to generate both migration scripts from DB (for
+        the object states transfer from the project to DB) and into it. Due to the fact that we use
+        <a href="http://www.antlr.org/">ANTLR</a> grammar to analyze the objects, we can build object dependency
+        columns worked out quite well. It leads to the correct migration scripts creation (considering the existing
+        dependencies problems mentioned above).
+      </p>
+      <p>pgCodeKeeper usage can help to organize workflow of making changes in DB. We successfully use the following scheme:</p>
+
+      <br>
+
+      <ol>
+        <li>The developer makes changes in the developer’s DB (however not considering migration scripc creation which
+          will be necessary when installing on the working DB). By the way, there can be one developer’s DB divided
+          between several developers. When applying the changes, pgCodeKeeper allows to transfer only selected
+          objects.<br>
+        </li>
+        <li>The changes made by the developer by means of pgCodeKeeper (if necessary, changes of just part of the
+          objects) transfer to the developer’s project branch and merge request with the main branch is created.<br>
+        </li>
+        <li>The merge request is checked and accepted by the responsible individual.<br></li>
+        <li>After accepting the merge request, pgCodeKeeper forms the migration script (at that it warns if the
+          instructions which can lead to the data loss are being formed in the script) from the main branch into the
+          woking DB.<br>
+        </li>
+        <li>The created script is installed to the working DB.<br></li>
+      </ol>
+
+      <br>
+
+      <p>The first two steps are done by a developer, the third is done by an inspector, the fourth and the fifth can
+        be done by the person maintaining DB. The fourth and the fifth steps can also be done in automatic mode and
+        this can be very comfortable for continuous Deliver. But we won’t talk about it in this article.
+      </p>
+      <p>Not all actions are done with the help of pgCodeKeeper in the described working process. For example,
+        creation of a new branch in the version control system is made by <a href="http://www.eclipse.org/egit/">EGit</a>
+        addition for Eclipse, whereas the merge request code review is made with the help of
+        <a href="https://about.gitlab.com/">GitLab</a>.
+      </p>
+      <p class="emphasis-sentence">So, the main aim of pgCodeKeeper is comparing preliminarily created project with
+        database instance, specifying modified objects and applying the changes either to the project from DB (project
+        files modification) or to DB from the project (via migration script creation).
+      </p>
+      <p>After a while, our project was successfully developing, and at a certain point there were no doubts that
+        pgCodeKeeper handles current requirements for our internal DB maintenance perfectly, however product backlog
+        is by no means empty. It is filled with the features and errors which can potentially be met in other
+        develovers’ DB. It became clear that pgCodeKeeper would either remain as a part of a corporational project
+        (and probably would move to the stagnation stage as practically all the requested features have been done), or
+        would try to enter the public market and get the answers to the following questions with the help of the
+        feedback:
+      </p>
+
+      <br>
+
+      <ol>
+        <li>Is the product commercially successful at the software market at the moment?<br></li>
+        <li>If yes, then what model of product distribution/licensing can be the most interesting both for us and the market?<br></li>
+      </ol>
+
+      <br>
+
+      <p>Now we’re ready to release pgCodeKeeper into the public beta testing with the only usage condition — feedback
+        provision. Would anybody like to try the product?</p>
+
+      <h3>Trying the product</h3>
+      <p>So, I hope that if you’ve read up to this moment, you’ve got interested enough to try pgCodeKeeper. Ready?
+        Let’s start.</p>
+      <p>As I have written before, pgCodeKeeper has started to represent a set of the Eclipse platform additions at
+        the end of its evolutionary process. It means that it is multiplatform and it works both under Linux and
+        Windows. It will certainly work under other platforms where the Eclipse platform can be started, but we use
+        only these two.
+      </p>
+      <p>For the pgCodeKeeper correct work the Eclipse Juno platform or greater is required, however this notice is
+        for those who want to install into the existing Eclipse instance. For new Eclipse installations use the latest
+        version from <a href="https://eclipse.org/downloads/"> eclipse.org/downloads</a>. You can install Eclipse IDE
+        for Java Developers (as among other issues the additions for Git integration are already installed in it and
+        it is relatively small) or choose any tool you like (don’t forget: Eclipse is a Java application, and you
+        should install JRE/JDK before to make it work).
+      </p>
+
+      <a href="https://eclipse.org/downloads/">
+        <img class="content-image" src="https://habrastorage.org/files/524/65c/d0b/52465cd0b70b4b6a9088fd91297e8bc2.png"
+             alt="Eclipse.org" title="Picture http://www.eclipse.org/downloads/">
+      </a>
+
+      <p>Choose the meny options Help — Install new software and enter update site URL:
+        <a href="http://pgcodekeeper.ru/update/release/">pgcodekeeper.ru/update/release</a>
+      </p>
+      <p>Choose and install pgCodeKeeper addition. Reload the Eclipse and if we see pgCodeKeeper project in the new
+        projects wizards list, then the installation mission is complete.</p>
+      <p>PgCodeKeeper work is to compare objects in the project and DB. Before creating a project you should already
+        have a DB, from which you want to make initial copy of the project. Let’s create a base and try to go through
+        the DB development process.
+      </p>
+
+      <details>
+        <summary>DB formation script</summary>
+        <pre><code class="sql">  $ psql -X &lt;&lt;SQL
+  create database dev;
+  \c dev
+
+  create table t1 (f1 text);
+  create view v1 as select * from t1;
+  create view v2 as select * from v1;
+  create function f1(p1 int) returns v2 as 'select * from v2 limit 1' language sql;
+  SQL
+
+  CREATE DATABASE
+  CREATE TABLE
+  CREATE VIEW
+  CREATE VIEW
+  CREATE FUNCTION
+
+  $ psql dev
+  psql (9.3.10)
+  Type "help" for help.
+
+  (ags@10.84.0.6:5432) 15:11:08 [dev]  =# \d \df
+               List of relations
+  ┌────────┬─────┬───────────────┬──────────┐
+  │ Schema │Name │      Type     │ Owner    │
+  ├────────┼─────┼───────────────┼──────────┤
+  │ public │ t1  │ table         │ ags      │
+  │ public │ v1  │ view          │ ags      │
+  │ public │ v2  │ view          │ ags      │
+  └────────┴─────┴───────────────┴──────────┘
+  (3 rows)
+
+                                List of functions
+  ┌────────┬─────┬───────────────────────┬────────────────────────┬─────────┐
+  │ Schema │Name │ Result data type      │ Argument data types    │  Type   │
+  ├────────┼─────┼───────────────────────┼────────────────────────┼─────────┤
+  │ public │ f1  │ v2                    │ p1 integer             │ normal  │
+  └────────┴─────┴───────────────────────┴────────────────────────┴─────────┘
+  (1 row)</code></pre>
+      </details>
+
+      <p>So, we have a database, it’s time to have fun and to write some code. Let’s change the table t1:</p>
+
+      <pre><code>  (ags@10.84.0.6:5432) 15:12:28 [dev]  =# alter table t1 alter column f1 type char(5);
+  ERROR:  cannot alter type of a column used by a view or rule
+  DETAIL:  rule _RETURN on view v1 depends on column "f1"
+  TIME: 2,393 мс</code></pre>
+
+      <p>It is to be expected that we cannot perform the requested action, because v1 expression depends on t1 table. Moreover, to delete v1 we’ll have to delete both v2 and f1</p>
+
+      <pre><code>  (ags@10.84.0.6:5432) 15:16:05 [dev] * =# drop view v1;
+  ERROR:  cannot drop view v1 because other objects depend on it
+  DETAIL:  view v2 depends on view v1
+  function f1(integer) depends on type v2
+  HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+  TIME: 1,631 мс</code></pre>
+
+      <p>Well... it looks like we are in a slight trap, now we’ll have to go to some great scripts (for example,
+        similar to that I’ve written about above… however, they don’t work with all objects that can get into the
+        dependencies columns) or use pgCodeKeeper (there is one more variant to make a cascading delete of the
+        expression and dependent objects and to restore the lost objects from the preliminarily saved dump, but we
+        won’t use this option).
+      </p>
+      <p>It’s high time to create a DB maintenance project.</p>
+      <img class="content-image image-small" src="images/create-project.png" alt="image">
+      <p>Enter a new project’s name:</p>
+      <img class="content-image image-small" src="images/create-project-name.png" alt="image">
+      <p>Configure a source for DB (yes, you can face the slightly unevident moment of a new source adding, but be
+        patient, we’ll surely upgrade it in the future). Personally, I keep my passwords in .pgpass and pgCodeKeeper
+        is able to take them from it, but if you don’t use them, fill in the password field in wizard.
+      </p>
+      <img class="content-image" src="images/project-initialization.png" alt="image">
+      <p>The project creation is complete, press «Finish». If you did everything right, a new project will be
+        initialized and filled with the DB objects.</p>
+      <img class="content-image image-small" src="images/project-explorer.png" alt="image">
+      <p>DB object in project — is a readable file, which among other things can be edited.</p>
+      <img class="content-image image-small" src="images/text-f1.png" alt="image">
+      <p>At the moment pgCodeKeeper is not positioned as a fully-featured SQL or PL/pgSQL code editor, but sometimes —
+        as, for example, in this case, - there is nothing better than to edit a file directly in the editor. Let’s
+        change the only field’s type from text to char(5).
+      </p>
+      <img class="content-image image-small" src="images/change-to-char.png" alt="image">
+      <p>Move to the main project panel (lower Tab - «Update DB») and press «Get changes». pgCodeKeeper has displayed
+        the list of objects, which differ both in DB and in the project. Diff panel shows the detailed changes in DB
+        objects.
+      </p>
+      <img class="content-image" src="images/get_change.png" alt="image">
+      <p>Now there is one little thing left, tick the DB objects which we want to synchronize with the project objects
+        and press «Generate script». pgCodeKeeper will helpfully report that generated script contains dangerous
+        instructions, which can lead to data loss, and will generate the following script:
+      </p>
+
+      <details>
+        <summary>Migration script generated by pgCodeKeeper</summary>
+        <pre><code class="sql">  SET TIMEZONE TO 'UTC';
+
+  SET check_function_bodies = false;
+
+  -- DEPCY: This FUNCTION depends on the COLUMN: t1.f1
+
+  DROP FUNCTION f1(p1 integer);
+
+  -- DEPCY: This VIEW depends on the COLUMN: t1.f1
+
+  DROP VIEW v2;
+
+  -- DEPCY: This VIEW depends on the COLUMN: t1.f1
+
+  DROP VIEW v1;
+
+  ALTER TABLE t1
+  ALTER COLUMN f1 TYPE char(5); /* TYPE change - table: t1 original: text new: char(5) */
+
+  -- DEPCY: This VIEW is a dependency of FUNCTION: f1(integer)
+
+  CREATE VIEW v1 AS
+  SELECT t1.f1
+  FROM t1;
+
+  ALTER VIEW v1 OWNER TO ags;
+
+  -- DEPCY: This VIEW is a dependency of FUNCTION: f1(integer)
+
+  CREATE VIEW v2 AS
+  SELECT v1.f1
+  FROM v1;
+
+  ALTER VIEW v2 OWNER TO ags;
+
+  CREATE OR REPLACE FUNCTION f1(p1 integer) RETURNS v2
+  LANGUAGE sql
+  AS $$select * from v2 limit 1$$;
+
+  ALTER FUNCTION f1(p1 integer) OWNER TO ags;</code></pre>
+      </details>
+
+      <p>Hooray!!! Couple of mouse clicks (if not considering project initialization) and we can generate migration
+        scripts! The received script can be installed both independently by means of pgAdmin/psql and also by means of
+        pgCodeKeeper. As far as DDL instructions in PostgreSQL are transactional, I mention the necessity of script
+        execution in one transaction (key — 1 in psql) when installing similar scripts to prevent the DB inconsistent
+        state in case of a script execution error.
+      </p>
+      <p>If to compare the project and DB again, we’ll see that the objects in the project and DB… Differ?!</p>
+      <p>Don’t panic, it is connected with the fact that when we were making changes in the project manually, we wrote
+        a character type short form as char, and it is now displayed in a full form in DB.</p>
+      <img class="content-image image-small" src="images/database.png" alt="image">
+      <p>To update a project switch to lower tab «Update project», press «Get changes», select the required objects
+        and press «Apply selected changes». After performing these actions DB objects and project objects will become
+        identical.
+      </p>
+
+      <h3>Product known features</h3>
+      <p>As far as the product was initially developed for internal DB, only the object types used by us were tested
+        in the first place, some are not supported yet (for example, FOREIGN TABLE). PgCodeKeeper doesn’t support
+        operation with all PostgreSQL versions, at the moment operation with 9.3 version and greater is guaranteed
+        (perhaps, it will operate with 9.1-9.2 versions, but not older — we need to check).
+      </p>
+
+      <h3>Conclusion</h3>
+      <p>Today you’ve got acquainted with a new product making PostgreSQL operation easier. I’ve told about main
+        capabilities of the product, not touching upon the following: manual dependencies adding (if our parser hasn’t
+        managed you can always direct it), operation with version control systems, pgCodeKeeper operation in
+        automatic, non-interactive mode.
+      </p>
+      <p>The article contains neologisms, jargonisms and several obsolete expressions. I’ve always specified the word
+        or expression meanings which define them in English best of all.</p>
+      <p>At the moment pgCodeKeeper is being registrated in the register of Russian software according to the
+        RF Government Decree No. 1236 of November 16, 2015 «On prohibition on the admission of software, originated
+        from foreign states, for the purposes of buying execution to ensure the government and public needs»
+        <a href="http://www.garant.ru/hotlaw/federal/671898/">www.garant.ru/hotlaw/federal/671898</a>
+        and it means that pgCodeKeeper will be able to take part in the import substitution programme in the nearest
+        future.
+      </p>
+      <p>pgCodeKeeper greatly eases PostgreSQL databases maintenance (even habituation effect was observed).</p>
+      <p>How interesting have you found pgCodeKeeper?</p>
+    </div>
+
+      <div id="disqus_thread"></div>
+
+    <script>
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://pgcodekeeper.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+
+    <noscript>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+
+  <!-- footer -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-lg-6">
+          <span>Share</span>
+          <div class="social-likes-custom social-likes">
+            <div class="facebook" title="Share link on Facebook">Facebook</div>
+            <div class="twitter" title="Share link on Twitter">Twitter</div>
+            <div class="plusone" title="Share link on Google+">Google+</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-6">
+          <p class="copyright">&copy; LLC "Technology" 2017</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.min.js"></script>
+  <!-- /footer -->
+
+  <script id="dsq-count-scr" src="https://pgcodekeeper.disqus.com/count.js" async></script>
+  <script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

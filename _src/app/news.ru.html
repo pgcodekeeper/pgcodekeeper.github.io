@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Releases</title>
+  <meta name="description" content="pgCodeKeeper 3.8.6 Добавлена поддержка ENABLE/DISABLE состояний RULE...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.ru/news.html">
+  <meta property="og:image" content="http://pgcodekeeper.ru/images/logo1.png">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="Обновления">
+  <meta property="og:description" content="pgCodeKeeper 3.8.6 Добавлена поддержка ENABLE/DISABLE состояний RULE...">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Обновления">
+  <meta itemprop="description" content="pgCodeKeeper 3.8.6 Добавлена поддержка ENABLE/DISABLE состояний RULE...">
+  <meta itemprop="image" content="http://pgcodekeeper.ru/images/logo1.png">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.ru/news.html">
+  <meta name="twitter:title" content="Обновления">
+  <meta name="twitter:description" content="pgCodeKeeper 3.8.6 Добавлена поддержка ENABLE/DISABLE состояний RULE...">
+  <meta name="twitter:image" content="http://pgcodekeeper.ru/images/logo1.png">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  //= templates-ru/partials/header.html
+  <!-- /header -->
+
+  <div id="release-block" class="container">
+    <h1>Обновления</h1>
+
+    <h4 class="anchor" name="pgCodeKeeper-3.11.0" id="pgCodeKeeper-3.11.0">pgCodeKeeper-3.11.0</h4>
+    <p class="date">11 июля 2017</p>
+    <ul class="short-article">
+      <li>Переработан CLI (интерфейс командной строки). Изменились названия опций, аргументы программы, способ задания
+        списков и другое. Подробнее см. помощь (параметр --help).
+      </li>
+      <li>Улучшен поиск ошибок при редактировании sql-файлов проекта.</li>
+      <li>Исправлена ошибка вызова JDBC хелпер-функций при отсутствии к ним доступа.</li>
+      <li>Исправлена ошибка фильтрации элементов в интерфейсе таблицы различий.</li>
+    </ul>
+
+    <h4 class="anchor" name="pgCodeKeeper-3.10.0" id="pgCodeKeeper-3.10.0">pgCodeKeeper-3.10.0</h4>
+    <p class="date">23 мая 2017</p>
+    <ul class="short-article">
+      <li>Закладки редактора проекта объединены в один интерфейс.</li>
+      <li>Список игнорируемых объектов в настройках теперь можно использовать в режиме белого списка.</li>
+      <li>В CLI версию для Windows добавлен bat-скрипт для удобного запуска.</li>
+      <li>Добавлена поддержка конструкции TABLE OF type.</li>
+      <li>Добавлена поддержка конструкции ALTER COLUMN SET (options).</li>
+      <li>Добавлена поддержка конструкции ALTER COLUMN SET STORAGE.</li>
+      <li>Улучшена вычитка зависимостей из выражений в SQL командах.</li>
+      <li>Улучшена работа с ключевыми словами SQL, распознавание встроенных типов и функций.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.9.1" id="pgCodeKeeper-3.9.1"></span>pgCodeKeeper 3.9.1</h4>
+    <p class="date">29 марта 2017</p>
+    <ul class="short-article">
+      <li>Добавлена поддержка конструкций CONSTRAINT ... EXCLUDE и INDEX ... TABLESPACE;</li>
+      <li>Теперь при выполнении миграции с использованием JDBC из редактора миграции редактор проекта уведомляет об
+        изменениях в БД;
+      </li>
+      <li>В консольную версию pgCodeKeeper добавлена возможность отмены генерации скрипта, если изменение зависимости
+        какого-либо объекта было заблокировано (cм. параметр --stop-depcy-omitted в CLI помощи);
+      </li>
+      <li>Улучшены отчеты об ошибках парсера для случая, когда в SQL-файлах присутствуют ссылки на несуществующие
+        объекты;
+      </li>
+      <li>Улучшена производительность парсинга во время JDBC загрузки;</li>
+      <li>Исправлена ошибка выделения объектов с фильтром. Теперь в редакторе проекта при нажатии кнопки "Выделить все"
+        с установленным фильтром выделяются только те объекты, которые соответствуют условиям фильтра;
+      </li>
+      <li>Исправлена ошибка отображения несуществующей схемы public при подключении по JDBC. Теперь такие схемы не
+        отображаются;
+      </li>
+      <li>Проекты pgCodeKeeper в Project Explorer выделяются среди других проектов за счет добавления маркера-иконки.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.9.0" id="pgCodeKeeper-3.9.0"></span>pgCodeKeeper 3.9.0</h4>
+    <p class="date">14 марта 2017</p>
+    <ul class="short-article">
+      <li>Добавили поддержку конструкций VIEW WITH. Улучшили ALTER код, который генерируется для изменений WITH
+        параметров у таблиц и представлений;
+      </li>
+      <li>Добавили поддержку конструкций CONSTRAINT TRIGGER ... DEFERRABLE;</li>
+      <li>Улучшили таблицу различий в редакторе проекта. Теперь объекты, которые принадлежат таблицам и представлениям
+        (ограничения, индексы, триггеры, правила), отображаются в ней как подэлементы дерева своих контейнеров.
+        Повысилась скорость работы таблицы;
+      </li>
+      <li>Исправили ошибку некорректного удаления объектов по зависимостям без восстановления в конце миграции;</li>
+      <li>Исправили ошибку связанную с отображением схем, созданных расширениями (EXTENSION). Теперь эти схемы скрыты.</li>
+      <li>И последнее, мы прекращаем поддержку устаревших версий Java и Еclipse. Теперь требования продукта: Java SE 1.8
+        и Eclipse Neon (4.6). Это нововведение позволит нам улучшить наш продукт за счет концентрации наших сил на
+        реализации затребованных функций приложения вместо поддержки устаревших платформ. Для подавляющего большинства
+        пользователей это нововведение должно пройти незамеченным.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.7" id="pgCodeKeeper-3.8.7"></span>pgCodeKeeper 3.8.7</h4>
+    <p class="date">21 февраля 2017</p>
+    <ul class="short-article">
+      <li>В Eclipse добавили мастер импорта проектов pgCodeKeeper</li>
+      <li>Теперь в мастере создания проекта pgCodeKeeper вы можете указать кодировку и временную зону подключения к БД.
+        Настройки временной зоны можно запросить и с сервера БД. Также мы добавили возможность создания пустого проекта;
+      </li>
+      <li>Теперь вы можете генерировать выражения ALTER COLUMN ... TYPE ... USING ... при изменении типа колонки таблицы;</li>
+      <li>Добавили поддержку условия запуска триггера INSTEAD OF;</li>
+      <li>Исправили ошибку изменения параметров всех последующих транзакций сессии при подключении к БД по JDBC;</li>
+      <li>На приветственной странице Eclipse отображается информация об обновлениях pgCodeKeeper;</li>
+      <li>Обновили иконки продукта.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.6" id="pgCodeKeeper-3.8.6"></span>pgCodeKeeper 3.8.6</h4>
+    <p class="date">7 февраля 2017</p>
+    <ul class="short-article">
+      <li>Добавлена поддержка ENABLE/DISABLE состояний RULE;</li>
+      <li>Обновлены серверные функции ускорения JDBC. Для начала работы с функциями установите их заново;</li>
+      <li>Исправлена ошибка с получением имен типов данных по JDBC;</li>
+      <li>В неинтерактивном режиме добавлена возможность выбора типов объектов (--allowed-objects), выводимых в скрипт миграции.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.4" id="pgCodeKeeper-3.8.4"></span>pgCodeKeeper 3.8.4</h4>
+    <p class="date">22 декабря 2016</p>
+    <ul class="short-article">
+      <li>Улучшен и актуализирован мастер сравнения БД. Теперь вы можете сравнивать и генерировать скрипты миграции для
+        БД из любых источников без создания проекта. Мастер сравнения БД можете запустить через главное меню
+        pgCodeKeeper - Мастер сравнения или через контекстное меню проекта - пункт pgCodeKeeper.
+      </li>
+      <li>В неинтерактивном режиме работы pgCodeKeeper появилась возможность подключения к БД с помощью JDBC строки соединения.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.8.0" id="pgCodeKeeper-3.8.0"></span>pgCodeKeeper 3.8.0</h4>
+    <p class="date">6 декабря 2016</p>
+    <ul class="short-article">
+      <li>Добавлен новый режим чтения БД по JDBC. В этом режиме при использовании соединений, ограниченных по скорости,
+        или при работе с БД, содержащей большое количество схем, увеличивается производительность чтения БД. Как начать
+        работать в ускоренном режиме: открыть перспективу pgCodeKeeper (Window - Perspective), выбрать пункт главного
+        меню pgCodeKeeper - Установить хелперы производительности JDBC и применить открывшийся скрипт к соответствующей
+        БД. После этого данная БД автоматически станет читаться в ускоренном режиме.
+      </li>
+      <li>Усовершенствован механизм исключения объектов из сравнения БД. Теперь существуют как и черные, так и белые
+        списки объектов. Использовать их можно как в графическом, так и в неинтерактивном режиме работы pgCodeKeeper.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.8" id="pgCodeKeeper-3.7.8"></span>pgCodeKeeper 3.7.8</h4>
+    <p class="date">25 октября 2016</p>
+    <ul class="short-article">
+      <li>Теперь в редакторе проекта pgCodeKeeper полученные изменения БД заполняют обе его вкладки - обновление проекта
+        и обновление БД. Синхронизирован выбор источника изменений во вкладках.
+      </li>
+      <li>Улучшена скорость работы диалога ручного добавления зависимостей. В этом диалоге в списки объектов добавлены все объекты БД.</li>
+      <li>Добавлена комбинация клавиш Ctrl+F5 для запуска выполнения выделенного текста скрипта в редакторе миграции или
+        всего скрипта, если не выделена его часть.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.5" id="pgCodeKeeper-3.7.5"></span>pgCodeKeeper 3.7.5</h4>
+    <p class="date">4 октября 2016</p>
+    <ul class="short-article">
+      <li>Улучшен и облегчен интерфейс редактора проекта pgCodeKeeper.</li>
+      <li>Теперь выбор источников схемы БД (файлов дампа или данных подключения из Хранилища БД) производится через единый выпадающий список.</li>
+      <li>В целях облегчения интерфейса и освобождения рабочего пространства убрали возможность "ручного" ввода данных подключения.</li>
+      <li>Для освобождения рабочего пространства панель работы с выбранными элементами объединена со строкой поиска.</li>
+      <li>Прочие мелкие исправления и улучшения пользовательского интерфейса.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.2" id="pgCodeKeeper-3.7.2"></span>pgCodeKeeper 3.7.2</h4>
+    <p class="date">20 сентября 2016</p>
+    <ul class="short-article">
+      <li>Добавлена возможность открытия редактора проекта pgCodeKeeper двойным щелчком по пункту "Проект pgCodeKeeper" в Project Explorer.</li>
+      <li>Исправлена ошибка запуска сборки для скрытых файлов.</li>
+      <li>Улучшена работа с изображениями, исправлена ошибка утечки ресурсов.</li>
+      <li>Исправлена ошибка получения индексов по JDBC.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.7.0" id="pgCodeKeeper-3.7.0"></span>pgCodeKeeper 3.7.0</h4>
+    <p class="date">7 сентября 2016</p>
+    <ul class="short-article">
+      <li>Добавлена возможность создания маркеров ошибок синтаксиса SQL, выявленных парсером. Ошибочные файлы
+        помечаются в дереве проекта, ошибочные места подчеркиваются в редакторе SQL pgCodeKeeper (включите
+        редактор SQL pgCodeKeeper кликом правой кнопкой мыши на файле SQL - Open With - SQL редактор
+        pgCodeKeeper). Для обновления маркеров в проекте, удостоверьтесь, что сборщик pgCodeKeeper включен (как
+        включить: правой кнопкой мыши по проекту - выбрать pgCodeKeeper, далее - Добавить сборщик).
+      </li>
+      <li>Улучшена работа сборщика pgCodeKeeper: частое обновление и плавное отображение прогресс-бара.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.6.2" id="pgCodeKeeper-3.6.2"></span>pgCodeKeeper 3.6.2</h4>
+    <p class="date">24 августа 2016</p>
+    <ul class="short-article">
+      <li>Добавлена полная поддержка синтаксиса операторов PostgreSQL. Подробнее о синтаксисе:
+        <a href="https://www.postgresql.org/docs/9.3/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS.">
+          https://www.postgresql.org/docs/9.3/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
+        </a>.
+      </li>
+      <li>Появилась возможность отправки сообщений разработчикам напрямую из программы. Для отправки сообщения
+        воспользуйтесь перспективой pgCodeKeeper в Eclipse, выберите пункт меню pgCodeKeeper - Обратная связь.
+      </li>
+      <li>Улучшен интерфейс для работы с данными подключения к БД.</li>
+      <li>Исправлена ошибка в чтении привилегий объектов БД.</li>
+      <li>Прочие исправления.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.6.0" id="pgCodeKeeper-3.6.0"></span>pgCodeKeeper 3.6.0</h4>
+    <p class="date">12 августа 2016</p>
+    <ul class="short-article">
+      <li>Модифицирован способ хранения зависимостей объектов, что позволило добавить зависимости объектов из выражений RULE.</li>
+      <li>При формировании скрипта миграции теперь корректно учитываются индексы от зависимых колонок.</li>
+      <li>Исправлен разбор описания типа с атрибутом INTERNALLENGTH.</li>
+      <li>Исправлены случаи отображения ложных различий в хранимых процедурах возвращающих тип jsonb и в таблицах
+        использующих в качестве дефолтного значения nextval со значением в двойных кавычках.
+      </li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.5.4" id="pgCodeKeeper-3.5.4"></span>pgCodeKeeper 3.5.4</h4>
+    <p class="date">25 июля 2016</p>
+    <ul class="short-article">
+      <li>Улучшена обработка изменившихся привилегий: для удаленных GRANT явно генерируется REVOKE.</li>
+      <li>Исправлена ошибка случайного перемешивания объектов в проекте при повторном экспорте - теперь порядок объектов
+        в файле таблицы задается явно.
+      </li>
+      <li>Загрузка с помощью pg_dump по умолчанию скрыта (вы можете включить ее в настройках).</li>
+      <li>В редакторе SQL сделаны переходы по ссылкам для типов и доменов, также эти объекты добавлены в список Outline в Eclipse.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.5.1" id="pgCodeKeeper-3.5.1"></span>pgCodeKeeper 3.5.1</h4>
+    <p class="date">18 мая 2016</p>
+    <ul class="short-article">
+      <li>Поддержка PostgreSQL объектов <a href="http://www.postgresql.org/docs/9.3/static/sql-createrule.html">RULE</a> (правила)</li>
+      <li>Оптимизация и улучшение быстродействия, переработка парсера SQL. По оценкам, время работы парсера уменьшилось
+        в 4 раза, требуемая память (heap) - в 2 раза.
+      </li>
+      <li>Оптимизация и рефакторинг парсера SQL. Правила парсинга выражений и SELECT переписаны на леворекурсивную форму.
+        Устранены ошибки неоднозначности парсинга в этих правилах.
+      </li>
+      <li>Полностью переписан анализатор SELECT зависимостей.</li>
+      <li>Чтение источников сравниваемых БД выполняется параллельно.</li>
+      <li>Сохраненный набор элементов можно скопировать в виде RegEx фильтра.</li>
+      <li>Исправлен переход к определению объекта в редакторе SQL.</li>
+      <li>Цветовое выделение табов редактора сделано опциональным.</li>
+      <li>Обновлена справочная информация.</li>
+      <li>Улучшены сообщения об ошибках JDBC.</li>
+      <li>Прочие мелкие исправления, в основном связанные с парсером.</li>
+    </ul>
+
+    <h4><span class="anchor" name="pgCodeKeeper-3.4.1" id="pgCodeKeeper-3.4.1"></span>pgCodeKeeper 3.4.1</h4>
+    <p class="date">29 апреля 2016</p>
+    <ul class="short-article">
+      <li>Добавлен парсинг ORDER BY в агрегатных функциях</li>
+    </ul>
+  </div>
+
+  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+
+  <!-- footer -->
+  //= templates-ru/partials/footer.html
+  <!-- /footer -->
+</body>
+</html>

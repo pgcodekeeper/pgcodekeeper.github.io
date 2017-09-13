@@ -863,13 +863,6 @@ blockquote {
 .text-vertical-align {
   display: table;
 }
-.download-other-version {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  margin-top: 5px;
-  text-align: right;
-}
 .need-help {
   display: inline-block;
   float: left;
@@ -1185,10 +1178,6 @@ blockquote {
     font-size: 4em;
   }
 
-  .download-other-version {
-    margin-left: 50px;
-  }
-
   #about-product .media-object {
     width: 100%;
   }
@@ -1199,13 +1188,6 @@ blockquote {
   #how-install .number,
   #for-developers .number {
     font-size: 40px;
-  }
-}
-
-/* Super Extra Small Devices */
-@media only screen and (max-width: 380px) {
-  .download-other-version {
-    margin-left: 0;
   }
 }
 
@@ -1492,10 +1474,6 @@ blockquote {
     background-color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-
-  .download-other-version {
-    width: auto;
   }
 }
 

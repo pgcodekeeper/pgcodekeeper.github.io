@@ -24,12 +24,12 @@
   <meta name="twitter:title" content="The taming of the scoundrel">
   <meta name="twitter:description" content="Do you like to develop databases? No, not the modern NoSQL, but good old-fashioned relational ones, where you can describe the relations and the stored procedures for the data access and logic...">
   <meta name="twitter:image" content="http://pgcodekeeper.com/images/addoelephantpark.jpg">
-  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
 </head>
 <body id="en-version">
   <!--[if lt IE 7]>
@@ -42,7 +42,7 @@
 
   <div id="blog-image">
     <div class="container custom">
-      <img class="media-object" src="images/addoelephantpark.jpg" alt="elephants">
+      <img class="media-object" src="/images/addoelephantpark.jpg" alt="elephants">
     </div>
   </div>
 
@@ -296,29 +296,29 @@
         won’t use this option).
       </p>
       <p>It’s high time to create a DB maintenance project.</p>
-      <img class="content-image image-small" src="images/create-project.png" alt="image">
+      <img class="content-image image-small" src="/images/create-project.png" alt="image">
       <p>Enter a new project’s name:</p>
-      <img class="content-image image-small" src="images/create-project-name.png" alt="image">
+      <img class="content-image image-small" src="/images/create-project-name.png" alt="image">
       <p>Configure a source for DB (yes, you can face the slightly unevident moment of a new source adding, but be
         patient, we’ll surely upgrade it in the future). Personally, I keep my passwords in .pgpass and pgCodeKeeper
         is able to take them from it, but if you don’t use them, fill in the password field in wizard.
       </p>
-      <img class="content-image" src="images/project-initialization.png" alt="image">
+      <img class="content-image" src="/images/project-initialization.png" alt="image">
       <p>The project creation is complete, press «Finish». If you did everything right, a new project will be
         initialized and filled with the DB objects.</p>
-      <img class="content-image image-small" src="images/project-explorer.png" alt="image">
+      <img class="content-image image-small" src="/images/project-explorer.png" alt="image">
       <p>DB object in project — is a readable file, which among other things can be edited.</p>
-      <img class="content-image image-small" src="images/text-f1.png" alt="image">
+      <img class="content-image image-small" src="/images/text-f1.png" alt="image">
       <p>At the moment pgCodeKeeper is not positioned as a fully-featured SQL or PL/pgSQL code editor, but sometimes —
         as, for example, in this case, - there is nothing better than to edit a file directly in the editor. Let’s
         change the only field’s type from text to char(5).
       </p>
-      <img class="content-image image-small" src="images/change-to-char.png" alt="image">
+      <img class="content-image image-small" src="/images/change-to-char.png" alt="image">
       <p>Move to the main project panel (lower Tab - «Update DB») and press «Get changes». pgCodeKeeper has displayed
         the list of objects, which differ both in DB and in the project. Diff panel shows the detailed changes in DB
         objects.
       </p>
-      <img class="content-image" src="images/get_change.png" alt="image">
+      <img class="content-image" src="/images/get_change.png" alt="image">
       <p>Now there is one little thing left, tick the DB objects which we want to synchronize with the project objects
         and press «Generate script». pgCodeKeeper will helpfully report that generated script contains dangerous
         instructions, which can lead to data loss, and will generate the following script:
@@ -377,7 +377,7 @@
       <p>If to compare the project and DB again, we’ll see that the objects in the project and DB… Differ?!</p>
       <p>Don’t panic, it is connected with the fact that when we were making changes in the project manually, we wrote
         a character type short form as char, and it is now displayed in a full form in DB.</p>
-      <img class="content-image image-small" src="images/database.png" alt="image">
+      <img class="content-image image-small" src="/images/database.png" alt="image">
       <p>To update a project switch to lower tab «Update project», press «Get changes», select the required objects
         and press «Apply selected changes». After performing these actions DB objects and project objects will become
         identical.

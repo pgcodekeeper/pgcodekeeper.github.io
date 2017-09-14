@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pgsqlblocks</title>
+  <meta name="description" content="Инструмент для работы с блокировками">
+  <meta Name="keywords" content="postgresql, blocking queries, process, db">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.com/pgsqlblocks.html">
+  <meta property="og:image" content="http://pgcodekeeper.com/images/block-process.png">
+  <meta property="og:site_name" content="pgSqlBlocks">
+  <meta property="og:title" content="pgSqlBlocks">
+  <meta property="og:description" content="Инструмент для работы с блокировками">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="pgSqlBlocks">
+  <meta itemprop="description" content="Инструмент для работы с блокировками">
+  <meta itemprop="image" content="http://pgcodekeeper.com/images/block-process.png">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.com/pgsqlblocks.html">
+  <meta name="twitter:title" content="pgSqlBlocks">
+  <meta name="twitter:description" content="Инструмент для работы с блокировками">
+  <meta name="twitter:image" content="http://pgcodekeeper.com/images/block-process.png">
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  //= templates/partials/header.html
+  <!-- /header -->
+
+  <div id="product-description" class="container">
+    <div id="product-main">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ">
+          <img class="media-object" src="images/block-256x256.png" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+          <h1>pgSqlBlocks</h1>
+          <h3>Tool for work with PostgreSQL</h3>
+          <div id="button-download">
+            <button type="button" class="btn install-btn btn-lg"
+                    onclick="location.href='https://github.com/technology16/pgsqlblocks/releases/latest'">
+              Download pgSqlBlocks
+            </button>
+          </div>
+          <div class="need-help"><a href="#how-install">Help</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="line" role="presentation"></div>
+    </div>
+    <div id="about-product" class="container">
+      <h2>Product capabilities</h2>
+
+      <div class="row feature-line">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="text-content">
+            <h4>Process tree with displaying of blocking and pending queries</h4>
+            <p class="text-descr">Sortable process tree allows to navigate easily all processes, find blocked resources,
+              blocking and pending queries.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <img class="media-object" src="images/block-process.png" alt="">
+        </div>
+      </div>
+
+      <div class="row feature-line">
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+          <div class="text-content">
+            <h4>Cancellation or kill of a process</h4>
+            <p class="text-descr">Send a signal of process cancellation or kill in one click.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <img class="media-object" src="images/kill-process.png" alt="">
+        </div>
+      </div>
+
+      <div class="row feature-line">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="text-content">
+            <h4>Always up-to-date information</h4>
+            <p class="text-descr">Autoupdate of a process tree by means of a user's actions (cancellation/kill of
+              processes), configurable timer or manually.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <img class="media-object" src="images/auto-update.png" alt="">
+        </div>
+      </div>
+
+      <div class="row feature-line">
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+          <div class="text-content">
+            <h4>Provision of information to the user, even when the application window is minimized</h4>
+            <p class="text-descr">Notifications and change of the icon in a tray indicate the appearance of blocked
+              processes in one of DBs.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <img class="media-object" src="images/notification.png" alt="">
+        </div>
+      </div>
+
+      <div class="row feature-line">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="text-content">
+            <h4>Saving and loading of blocking history</h4>
+            <p class="text-descr">Saving the blocking history to the file and loading it back to the application — for
+              speed problem resolution followed by the analysis of the current situation.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <img class="media-object" src="images/history-block.png" alt="">
+        </div>
+      </div>
+
+      <div id="how-install">
+        <h2>How to install</h2>
+        <p class="feature-title">To install and start pgSqlBlocks, do the following steps:</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 text-vertical-align">
+            <div class="number">1</div>
+            <div class="install-instruction">Install Java JRE 1.8 or greater for your platform. Click this
+              <a href='http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html'> link</a>.
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 text-vertical-align">
+            <div class="number">2</div>
+            <div class="install-instruction">Click this <a href='https://github.com/technology16/pgsqlblocks/releases/latest'>link</a> to
+              download the latest version of pgSqlBlocks for your platform.
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 text-vertical-align">
+            <div class="number">3</div>
+            <div class="install-instruction">Start pgSqlBlocks by double-clicking the downloaded jar-file or via the
+              console command <span class='product-name'>java -jar pgSqlBlocks-1.4.0-Linux-64.jar</span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+          </div>
+        </div>
+      </div>
+
+      <div id="for-developers">
+        <h2>For developers</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 text-vertical-align">
+            <div class="number">1</div>
+            <div class="install-instruction">pgSqlBlocks is a product with open source code, licensed under Apache License 2.0.</div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 text-vertical-align">
+            <div class="number">2</div>
+            <div class="install-instruction">Source code is located in our repository on
+            <a href="https://github.com/technology16/pgsqlblocks">github.</a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  //= templates/partials/footer.html
+  <!-- /footer -->
+</body>
+</html>

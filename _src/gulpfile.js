@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
@@ -41,13 +42,19 @@ var filesToConcat = {
   ]
 };
 
-gulp.task('html', function() {
+gulp.task('html', ['html-pgsqlblocks'], function() {
   return gulp.src([
     paths.dev.main + '/*.html',
     '!' + paths.dev.main + '/*.ru.html'
   ])
     .pipe(htmlRigger())
     .pipe(gulp.dest(paths.build.main));
+});
+
+gulp.task('html-pgsqlblocks', function() {
+  return gulp.src(paths.dev.main + '/pgsqlblocks.html')
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest(paths.build.main + '/pgsqlblocks/'));
 });
 
 gulp.task('css', function() {

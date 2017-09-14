@@ -42,7 +42,7 @@ var filesToConcat = {
   ]
 };
 
-gulp.task('html', ['html-pgsqlblocks'], function() {
+gulp.task('html', function() {
   return gulp.src([
     paths.dev.main + '/*.html',
     '!' + paths.dev.main + '/*.ru.html'
@@ -51,8 +51,8 @@ gulp.task('html', ['html-pgsqlblocks'], function() {
     .pipe(gulp.dest(paths.build.main));
 });
 
-gulp.task('html-pgsqlblocks', function() {
-  return gulp.src(paths.dev.main + '/pgsqlblocks.html')
+gulp.task('html-pgsqlblocks', ['html'], function() {
+  return gulp.src(paths.build.main + '/pgsqlblocks.html')
     .pipe(rename('index.html'))
     .pipe(gulp.dest(paths.build.main + '/pgsqlblocks/'));
 });
@@ -85,6 +85,7 @@ gulp.task('fonts', function() {
 
 gulp.task('build', [
   'html',
+  'html-pgsqlblocks',
   'css',
   'js',
   'images',

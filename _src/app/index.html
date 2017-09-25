@@ -175,31 +175,23 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-lg-6">
-        <h4 name="pgCodeKeeper-4.0.0" id="pgCodeKeeper-4.0.0">pgCodeKeeper 4.0.0</h4>
-        <p class="date">September 11, 2017</p>
-        <p class="short-article">We increment major version in this release due to decision 
-        to shift our development focus onto the SQL-IDE side of the application. 
-        Another reason is an upcoming open-source release, which we plan in the near future.</p>
+        <h4 class="anchor" name="pgCodeKeeper-4.1.0" id="pgCodeKeeper-4.1.0">pgCodeKeeper 4.1.0</h4>
+        <p class="date">September 25, 2017</p>
         <ul class="short-article">
-          <li>New workflow for the migration editor — Quick Update. 
-          If you introduce schema changes directly in pgCodeKeeper now you'll 
-          be able to save your changes, generate a migration, apply that migration 
-          and update your project using a single hotkey — Ctrl+Alt+A.</li>
-          <li>Project editor's main action buttons were moved to Eclipse's toolbar 
-          and we also assigned them hotkeys: Get Changes — Ctrl+F5, 
-          Apply to project — Ctrl+Alt+S, Apply to DB — Ctrl+Alt+D. 
-          Additional dependencies button was moved to pg Dependencies view.</li>
-          <li>Migration files are now saved in project (/MIGRATION) or in the temp directory, 
-          user may choose to auto-delete migrations when their respective editors close.</li>
-          <li>Dangerous statements in migrations are now highlighted at their locations.</li>
-          <li>Improved editor highlighting and tooltips, Outline view, project builder, added tooltips for errors found in code.</li>
-          <li>Improved SQL editors code to allow for more efficient future development.</li>
-          <li>Blocked launching of extra Get Changes jobs if a given Project Editor is already running one.</li>
-          <li>Project Explorer context menu now shows an Eclipse's Show In submenu for pgCodeKeeper project elements.</li>
-          <li>SQL editor's Show In context menu now has a Project Explorer item 
-          (allowing user to quickly find editor's file in the project's tree).</li>
-          <li>Fixed an error where newly created project would show as empty.</li>
-          <li>Fixed an error where the application tried to access a SEQUENCE without permission to use its SCHEMA.</li>
+          <li>JDBC loader is able to read schemas of different PostgreSQL versions now,
+          9.2 though 9.6 are currently supported. Following SQL-clauses from these versions are now supported: 
+          CREATE FUNCTION ... TRANSFORM, CREATE FUNCTION ... PARALLEL, ROW LEVEL SECURITY. 
+          JDBC loader no longer fails when reading SEQUENCEs from PostgreSQL 10.</li>
+          <li>Added support for FOREIGN TABLE, MATERIALIZED VIEW objects and CREATE TABLE UNLOGGED clause.</li>
+          <li>Project builder now detects object name conflicts.</li>
+          <li>Error markers in sql-files are disabled for non-pgCodeKeeeper projects.</li>
+          <li>Added an object and change types filters to the diff table in the project editor.</li>
+          <li>pgCodeKeeper item is now visible in the main menu when working in the program's editors or its files.</li>
+          <li>Added a notification for errors found in sql-files while comparing DBs.</li>
+          <li>Extended .-operator (dot) support when it's used with nested composite types etc.</li>
+          <li>Object owners' names are now quoted the same as other identifiers.</li>
+          <li>Fixed a parser error when reading malformed COMMENT ON statements.</li>
+          <li>Fixed and error in checkbox state tracking in diff table.</li>
         </ul>
         </div>
         <div class="col-sm-6 col-lg-6">

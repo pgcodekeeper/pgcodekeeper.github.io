@@ -42,6 +42,25 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.1.0" id="pgCodeKeeper-4.1.0">pgCodeKeeper 4.1.0</h4>
+    <p class="date">September 25, 2017</p>
+    <ul class="short-article">
+      <li>JDBC loader is able to read schemas of different PostgreSQL versions now, 
+      9.2 though 9.6 are currently supported. Following SQL-clauses from these versions are now supported: 
+      CREATE FUNCTION ... TRANSFORM, CREATE FUNCTION ... PARALLEL, ROW LEVEL SECURITY. 
+      JDBC loader no longer fails when reading SEQUENCEs from PostgreSQL 10.</li>
+      <li>Added support for FOREIGN TABLE, MATERIALIZED VIEW objects and CREATE TABLE UNLOGGED clause.</li>
+      <li>Project builder now detects object name conflicts.</li>
+      <li>Error markers in sql-files are disabled for non-pgCodeKeeeper projects.</li>
+      <li>Added an object and change types filters to the diff table in the project editor.</li>
+      <li>pgCodeKeeper item is now visible in the main menu when working in the program's editors or its files.</li>
+      <li>Added a notification for errors found in sql-files while comparing DBs.</li>
+      <li>Extended .-operator (dot) support when it's used with nested composite types etc.</li>
+      <li>Object owners' names are now quoted the same as other identifiers.</li>
+      <li>Fixed a parser error when reading malformed COMMENT ON statements.</li>
+      <li>Fixed and error in checkbox state tracking in diff table.</li>
+    </ul>
+
     <h4><span class="anchor" name="pgCodeKeeper-4.0.0" id="pgCodeKeeper-4.0.0"></span>pgCodeKeeper 4.0.0</h4>
     <p class="date">September 11, 2017</p>
     <p class="short-article">We increment major version in this release due to decision 

@@ -174,26 +174,22 @@
 
     <div class="container">
       <div class="row">
+      
         <div class="col-sm-6 col-lg-6">
-        <h4 class="anchor" name="pgCodeKeeper-4.1.0" id="pgCodeKeeper-4.1.0">pgCodeKeeper 4.1.0</h4>
-        <p class="date">September 25, 2017</p>
+        <h4 class="anchor" name="pgCodeKeeper-4.1.2" id="pgCodeKeeper-4.1.2">pgCodeKeeper 4.1.2</h4>
+        <p class="date">November 22, 2017</p>
         <ul class="short-article">
-          <li>JDBC loader is able to read schemas of different PostgreSQL versions now,
-          9.2 though 9.6 are currently supported. Following SQL-clauses from these versions are now supported: 
-          CREATE FUNCTION ... TRANSFORM, CREATE FUNCTION ... PARALLEL, ROW LEVEL SECURITY. 
-          JDBC loader no longer fails when reading SEQUENCEs from PostgreSQL 10.</li>
-          <li>Added support for FOREIGN TABLE, MATERIALIZED VIEW objects and CREATE TABLE UNLOGGED clause.</li>
-          <li>Project builder now detects object name conflicts.</li>
-          <li>Error markers in sql-files are disabled for non-pgCodeKeeeper projects.</li>
-          <li>Added an object and change types filters to the diff table in the project editor.</li>
-          <li>pgCodeKeeper item is now visible in the main menu when working in the program's editors or its files.</li>
-          <li>Added a notification for errors found in sql-files while comparing DBs.</li>
-          <li>Extended .-operator (dot) support when it's used with nested composite types etc.</li>
-          <li>Object owners' names are now quoted the same as other identifiers.</li>
-          <li>Fixed a parser error when reading malformed COMMENT ON statements.</li>
-          <li>Fixed and error in checkbox state tracking in diff table.</li>
+          <li>SQL editor and migration editor have been merged into single SQL editor
+          that also executes scripts and performs quick object updates.</li>
+          <li>Improved project editor's and SQL editor's toolbars. 
+          You can now choose changes sources or script execution targets using a dropdown-combo on Eclipse's main toolbar.</li>
+          <li>Added table test data (INSERT) generation wizard.</li>
+          <li>Restored feedback dialog functionality.</li>
+          <li>Migration scrips saved as temporary, out-of-project files are now always created in UTF-8 encoding.</li>
+          <li>Fixed an error in object type filter in project editor.</li>
         </ul>
         </div>
+        
         <div class="col-sm-6 col-lg-6">
           <h4><a href="https://reestr.minsvyaz.ru/reestr/71688/">Registration in the unified register of the Russian programs for ECM and DB</a></h4>
           <p class="date">April 18, 2016</p>

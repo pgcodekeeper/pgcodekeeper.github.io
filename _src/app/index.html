@@ -149,7 +149,7 @@
             <div class="text-content">
               <p class="feature-title">Non-interactive mode for continuous integration systems</p>
               <p class="text-descr">
-                <a href="https://github.com/pgcodekeeper/pgcodekeeper.github.io/releases" data-toggle="tooltip" data-placement="top"
+                <a href="https://github.com/pgcodekeeper/pgcodekeeper/releases" data-toggle="tooltip" data-placement="top"
                    title="Download pgCodeKeeper CLI">pgCodeKeeper-cli</a>
                 can work in the non-interactive mode, which is really convenient for the formation of the
                 continuous integration pipelines.
@@ -176,17 +176,21 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-        <h4 class="anchor" name="pgCodeKeeper-4.1.2" id="pgCodeKeeper-4.1.2">pgCodeKeeper 4.1.2</h4>
-        <p class="date">November 22, 2017</p>
+        <h4 class="anchor" name="pgCodeKeeper-4.1.3" id="pgCodeKeeper-4.1.3">pgCodeKeeper 4.1.3</h4>
+        <p class="date">December 19, 2017</p>
         <ul class="short-article">
-          <li>SQL editor and migration editor have been merged into single SQL editor
-          that also executes scripts and performs quick object updates.</li>
-          <li>Improved project editor's and SQL editor's toolbars. 
-          You can now choose changes sources or script execution targets using a dropdown-combo on Eclipse's main toolbar.</li>
-          <li>Added table test data (INSERT) generation wizard.</li>
-          <li>Restored feedback dialog functionality.</li>
-          <li>Migration scrips saved as temporary, out-of-project files are now always created in UTF-8 encoding.</li>
-          <li>Fixed an error in object type filter in project editor.</li>
+          <li>pgCodeKeeper is now open-source, project moved under Apache 2.0 license.</li>
+          <li>Licensing feature has been removed along with usage restrictions.</li>
+          <li>Fixed a project initialization error. We recommend users to check their projects' properties to see whether they have a pgCodeKeeper builder attached. In case it's not, it is recommended to add it manually via a pgCodeKeeper - Add Builder context menu item.</li>
+          <li>Fixed errors when creating object links in SQL editor, specifically links in function bodies and in out-of-project files.</li>
+          <li>Fixed an error where changing contents of a single project had reset all project editors.</li>
+          <li>Added a "Cancel Execution" action to SQL editor's toolbar, allowing users to terminate a launched script without opening Eclipse's Progress view.</li>
+          <li>Project editor's actions have been moved back inside the editor. They are still available in pgCodeKeeper main menu and using hotkeys.</li>
+          <li>"Saved selections" feature has been removed. Instead users may copy selected objects as a filter regex string.</li>
+          <li>Filtering in project editor has been improved. It is now possible to filter tables' subelements by their types and all objects by their SQL-code.</li>
+          <li>Added "Collapse All" and "Expand All" options to project editor's diff table's context menu.</li>
+          <li>Project editor's object counters have been moved to Eclipse's status bar.</li>
+          <li>Changed pgCodeKeeper perspective's initial layout to allow for better cohesion between editors and their toolbars.</li>
         </ul>
         </div>
         

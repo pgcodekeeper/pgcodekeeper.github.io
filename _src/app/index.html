@@ -176,22 +176,26 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-        <h4 class="anchor" name="pgCodeKeeper-4.1.3" id="pgCodeKeeper-4.1.3">pgCodeKeeper 4.1.3</h4>
-        <p class="date">December 19, 2017</p>
-        <ul class="short-article">
-          <li>pgCodeKeeper is now open-source, project moved under Apache 2.0 license.</li>
-          <li>Licensing feature has been removed along with usage restrictions.</li>
-          <li>Fixed a project initialization error. We recommend users to check their projects' properties to see whether they have a pgCodeKeeper builder attached. In case it's not, it is recommended to add it manually via a pgCodeKeeper - Add Builder context menu item.</li>
-          <li>Fixed errors when creating object links in SQL editor, specifically links in function bodies and in out-of-project files.</li>
-          <li>Fixed an error where changing contents of a single project had reset all project editors.</li>
-          <li>Added a "Cancel Execution" action to SQL editor's toolbar, allowing users to terminate a launched script without opening Eclipse's Progress view.</li>
-          <li>Project editor's actions have been moved back inside the editor. They are still available in pgCodeKeeper main menu and using hotkeys.</li>
-          <li>"Saved selections" feature has been removed. Instead users may copy selected objects as a filter regex string.</li>
-          <li>Filtering in project editor has been improved. It is now possible to filter tables' subelements by their types and all objects by their SQL-code.</li>
-          <li>Added "Collapse All" and "Expand All" options to project editor's diff table's context menu.</li>
-          <li>Project editor's object counters have been moved to Eclipse's status bar.</li>
-          <li>Changed pgCodeKeeper perspective's initial layout to allow for better cohesion between editors and their toolbars.</li>
-        </ul>
+          <h4 class="anchor" name="pgCodeKeeper-4.2.0" id="pgCodeKeeper-4.2.0">pgCodeKeeper 4.2.0</h4>
+          <p class="date">January 16, 2018</p>
+          <ul class="short-article">
+            <li>Added support for PostgreSQL 10 objects and clauses:<br>
+            - table columns GENERATED AS IDENTITY;<br>
+            - partitioned tables;<br>
+            - data type used by SEQUENCE;<br>
+            - TRIGGER REFERENCING TABLE.</li>
+            <li>Improved processing of inherited columns and their properties, including partitioned tables.</li>
+            <li>Added handling for foreign key to referenced table's unique index dependency.</li>
+            <li>Added support for declaring constraints within table column definitions (syntactic sugar).</li>
+            <li>Information gathered by the project builder (project files object indices) is now retained between restarts. Full project rebuilds will now happen only when user requests them.</li>
+            <li>Added New SQL Object wizard.</li>
+            <li>Improved test data generation wizard.</li>
+            <li>Added an option to settings and to CLI to CREATE INDEX CONCURRENTLY.</li>
+            <li>Outline view for SQL editor can now be filtered to show dangerous statements and can also be sorted by object name.</li>
+            <li>When an object has no explicit privileges, default privileges will be generated instead of revoking everything.</li>
+            <li>Scripts now always set search_path, regardless of the first object's schema.</li>
+            <li>Potential parser errors no longer prevent SQL editor from opening.</li>
+          </ul>
         </div>
         
         <div class="col-sm-6 col-lg-6">

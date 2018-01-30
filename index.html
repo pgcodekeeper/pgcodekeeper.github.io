@@ -104,11 +104,11 @@
                     <li>Install the <a href='https://eclipse.org/downloads/'>Eclipse</a> platform.</li>
                     <li>Start the Eclipse. Choose the menu option
                       <span class='product-name'>«Help»</span> - <span class='product-name'>«Install new software»</span>,
-                      enter URL <a class='js-emaillink'>http://pgcodekeeper.org/update/</a> in the opened dialogue
-                      in the field <span class='product-name'>«Work with»</span>
+                      enter URL <a class='js-emaillink'>http://pgcodekeeper.org/update/</a>
                       <button class='copy-link-btn js-emailcopybtn' id='popoverbutton' data-toggle='tooltip' data-placement='top' title='Copy'>
                         <i class='fa fa-clone' aria-hidden='true'></i>
                       </button>
+                      in the opened dialogue in the field <span class='product-name'>«Work with»</span>
                       press «Enter». Choose <span class='product-name'>pgCodeKeeper</span> from the list of available plugins
                       and install the plugin according to the installation wizard prompts.
                     </li>
@@ -236,25 +236,17 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-4.2.0" id="pgCodeKeeper-4.2.0">pgCodeKeeper 4.2.0</h4>
-          <p class="date">January 16, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-4.2.1" id="pgCodeKeeper-4.2.1">pgCodeKeeper 4.2.1</h4>
+          <p class="date">January 30, 2018</p>
           <ul class="short-article">
-            <li>Added support for PostgreSQL 10 objects and clauses:<br>
-            - table columns GENERATED AS IDENTITY;<br>
-            - partitioned tables;<br>
-            - data type used by SEQUENCE;<br>
-            - TRIGGER REFERENCING TABLE.</li>
-            <li>Improved processing of inherited columns and their properties, including partitioned tables.</li>
-            <li>Added handling for foreign key to referenced table's unique index dependency.</li>
-            <li>Added support for declaring constraints within table column definitions (syntactic sugar).</li>
-            <li>Information gathered by the project builder (project files object indices) is now retained between restarts. Full project rebuilds will now happen only when user requests them.</li>
-            <li>Added New SQL Object wizard.</li>
-            <li>Improved test data generation wizard.</li>
-            <li>Added an option to settings and to CLI to CREATE INDEX CONCURRENTLY.</li>
-            <li>Outline view for SQL editor can now be filtered to show dangerous statements and can also be sorted by object name.</li>
-            <li>When an object has no explicit privileges, default privileges will be generated instead of revoking everything.</li>
-            <li>Scripts now always set search_path, regardless of the first object's schema.</li>
-            <li>Potential parser errors no longer prevent SQL editor from opening.</li>
+            <li>Project editor shows last change author for projects in git repositories.<br>
+            <li>Last change lookup uses <i>git log ‑‑full‑history ‑‑no‑merges</i> algorithm which results may differ from the standard one.<br>
+            <li>This functionality may be disabled in pgCodeKeeper project editor settings.</li>
+            <li>Added support for column OPTIONs in CREATE FOREIGN TABLE. Added support for CREATE RECURSIVE VIEW.</li>
+            <li>JDBC-loader now notifies of errors due to outdated helper functions installed in the DB, and also permission denied errors for SEQUENCE objects.</li>
+            <li>Fixed an error when reading privileges with special-character-containing user names via JDBC.</li>
+            <li>Fixed errors when building project indices and when restoring them after Eclipse restart.</li>
+            <li>SQL-editor's Outline will now open with correct filter states after it was closed.</li>
           </ul>
         </div>
         

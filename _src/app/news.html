@@ -42,6 +42,27 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.2.3" id="pgCodeKeeper-4.2.3">pgCodeKeeper 4.2.3</h4>
+    <p class="date">February 13, 2018</p>
+    <ul class="short-article">
+      <li>Mock data wizard improvements:<br>
+      - added support for more types: numeric, time, timestamptz;<br>
+      - added support for type aliases (varchar etc);<br>
+      - test data insert code can now be generated with explicit type casts for each value;<br>
+      - improved and cleared up error messages about incorrect input values;<br>
+      - added <i>"any"</i> generator, that allows any expressions or values and uses them "as is;"<br>
+      - user may now select and delete many columns at once;<br>
+      - the wizard is now accessible via Project Explorer's and SQL Editor's context menus for table files, it is also still accessible via <i>File - New</i>.</li>
+      <li>New SQL object wizard improvements:<br>
+      - object name and location are now entered as a single string with dot-separators;<br>
+      - object name field is filled with default values from current context and is focused by default;<br>
+      - useless dummy owner code is no longer generated.</li>
+      <li>Project Editor now has history of previously used filters. Filtering is slightly delayed now to reduce UI hitches when filtering large change-sets. Added object container filter.</li>
+      <li>Fixed project import when <i>.pgcodekeeper</i> file is missing. Also any Eclipse project may be converted into pgCodeKeeper project now (via Configure menu).</li>
+      <li>Fixed an error when parsing qualified opclass in CREATE INDEX.</li>
+      <li>Fixed an error when parsing implicit row constructor in expressions.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.2.1" id="pgCodeKeeper-4.2.1">pgCodeKeeper 4.2.1</h4>
     <p class="date">January 30, 2018</p>
     <ul class="short-article">

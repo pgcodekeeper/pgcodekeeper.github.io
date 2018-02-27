@@ -84,6 +84,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.3.0" id="pgCodeKeeper-4.3.0">pgCodeKeeper 4.3.0</h4>
+    <p class="date">February 27, 2018</p>
+    <ul class="short-article">
+      <li>Added <a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/'><i>pg_dbo_timestamp</i></a> extension support. This extension gathers information about DB objects DDL modifications.<br>
+      pgCodeKeeper project editor settings now contain an option to show DB users who modified the objects that were found to differ.<br>
+      In the future we plan to speed up JDBC schema reads by using this extension.</li>
+      <li>Project editor can now filter objects by users who made changes in git or database.</li>
+      <li>New SQL object wizard will now try to deduce object name and location from context. Inputting object's name and type has been improved, unwanted focus shifts fixed.</li>
+      <li>Mock data wizard now has a button to remove all optional (not-NOT NULL) columns.</li>
+      <li>Project editor's filter history now shows automatically when typing.</li>
+      <li>SQL editor now suggests adding builder for file's project if it is absent.</li>
+      <li>Fixed an error when reading SEQUENCE objects from PostgreSQL 10.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.2.3" id="pgCodeKeeper-4.2.3">pgCodeKeeper 4.2.3</h4>
     <p class="date">February 13, 2018</p>
     <ul class="short-article">

@@ -42,6 +42,21 @@
   <div id="release-block" class="container">
     <h1>Обновления</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.3.3" id="pgCodeKeeper-4.3.3">pgCodeKeeper 4.3.3</h4>
+    <p class="date">March 14, 2018</p>
+    <ul class="short-article">
+      <li>Документация продукта перенесена из Eclipse Help System в отдельный проект на <a href='http://pgcodekeeper.readthedocs.io/'>Read the Docs</a>.</li>
+      <li>В редактор SQL добавлен поиск и создание ссылок на используемые в представлениях (VIEW) объекты. Для инициализации ссылок в существующих файлах пересоберите или очистите (Clean) проект.</li>
+      <li>Обновлено расширение <a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/'><i>pg_dbo_timestamp</i></a>. Исправлена ошибка при работе на PostgreSQL 10, добавлено сохранение дополнительной информации о событиях. Начиная с этого выпуска, pgCodeKeeper будет работать с расширением версии 0.0.2 или выше.</li>
+      <li>Восстановлена работа обратной связи из программы.</li>
+      <li>Улучшена работа с именами в кавычках в мастере новых объектов.</li>
+      <li>JDBC запросы чтения схемы БД улучшены для избежания совпадений между именами внутренних PostgreSQL и пользовательских объектов.</li>
+      <li>Исправлена ошибка при поиске автора файла в пустом git репозитории.</li>
+      <li>Исправлена ошибка при создании проекта в директории с уже существующими настройками.</li>
+      <li>Исправлена ошибка, превращавшая serial SEQUENCE в IDENTITY на PostgreSQL 10.</li>
+      <li>Исправлены ошибочные предложения добавить сборщик для не-pgCodeKeeper проектов.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.3.0" id="pgCodeKeeper-4.3.0">pgCodeKeeper 4.3.0</h4>
     <p class="date">27 февраля 2018</p>
     <ul class="short-article">

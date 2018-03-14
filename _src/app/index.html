@@ -176,18 +176,19 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-4.3.0" id="pgCodeKeeper-4.3.0">pgCodeKeeper 4.3.0</h4>
-          <p class="date">February 27, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-4.3.3" id="pgCodeKeeper-4.3.3">pgCodeKeeper 4.3.3</h4>
+          <p class="date">March 14, 2018</p>
           <ul class="short-article">
-            <li>Added <a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/'><i>pg_dbo_timestamp</i></a> extension support. This extension gathers information about DB objects DDL modifications.<br>
-            pgCodeKeeper project editor settings now contain an option to show DB users who modified the objects that were found to differ.<br>
-            In the future we plan to speed up JDBC schema reads by using this extension.</li>
-            <li>Project editor can now filter objects by users who made changes in git or database.</li>
-            <li>New SQL object wizard will now try to deduce object name and location from context. Inputting object's name and type has been improved, unwanted focus shifts fixed.</li>
-            <li>Mock data wizard now has a button to remove all optional (not-NOT NULL) columns.</li>
-            <li>Project editor's filter history now shows automatically when typing.</li>
-            <li>SQL editor now suggests adding builder for file's project if it is absent.</li>
-            <li>Fixed an error when reading SEQUENCE objects from PostgreSQL 10.</li>
+            <li>Product documentation has been moved out of Eclipse Help System into a separate <a href='http://pgcodekeeper.readthedocs.io/'>Read the Docs</a> project.</li>
+            <li>SQL editor now searches and creates links for objects referenced by VIEWs. To initialize these links, rebuild or clean your projects.</li>
+            <li><a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/'><i>pg_dbo_timestamp</i></a> extension has been updated. A crash on PostgreSQL 10 has been fixed and additional data is now saved for events. From this release pgCodeKeeper supports extension of version 0.0.2 or above.</li>
+            <li>In-product feedback function was not working and has been restored.</li>
+            <li>Improved quoted identifier handling by New Object wizard.</li>
+            <li>JDBC DB schema read queries have been secured against naming conflicts between internal PostgreSQL and user objects.</li>
+            <li>Fixed an error while searching for file author in an empty git repository.</li>
+            <li>Fixed an error when creating a project in a directory with existing settings.</li>
+            <li>Fixed an error where serial SEQUENCEs turned into IDENTITY's on PostgreSQL 10.</li>
+            <li>Fixed erroneous suggestions to add builder for non-pgCodeKeeper projects.</li>
           </ul>
         </div>
         

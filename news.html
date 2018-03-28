@@ -84,10 +84,21 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.3.4" id="pgCodeKeeper-4.3.4">pgCodeKeeper 4.3.4</h4>
+    <p class="date">March 28, 2018</p>
+    <ul class="short-article">
+      <li>Improved DB Store: added per-DB ignored objects lists, a read-only DB setting, a connection tester, and <i>.pgpass</i> import functionality. Changed internal storage format for easier expansion and maintenance.</li>
+      <li>Improved JDBC SQL-queries cancelability, such as DB schema reads. When cancelling such operations they will now terminate immediately after cancelling their current DB query.</li>
+      <li>Fixed an error where identifiers in RETURNS TABLE clause weren't properly quoted.</li>
+      <li>Dollar quotes are now supported in any places in SQL code where strings are valid.</li>
+      <li>Updated the list of keywords used for highlighting in SQL editor.</li>
+      <li>Object links drop-down in SQL editor now shows project-relative paths.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.3.3" id="pgCodeKeeper-4.3.3">pgCodeKeeper 4.3.3</h4>
     <p class="date">March 14, 2018</p>
     <ul class="short-article">
-      <li>Product documentation has been moved out of Eclipse Help System into a separate <a href='http://pgcodekeeper.readthedocs.io/en/latest/'>Read the Docs</a> project.</li>
+      <li>Product documentation has been moved out of Eclipse Help System into a separate <a href='http://pgcodekeeper.readthedocs.io/'>Read the Docs</a> project.</li>
       <li>SQL editor now searches and creates links for objects referenced by VIEWs. To initialize these links, rebuild or clean your projects.</li>
       <li><a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/'><i>pg_dbo_timestamp</i></a> extension has been updated. A crash on PostgreSQL 10 has been fixed and additional data is now saved for events. From this release pgCodeKeeper supports extension of version 0.0.2 or above.</li>
       <li>In-product feedback function was not working and has been restored.</li>

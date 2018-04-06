@@ -3,38 +3,11 @@
   /* Event Handlers */
   $(document).ready(function() {
     var lang = document.documentElement.lang;
-    initGoogleCustomSearch(lang);
     initPopover();
     copyLinkToClipboardByClick(lang);
     hideNavbarTopByClick();
     hideScrollArrow();
   });
-
-  // Google Custom Search
-  function initGoogleCustomSearch(lang) {
-    var cxRu = '014950911206763670650:gwdcg5iudkg';
-    var cxEn = '014950911206763670650:6q6syg-tntw';
-    var placeholderRu = 'Поиск';
-    var placeholderEn = 'Search';
-
-    var cx = lang === 'en' ? cxEn : cxRu;
-    var placeholder = lang === 'en' ? placeholderEn : placeholderRu;
-
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-
-    var changeGcsPlaceholder = function(value) {
-      setTimeout(function() {
-        $('.gsc-input').attr('placeholder', value);
-      }, 1000);
-    };
-
-    changeGcsPlaceholder(placeholder);
-  }
 
   // Popover
   function initPopover() {
@@ -84,11 +57,7 @@
   function hideNavbarTopByClick() {
     $(document).click(function(e) {
       if ((window.innerWidth <= 992) && jQuery('.navbar-collapse').hasClass('collapse in')) {
-        if (!$(e.target).is('input')) {
-          if (!$(e.target).hasClass('gsc-clear-button')) {
-            $('.collapse').collapse('hide');
-          }
-        }
+        $('.collapse').collapse('hide');
       }
     });
   }

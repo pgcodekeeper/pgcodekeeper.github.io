@@ -176,15 +176,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-4.3.4" id="pgCodeKeeper-4.3.4">pgCodeKeeper 4.3.4</h4>
-          <p class="date">March 28, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-4.4.0" id="pgCodeKeeper-4.4.0">pgCodeKeeper 4.4.0</h4>
+          <p class="date">April 11, 2018</p>
           <ul class="short-article">
-            <li>Improved DB Store: added per-DB ignored objects lists, a read-only DB setting, a connection tester, and <i>.pgpass</i> import functionality. Changed internal storage format for easier expansion and maintenance.</li>
-            <li>Improved JDBC SQL-queries cancelability, such as DB schema reads. When cancelling such operations they will now terminate immediately after cancelling their current DB query.</li>
-            <li>Fixed an error where identifiers in RETURNS TABLE clause weren't properly quoted.</li>
-            <li>Dollar quotes are now supported in any places in SQL code where strings are valid.</li>
-            <li>Updated the list of keywords used for highlighting in SQL editor.</li>
-            <li>Object links drop-down in SQL editor now shows project-relative paths.</li>
+            <li>New feature: libraries in pgCodeKeeper projects. Other project directories, dump files, directories with SQL files, and JDBC connection strings can all be added as libraries.</li>
+            <li>Users may now turn off SQL editor's SQL parser for unrelated files stored in pgCodeKeeper projects. This option is available in project settings.</li>
+            <li>Fixed the message shown when SQL scripts executes with an error.</li>
+            <li>Fixed a compatibility error with Eclipse Neon.3.</li>
           </ul>
         </div>
         

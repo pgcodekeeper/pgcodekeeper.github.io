@@ -42,6 +42,18 @@
   <div id="release-block" class="container">
     <h1>Обновления</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.5.0" id="pgCodeKeeper-4.5.0">pgCodeKeeper 4.5.0</h4>
+    <p class="date">25 апреля 2018</p>
+    <ul class="short-article">
+      <li>В списках исключенных объектов теперь возможно указать типы объектов, к которым применяется правило. Подробности в <a href='http://pgcodekeeper.readthedocs.io/en/latest/preferences.html#ignoredobjects'>документации</a>.</li>
+      <li>Библиотеки проектов pgCodeKeeper:<br>
+      - структура библиотек теперь отображаются в дереве <i>Project Explorer</i>;<br>
+      - добавлено представление <i>Переопределенные объекты</i>, отображающее переопределения объектов в текущем редакторе проекта;<br>
+      - библиотечные объекты в таблице различий редактора проекта теперь отмечаются иконкой.</li>
+      <li>Улучшен анализ выражений SQL (в SELECT и других value expression). Благодаря этому теперь определяются зависимости выражений от конкретной функции из нескольких перегруженных, а также от колонок, выбранных звездочкой (SELECT * FROM ...).</li>
+      <li>Логи CLI версии теперь записываются в один файл в директории пользователя. Это поведение можно изменить в скрипте запуска CLI.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.4.0" id="pgCodeKeeper-4.4.0">pgCodeKeeper 4.4.0</h4>
     <p class="date">11 апреля 2018</p>
     <ul class="short-article">

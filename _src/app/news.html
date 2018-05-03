@@ -136,8 +136,8 @@
     <h4><span class="anchor" name="pgCodeKeeper-3.8.0" id="pgCodeKeeper-3.8.0"></span>pgCodeKeeper 3.8.0</h4>
     <p class="date">December 6, 2016</p>
     <ul class="short-article">
-      <li>Another JDBC DB reader mode has been added. This mode usage increases the performance when working with DBs
-        containing a large number of schemes and while using limited bandwith connections. To use it, it is necessary to
+      <li>Another JDBC DB reader mode has been added. This mode improves performance when working with DBs
+        containing large number of schemas and while using limited bandwith connections. To use it, it is necessary to
         install "helper" stored procedures in the DB being read. To do so, open pgCodeKeeper perspective (Window -
         Perspective), choose pgCodeKeeper - Install JDBC Performance Helpers in the main menu and apply the script to
         the DB in question. After this the new enhanced reader will be used automatically with this DB.
@@ -196,20 +196,20 @@
           https://www.postgresql.org/docs/9.3/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
         </a>.
       </li>
-      <li>Option of sending messages to the developers directly from the programme has been implemented. To send
-        messages use the pgCodeKeeper perspective in the Eclipse, choose the pgCodeKeeper menu option — Feedback.
+      <li>Option of sending messages to the developers directly from the program has been implemented. To send
+        messages use the pgCodeKeeper perspective in the Eclipse, choose the menu option pgCodeKeeper — Feedback.
       </li>
       <li>Interface for working with DB connection data has been improved.</li>
-      <li>The DB objects priviliges reading error has been eliminated.</li>
-      <li>Other correction.</li>
+      <li>The DB objects priviliges reading error has been fixed.</li>
+      <li>Other fixes.</li>
     </ul>
 
     <h4><span class="anchor" name="pgCodeKeeper-3.6.0" id="pgCodeKeeper-3.6.0"></span>pgCodeKeeper 3.6.0</h4>
     <p class="date">August 12, 2016</p>
     <ul class="short-article">
       <li>Object dependencies storage method has been modified, which made it possible to add the object dependencies from the RULE statements.</li>
-      <li>When generating the migration script, the dependent columns indexes are now correctly taken into account.</li>
-      <li>The analysis of the type definition with the INTERNALLENGTH attribute has been updated.</li>
+      <li>When generating migration script, the dependent columns indexes are now correctly taken into account.</li>
+      <li>Parsing of type definitions with INTERNALLENGTH attribute has been fixed.</li>
       <li>The cases of false differences display in stored procedures that return the jsonb type and in the tables using
         nextval with a value in double quotes as a default value have been updated.
       </li>
@@ -218,7 +218,7 @@
     <h4><span class="anchor" name="pgCodeKeeper-3.5.4" id="pgCodeKeeper-3.5.4"></span>pgCodeKeeper 3.5.4</h4>
     <p class="date">July 25, 2016</p>
     <ul class="short-article">
-      <li>Altered privileges handling has been improved: REVOKE is generated explicitly for remote GRANT.</li>
+      <li>Altered privileges handling has been improved: REVOKE is generated explicitly for deleted GRANT.</li>
       <li>The objects random shuffling bug occurring in the project when reexporting has been fixed — now the object
         order in the table file is specified explicitly.
       </li>
@@ -231,21 +231,21 @@
     <h4><span class="anchor" name="pgCodeKeeper-3.5.1" id="pgCodeKeeper-3.5.1"></span>pgCodeKeeper 3.5.1</h4>
     <p class="date">May 18, 2016</p>
     <ul class="short-article">
-      <li>PostgreSQL support of <a href="http://www.postgresql.org/docs/9.3/static/sql-createrule.html">RULE</a> (rules)</li>
-      <li>Optimizing and improving of operation speed, rework SQL parser. According to estimates, the parser working
-        time has decreased by factor of 4, the required memory (heap) has decreased by factor of 2.
+      <li>Support for PostgreSQL <a href="http://www.postgresql.org/docs/9.3/static/sql-createrule.html">RULE</a> objects</li>
+      <li>SQL parser rework, optimization and performance enhancements. Optimization estimates:
+        parsing speed increased by a factor of 4, required memory reduced by a factor of 2.
       </li>
-      <li>Optimizing and refactor of the SQL parser. The rules of parsing expressions and SELECT have been rewritten to
-        the left-recursive form. Parsing ambiguity errors in these rules have been eliminated.
+      <li>Optimized and refactored SQL parser. SELECT and expression parse rules were rewritten using left-recursion.
+        Eliminated parsing ambiguities in these rules.
       </li>
       <li>SELECT dependences analyzer has been entirely rewritten.</li>
-      <li>Reading of the compared DBs sources has been done in parallel.</li>
-      <li>You can copy the saved set of elements in the form of the RegEx filter.</li>
-      <li>Transition to the object definition in the SQL editor has been updated.</li>
+      <li>Reading of the compared DB sources is now done in parallel.</li>
+      <li>You can copy saved set of elements in the form of the RegEx filter.</li>
+      <li>Transition to the object definition in the SQL editor has been fixed.</li>
       <li>Colour highlighting of the editor tabs is optional.</li>
-      <li>Helpful information has been updated.</li>
+      <li>Help has been updated.</li>
       <li>JDBC errors reports have been improved.</li>
-      <li>Other minor corrections, mostly connected with the parser.</li>
+      <li>Other minor corrections, mostly related to the parser.</li>
     </ul>
 
     <h4><span class="anchor" name="pgCodeKeeper-3.4.1" id="pgCodeKeeper-3.4.1"></span>pgCodeKeeper 3.4.1</h4>
@@ -255,8 +255,8 @@
     </ul>
   </div>
 
-  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
-  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+  <div class="go-up" title="Up" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Down" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
 
   <!-- footer -->
   //= templates/partials/footer.html

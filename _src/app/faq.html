@@ -40,17 +40,14 @@
       <ul>
         <li><p><a href="#why-need-jdk">Why JDK?</a></p></li>
         <li><p><a href="#why-need-eclipse">Why Eclipse?</a></p></li>
-        <li><p><a href="#problem-with-interface">Problem with displaying a user interface in GNU/Linux</a></p></li>
-        <li><p><a href="#license">License file maintenance</a></p></li>
-        <li><p><a href="#encoding">Why do I need to specify the encoding when creating a project?</a></p></li>
-        <li><p><a href="#choose-time-zone">What time zone to choose?</a></p></li>
-        <li><p><a href="#line-breaks">Dealing with line breaks.</a></p></li>
+        <li><p><a href="#choose-time-zone">Project time zone</a></p></li>
+        <li><p><a href="#line-breaks">Dealing with line breaks</a></p></li>
         <li><p><a href="#making-change">Making changes in the project, potential problems</a></p></li>
       </ul>
       <div role="presentation" class="line"></div>
 
       <p class="question"><span class="anchor" name="why-need-jdk" id="why-need-jdk"></span>Why JDK?</p>
-      <p class="answer">pgCodeKeeper is an Eclipse IDE plugin, which runs on Java Virtual Machine. 
+      <p class="answer">pgCodeKeeper is an Eclipse IDE plug-in, which runs on Java Virtual Machine. 
         You can install either JRE or JDK depending on your Eclipse build. If you plan to use Eclipse
         for Java development, the best choice would probably be to use JDK instead of JRE.
         <br>
@@ -61,88 +58,56 @@
       <br>
 
       <p class="question"><span class="anchor" name="why-need-eclipse" id="why-need-eclipse"></span>Why Eclipse?</p>
-      <p class="answer">Eclipse is a «tool for developing tools».
+      <p class="answer">Eclipse is an open source platform for IDE development.
+        It is designed as a base upon which various IDEs can be built.
         <br>
-        The Eclipse platform is a basis for constructing and starting the integrated development tools. It consists of
-        the components with the open source code.
+        Using Eclipse allows us to concentrate efforts on our main task which is database schema development.
+        This way basic IDE functionality such as workbench UI, workspaces, projects, VCS support
+        is provided to us by the platform and its plug-ins out of the box.
         <br>
-        Using the Eclipse allows us to concentrate on the implement of the requested product`s business functions
-        without the necessity to implement the application helper functions (provided by the Eclipse).
-        <br>
-        Learn more: <a href="https://www.ibm.com/developerworks/ru/library/os-eclipse/">https://www.ibm.com/developerworks/ru/library/os-eclipse/</a>
+        Learn more: <a href="https://www.ibm.com/developerworks/ru/library/os-eclipse/">ru</a>;
+        <a href='http://web.archive.org/web/20090705081427/http://www.ibm.com/developerworks/library/os-eclipse.html'>en (archived)</a>
       </p>
       <br>
 
-      <p class="question"><span class="anchor" name="problem-with-interface" id="problem-with-interface"></span>Problem with displaying a user interface in GNU/Linux</p>
-      <p class="answer">Problems with displaying elements of the Eclipse user interface have been found out on some
-        working places running GNU/Linux and GTK3.
+      <p class="question"><span class="anchor" name="choose-time-zone" id="choose-time-zone"></span>Project time zone</p>
+      <p class="answer">All developers working on the same project should specify the same time zone when creating or importing the project.
         <br>
-        To troubleshoot you can forbid the Eclipse platform to use GTK3. You can do this setting the SWT_GTK3
-        environment variable equal to zero.
-      </p>
-      <pre><code>SWT_GTK3=0 eclipse</code></pre>
-      <p class="answer">Learn more:
-        <a href="https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3">https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3</a>
+        This time zone is used for database connections and will influence certain values in the schema when migrating it 
+        to or from the database.
+        <br>
+        For example, default values of <i>time with time zone</i> fields will be affected.
       </p>
       <br>
 
-      <p class="question"><span class="anchor" name="license" id="license"></span>License file maintenance</p>
-      <p class="answer">After getting the license file you must copy the license to some safe place on the local
-        computer, where pgCodeKeeper is run. In the application settings (Window — Preferences — pgCodeKeeper — License)
-        you need to choose the path to the preliminarily saved license file.
+      <p class="question"><span class="anchor" name="line-breaks" id="line-breaks"></span>Dealing with line breaks</p>
+      <p class="answer">New projects are created with "Force Unix newlines" option turned on by default. You may turn this off in the project settings.
         <br>
-        The license file is not maintained by the application (that is it is not copied into the internal application
-        structures); the responsibility for the license files safety rests entirely with the end user.
-      </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="encoding" id="encoding"></span>Why do I need to specify the encoding when creating a project?</p>
-      <p class="answer">Project files are created with the encoding used by the operating system by default. It is
-        Windows-1251 for Windows and UTF8 — for GNU/Linux. If the DB encoding differs from the local one on the user's
-        computer, it can happen that the national symbols will be displayed in the project incorrectly or will be lost.
-        To avoid this make sure that the project files encoding corresponds with the database encoding.
-      </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="choose-time-zone" id="choose-time-zone"></span>What time zone to choose?</p>
-      <p class="answer">If you develop on working places situated in different time zones, you should choose the same
-        time zone for all computers. Otherwise, part of the DDL code, received from the DB, can differ on the users'
-        computers (e.g. where the string literals are used in the function of time tag constants).
+        This is done to unify newline format of raw user strings, such as object comments, function bodies, etc, across developers' environments.
         <br>
-        By default, JDBC-driver installs the connection time zone into the local computer time zone (not the DB server),
-        that's why it is important to set the same time zone in the project explicitly.
-      </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="line-breaks" id="line-breaks"></span>Dealing with line breaks.</p>
-      <p class="answer">The project is created with the option of using the line breaks in the Unix style. It is done to
-        unify several users' work on the project files on potentially different operating systems.
+        You may want to set up this behaviour in your VSC as well.
         <br>
-        If you use GIT, don't forget to switch on the line endings' convertion setting in your Unix-style project:
-      </p>
-      <pre><code>text eol=lf</code></pre>
-      <p class="answer">Note:
-        <a href="https://help.github.com/articles/dealing-with-line-endings/">https://help.github.com/articles/dealing-with-line-endings/</a>
+        Learn more: <a href="https://help.github.com/articles/dealing-with-line-endings/">https://help.github.com/articles/dealing-with-line-endings/</a>
       </p>
       <br>
 
       <p class="question"><span class="anchor" name="making-change" id="making-change"></span>Making changes in the project, potential problems</p>
-      <p class="answer">Project files follow the predefined structure and naming rules. If you create project files
-        manually or edit the existing ones, you can potentially create a situation when the parser won't be able to
-        handle the modified files.
+      <p class="answer">Project files and directories follow predefined structure and naming rules. If you create project files
+        manually or edit the existing ones, you can end up in a situation where the parser won't be able to
+        handle the modified files or the structure.
         <br>
-        Anyway, if you want to use pgCodeKeeper in the function of an editor — create new objects in the DB, but edit
-        them in the project. It will save you from potential mistakes when creating files or DB objects' checksums.
+        You should try and mimic pgCodeKeeper's project structure when editing objects manually.
+        Also you may use New Object Wizard to create new objects in their proper project locations. 
       </p>
 
-      <p class="no_answer">Haven't found the answer to the right question? Write to the
-        <a href="mailto:codekeeper@chelny.taximaxim.ru">technical support service</a>, and we will definitely reply.
+      <p class="no_answer">Haven't found the answer to your question? Contact us via 
+        <a href="mailto:codekeeper@chelny.taximaxim.ru">e-mail</a> and we will get back to you.
       </p>
     </div>
   </div>
 
-  <div class="go-up" title="Вверх" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
-  <div class="go-down" title="Вниз" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+  <div class="go-up" title="Up" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Down" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
 
   <!-- footer -->
   //= templates/partials/footer.html

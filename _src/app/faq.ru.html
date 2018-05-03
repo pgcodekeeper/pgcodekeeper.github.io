@@ -1,3 +1,5 @@
+<!-- TODO: outdated content, see english version -->
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -40,11 +42,8 @@
       <ul>
         <li><p><a href="#why-need-jdk">Зачем нужен JDK?</a></p></li>
         <li><p><a href="#why-need-eclipse">Зачем нужен Eclipse?</a></p></li>
-        <li><p><a href="#problem-with-interface">Проблема с отображением пользовательского интерфейса в GNU/Linux</a></p></li>
-        <li><p><a href="#license">Обслуживание файла лицензии</a></p></li>
-        <li><p><a href="#encoding">Зачем нужно указывать кодировку при создании проекта?</a></p></li>
         <li><p><a href="#choose-time-zone">Какую временную зону выбрать?</a></p></li>
-        <li><p><a href="#line-breaks">Особенности работы с переносами строк.</a></p></li>
+        <li><p><a href="#line-breaks">Особенности работы с переносами строк</a></p></li>
         <li><p><a href="#making-change">Внесение изменений в проект, потенциальные проблемы</a></p></li>
       </ul>
       <div role="presentation" class="line"></div>
@@ -72,37 +71,6 @@
         <br>
         Подробнее: <a href="https://www.ibm.com/developerworks/ru/library/os-eclipse/">https://www.ibm.com/developerworks/ru/library/os-eclipse/</a>
       </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="problem-with-interface" id="problem-with-interface"></span>Проблема с отображением пользовательского интерфейса в GNU/Linux</p>
-      <p class="answer">На части рабочих мест под управлением GNU/Linux и GTK3 были обнаружены проблемы с отображением
-        элементов пользовательского интерфейса Eclipse.
-        <br>
-        Для устранения этих проблем вы можете запретить платформе Eclipse использовать GTK3. Сделать это можно, выставив
-        переменную среды окружения SWT_GTK3 равной нулю.
-      </p>
-      <pre><code>SWT_GTK3=0 eclipse</code></pre>
-      <p class="answer">Подробнее:
-        <a href="https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3">https://wiki.archlinux.org/index.php/eclipse#Disable_GTK.2B_3</a>
-      </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="license" id="license"></span>Обслуживание файла лицензии</p>
-      <p class="answer">После получения файла лицензии вы должны скопировать лицензию в безопасное место на локальном
-        компьютере, где запускается pgCodeKeeper. В настройках приложения (Window - Preferences - pgCodeKepeer -
-        Лицензия) нужно выбрать путь до предварительно сохраненного файла лицензии.
-        <br>
-        Файл лицензии не обслуживается приложением (то есть, не копируется во внутренние структуры приложения);
-        ответственность за сохранность файла лицензии лежит полностью на конечном пользователе.
-      </p>
-      <br>
-
-      <p class="question"><span class="anchor" name="encoding" id="encoding"></span>Зачем нужно указывать кодировку при создании проекта?</p>
-      <p class="answer">Файлы проекта создаются в кодировке, используемой операционной системой по умолчанию. Для
-        Windows - это Windows-1251, для GNU/Linux - UTF8. Если кодировка БД отличается от локальной на компьютере
-        пользователя, то может получиться так, что национальные символы будут некорректно отображаться в проекте или
-        будут потеряны. Чтобы этого не случилось, убедитесь, что кодировка файлов проекта соответствует кодировке базы
-        данных.</p>
       <br>
 
       <p class="question"><span class="anchor" name="choose-time-zone" id="choose-time-zone"></span>Какую временную зону выбрать?</p>

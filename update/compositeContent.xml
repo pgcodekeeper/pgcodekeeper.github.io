@@ -2,29 +2,17 @@
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='pgCodeKeeper Central Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1526382575907'/>
+    <property name='p2.timestamp' value='1526382575908'/>
     <property name='p2.atomic.composite.loading' value='true'/>
   </properties>
-  <children size='20'>
+  <children size='8'>
     <child location='3.11.5.201709051522'/>
-    <child location='4.0.0.201709111327'/>
-    <child location='4.1.0.201709251330'/>
-    <child location='4.1.1.201710031120'/>
-    <child location='4.1.2.201711220652'/>
     <child location='4.1.3.201712191525'/>
-    <child location='4.2.0.201801160800'/>
-    <child location='4.2.1.201801300838'/>
-    <child location='4.2.2.201801301313'/>
     <child location='4.2.3.201802130732'/>
-    <child location='4.3.0.201802271302'/>
-    <child location='4.3.1.201803010751'/>
-    <child location='4.3.2.201803061223'/>
-    <child location='4.3.3.201803140635'/>
     <child location='4.3.4.201803281129'/>
     <child location='4.4.0.201804111044'/>
     <child location='4.5.0.201804251448'/>
     <child location='4.5.1.201805150641'/>
-    <child location='4.5.1.201805151040'/>
     <child location='4.5.2.201805151100'/>
   </children>
 </repository>

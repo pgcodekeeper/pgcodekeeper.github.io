@@ -176,21 +176,16 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-4.5.1" id="pgCodeKeeper-4.5.1">pgCodeKeeper 4.5.1</h4>
-          <p class="date">May 15, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-4.5.3" id="pgCodeKeeper-4.5.3">pgCodeKeeper 4.5.3</h4>
+          <p class="date">May 30, 2018</p>
           <ul class="short-article">
-            <li>pgCodeKeeper is now available in <a href='https://marketplace.eclipse.org/content/pgcodekeeper'>Eclipse Marketplace</a>!</li>
-            <li>Additional ignored objects lists can now be specified in project properties.<br>
-            The lists can be created and modified using editor dialog available in project properties.</li>
-            <li>Compare dialog has been replaced by the standard compare editor.<br>
-            <i>Object overrides</i> view now lets users to compare object versions using this editor.</li>
-            <li>Notification is shown when Get changes operation finds no differences.</li>
-            <li>Parser now supports TRUNCATE, CREATE USER MAPPING commands and FROM clause in UPDATE command.</li>
-            <li>Some internal PostgreSQL functions read data <a href='http://archives.postgresql.org/pgsql-bugs/2010-02/msg00187.php'>outside current transaction snapshot</a>. Security checks have been added to these function calls.</li>
-            <li>When changing libraries their trees in <i>Project Explorer</i> now update automatically.</li>
-            <li>Diff pane in Project editor now uses global preferences to render its SQL editors. This fixes the "zero-width tabs" error on Windows.</li>
-            <li>Improved rendering for checkboxes with very long labels on Windows.</li>
-            <li>Improved dependency analysis performance for VIEWs.</li>
+            <li>Bracket highlighting has been enabled in SQL Editor. This can be customized in SQL Editor section of the global pgCodeKeeper settings.</li>
+            <li>DB connection parameters UI has been improved. It is now possible to specify additional connection properties.</li>
+            <li>Column dependencies in expressions are now recognized in cases where columns are referenced without being qualified by their table names, e.g. in SELECT and index expressions.</li>
+            <li>Fixed an issue with increased memory consumption introduced in version 4.5.0.</li>
+            <li>Improved notifications' look in Project Editor.</li>
+            <li>Fixed broken association between SQL files and SQL editor. (4.5.2)</li>
+            <li>Fixed JDBC failover failing when server helper function forces transaction into an error state. (4.5.2)</li>
           </ul>
         </div>
         

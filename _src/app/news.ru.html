@@ -42,6 +42,17 @@
   <div id="release-block" class="container">
     <h1>Обновления</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.6.0" id="pgCodeKeeper-4.6.0">pgCodeKeeper 4.6.0</h4>
+    <p class="date">21 июня 2018</p>
+    <ul class="short-article">
+      <li>Добавлена поддержка объектов TEXT SEARCH: CONFIGURATION, DICTIONARY, PARSER, TEMPLATE. Отслеживание этих объектов добавлено в расширение <i>pg_dbo_timestamp</i>.</li>
+      <li>Обновлено расширение <a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/releases/tag/v1.0.0'><i>pg_dbo_timestamp</i></a> для обхода проблемы с отслеживанием изменений в привилегиях объектов. Это позволяет использовать расширение для ускорения чтения схемы БД в pgCodeKeeper. Для включения этого режима работы в общие настройки добавлена соответствующая опция. Эта же опция управляет отображением пользователя БД, изменившего объект.</li>
+      <li>Исправлены ошибки в SEQUENCE, прочитанных с помощью хелпер-функций на PostgreSQL 10.</li>
+      <li>Улучшен интерфейс редактирования списков исключенных объектов.</li>
+      <li>Исправлена подсветка многострочных строковых литералов в редакторе SQL.</li>
+      <li>В парсер добавлена поддержка команды IMPORT FOREIGN SCHEMA.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.5.3" id="pgCodeKeeper-4.5.3">pgCodeKeeper 4.5.3</h4>
     <p class="date">30 мая 2018</p>
     <ul class="short-article">

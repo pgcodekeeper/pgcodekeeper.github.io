@@ -80,6 +80,17 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-4.6.0" id="pgCodeKeeper-4.6.0">pgCodeKeeper 4.6.0</h4>
+    <p class="date">June 21, 2018</p>
+    <ul class="short-article">
+      <li>Added support from TEXT SEARCH objects: CONFIGURATION, DICTIONARY, PARSER, TEMPLATE. These objects are now also tracked by <i>pg_dbo_timestamp</i> extension.</li>
+      <li><a href='https://github.com/pgcodekeeper/pg_dbo_timestamp/releases/tag/v1.0.0'><i>pg_dbo_timestamp</i></a> extension has been updated to work around the issue of object privilege tracking. This fix allows pgCodeKeeper to use the extension to speed up DB schema reads. An option has been added to general settings to enable this behaviour. It also enables showing DB users who last modified objects that were found to differ.</li>
+      <li>Fixed errors in SEQUENCEs that were read using helper-functions on PostgreSQL 10.</li>
+      <li>Improved Ignored objects list editor UI.</li>
+      <li>Fixed highlight of multi-line string literals in SQL editor.</li>
+      <li>Parser now supports IMPORT FOREIGN SCHEMA command.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.5.3" id="pgCodeKeeper-4.5.3">pgCodeKeeper 4.5.3</h4>
     <p class="date">May 30, 2018</p>
     <ul class="short-article">

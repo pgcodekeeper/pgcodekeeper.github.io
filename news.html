@@ -80,6 +80,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.0.0" id="pgCodeKeeper-5.0.0">pgCodeKeeper 5.0.0</h4>
+    <p class="date">August 1, 2018</p>
+    <ul class="short-article">
+      <li>SQL code generation has been changed. All SQL statements are now created for <i>search_path = pg_catalog</i>. This improves security and stability of generated code, for more information see <a href='https://www.postgresql.org/docs/10/static/release-10-3.html#id-1.11.6.6.5'>PostgreSQL 10.3 changelog</a>.<br>
+      Because of this, differences in name qualification will be found when comparing projects with DBs. Projects need to be updated to the new format by saving these differences.</li>
+      <li>Location of schema SQL files in projects has been changed. They are now stored in their schema directories instead of common SCHEMA directory.<br>
+      When opening older projects pgCodeKeeper will suggest moving schema files to their new location.</li>
+      <li>Using constant <i>search_path</i> for SQL code generation allows JDBC loader to read objects from all schemas with a single query. This greatly improves schema load speeds and allows us to get rid of server helper functions, they are no longer used. Work with <i>pg_dbo_timestamp</i> extension is also greatly sped up.</li>
+      <li>Fixed parsing of nameless function parameter of type <i>character varying</i>. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v4.6.1'>4.6.1</a>)</li>
+      <li>Fixed compatibility with Eclipse 4.8. (4.6.1)</li>
+      <li>Fixed decrementing SEQUENCEs to comply with PostgreSQL 10 implementation. (4.6.1)</li>
+      <li>Fixed CONSTRAINT processing when working with <i>pg_dbo_timestamp</i> extension. (4.6.1)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-4.6.0" id="pgCodeKeeper-4.6.0">pgCodeKeeper 4.6.0</h4>
     <p class="date">June 21, 2018</p>
     <ul class="short-article">

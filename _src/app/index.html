@@ -176,18 +176,18 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.0.0" id="pgCodeKeeper-5.0.0">pgCodeKeeper 5.0.0</h4>
-          <p class="date">August 1, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.1.1" id="pgCodeKeeper-5.1.1">pgCodeKeeper 5.1.1</h4>
+          <p class="date">September 24, 2018</p>
           <ul class="short-article">
-            <li>SQL code generation has been changed. All SQL statements are now created for <i>search_path = pg_catalog</i>. This improves security and stability of generated code, for more information see <a href='https://www.postgresql.org/docs/10/static/release-10-3.html#id-1.11.6.6.5'>PostgreSQL 10.3 changelog</a>.<br>
-            Because of this, differences in name qualification will be found when comparing projects with DBs. Projects need to be updated to the new format by saving these differences.</li>
-            <li>Location of schema SQL files in projects has been changed. They are now stored in their schema directories instead of common SCHEMA directory.<br>
-            When opening older projects pgCodeKeeper will suggest moving schema files to their new location.</li>
-            <li>Using constant <i>search_path</i> for SQL code generation allows JDBC loader to read objects from all schemas with a single query. This greatly improves schema load speeds and allows us to get rid of server helper functions, they are no longer used. Work with <i>pg_dbo_timestamp</i> extension is also greatly sped up.</li>
-            <li>Fixed parsing of nameless function parameter of type <i>character varying</i>. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v4.6.1'>4.6.1</a>)</li>
-            <li>Fixed compatibility with Eclipse 4.8. (4.6.1)</li>
-            <li>Fixed decrementing SEQUENCEs to comply with PostgreSQL 10 implementation. (4.6.1)</li>
-            <li>Fixed CONSTRAINT processing when working with <i>pg_dbo_timestamp</i> extension. (4.6.1)</li>
+            <li>Added support for Microsoft SQL Server as a test phase. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.0'>5.1.0</a>)</li>
+            <li>It is now possible to run T-SQL scripts on MS SQL databases. Scripts are now split into separate commands using parsers which are then sent to DB. For T-SQL scripts commands are executed in batches as instructed by <i>GO</i> separators.</li>
+            <li>Improved T-SQL parser, fixed most of ambiguities remaining in the parser grammar. Improved parser error messages.</li>
+            <li>Added support for MS SQL objects ASSEMBLY, ROLE, USER.</li>
+            <li>DB drop-down lists are now filtered by type (PG/MS) depending on context.</li>
+            <li>Fixed a DB load crash when analysing expressions with references to non-existent objects. Such references now appear as errors in corresponding files.</li>
+            <li>Expression analysis is now performed after all library dependencies have been loaded to avoid errors with objects referencing not-yet-loaded objects.</li>
+            <li>Fixed false difference and incorrect read errors for MS SQL objects.</li>
+            <li>Fixed an error where DEFERRED state of CONSTRAINT TRIGGERs was incorrectly read and written.</li>
           </ul>
         </div>
         

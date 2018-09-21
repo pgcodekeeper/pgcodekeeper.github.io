@@ -42,6 +42,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.1.1" id="pgCodeKeeper-5.1.1">pgCodeKeeper 5.1.1</h4>
+    <p class="date">September 24, 2018</p>
+    <ul class="short-article">
+      <li>Added support for Microsoft SQL Server as a test phase. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.0'>5.1.0</a>)</li>
+      <li>It is now possible to run T-SQL scripts on MS SQL databases. Scripts are now split into separate commands using parsers which are then sent to DB. For T-SQL scripts commands are executed in batches as instructed by <i>GO</i> separators.</li>
+      <li>Improved T-SQL parser, fixed most of ambiguities remaining in the parser grammar. Improved parser error messages.</li>
+      <li>Added support for MS SQL objects ASSEMBLY, ROLE, USER.</li>
+      <li>DB drop-down lists are now filtered by type (PG/MS) depending on context.</li>
+      <li>Fixed a DB load crash when analysing expressions with references to non-existent objects. Such references now appear as errors in corresponding files.</li>
+      <li>Expression analysis is now performed after all library dependencies have been loaded to avoid errors with objects referencing not-yet-loaded objects.</li>
+      <li>Fixed false difference and incorrect read errors for MS SQL objects.</li>
+      <li>Fixed an error where DEFERRED state of CONSTRAINT TRIGGERs was incorrectly read and written.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.0.0" id="pgCodeKeeper-5.0.0">pgCodeKeeper 5.0.0</h4>
     <p class="date">August 1, 2018</p>
     <ul class="short-article">

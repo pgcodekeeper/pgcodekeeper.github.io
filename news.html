@@ -80,6 +80,23 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.1.4" id="pgCodeKeeper-5.1.4">pgCodeKeeper 5.1.4</h4>
+    <p class="date">October 8, 2018</p>
+    <ul class="short-article">
+      <li>Significantly improved SQL parsers coverage.</li>
+      <li>Added an option to use <a href='https://pgcodekeeper.readthedocs.io/ru/latest/windowsauth.html'>Windows authentication</a> when connecting to MS SQL databases.</li>
+      <li>Added a separate New Project Wizard for MS SQL.</li>
+      <li>User formatting is used when processing MS SQL PROCEDURE, FUNCTION, TRIGGER, VIEW objects.</li>
+      <li>Columns are now <a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/12'>UPDATEd</a> before adding a NOT NULL constraint. UPDATE has been added to the dangerous statements list.</li>
+      <li>Improved error logging.</li>
+      <li>Fixed an error when reading MS SQL schema over JDBC while using an unprivileged account.</li>
+      <li>Fixed an error when reading and parsing RULEs with SELECT commands.</li>
+      <li>Fixed an error when parsing a MS SQL USER.</li>
+      <li>Fixed an error when writing non-integer FUNCTION COST and ROWS values. </li>
+      <li>Fixed an error with quotation of procedure parameters' default values in MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.2'>5.1.2</a>)</li>
+      <li>Fixed several errors in MS SQL support. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.3'>5.1.3</a>)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.1.1" id="pgCodeKeeper-5.1.1">pgCodeKeeper 5.1.1</h4>
     <p class="date">September 24, 2018</p>
     <ul class="short-article">

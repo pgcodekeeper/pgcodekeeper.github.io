@@ -176,18 +176,21 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.1.1" id="pgCodeKeeper-5.1.1">pgCodeKeeper 5.1.1</h4>
-          <p class="date">September 24, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.1.4" id="pgCodeKeeper-5.1.4">pgCodeKeeper 5.1.4</h4>
+          <p class="date">October 8, 2018</p>
           <ul class="short-article">
-            <li>Added support for Microsoft SQL Server as a test phase. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.0'>5.1.0</a>)</li>
-            <li>It is now possible to run T-SQL scripts on MS SQL databases. Scripts are now split into separate commands using parsers which are then sent to DB. For T-SQL scripts commands are executed in batches as instructed by <i>GO</i> separators.</li>
-            <li>Improved T-SQL parser, fixed most of ambiguities remaining in the parser grammar. Improved parser error messages.</li>
-            <li>Added support for MS SQL objects ASSEMBLY, ROLE, USER.</li>
-            <li>DB drop-down lists are now filtered by type (PG/MS) depending on context.</li>
-            <li>Fixed a DB load crash when analysing expressions with references to non-existent objects. Such references now appear as errors in corresponding files.</li>
-            <li>Expression analysis is now performed after all library dependencies have been loaded to avoid errors with objects referencing not-yet-loaded objects.</li>
-            <li>Fixed false difference and incorrect read errors for MS SQL objects.</li>
-            <li>Fixed an error where DEFERRED state of CONSTRAINT TRIGGERs was incorrectly read and written.</li>
+            <li>Significantly improved SQL parsers coverage.</li>
+            <li>Added an option to use <a href='https://pgcodekeeper.readthedocs.io/ru/latest/windowsauth.html'>Windows authentication</a> when connecting to MS SQL databases.</li>
+            <li>Added a separate New Project Wizard for MS SQL.</li>
+            <li>User formatting is used when processing MS SQL PROCEDURE, FUNCTION, TRIGGER, VIEW objects.</li>
+            <li>Columns are now <a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/12'>UPDATEd</a> before adding a NOT NULL constraint. UPDATE has been added to the dangerous statements list.</li>
+            <li>Improved error logging.</li>
+            <li>Fixed an error when reading MS SQL schema over JDBC while using an unprivileged account.</li>
+            <li>Fixed an error when reading and parsing RULEs with SELECT commands.</li>
+            <li>Fixed an error when parsing a MS SQL USER.</li>
+            <li>Fixed an error when writing non-integer FUNCTION COST and ROWS values. </li>
+            <li>Fixed an error with quotation of procedure parameters' default values in MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.2'>5.1.2</a>)</li>
+            <li>Fixed several errors in MS SQL support. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.3'>5.1.3</a>)</li>
           </ul>
         </div>
         

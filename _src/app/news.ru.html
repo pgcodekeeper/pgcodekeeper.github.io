@@ -42,6 +42,23 @@
   <div id="release-block" class="container">
     <h1>Обновления</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.1.4" id="pgCodeKeeper-5.1.4">pgCodeKeeper 5.1.4</h4>
+    <p class="date">8 октября 2018</p>
+    <ul class="short-article">
+      <li>Значительно расширено покрытие команд SQL парсерами.</li>
+      <li>Добавлена возможность подключения к базе данных MS SQL, используя <a href='https://pgcodekeeper.readthedocs.io/ru/latest/windowsauth.html'>Windows аутентификацию</a>.</li>
+      <li>Добавлен отдельный мастер создания нового проекта для MS SQL.</li>
+      <li>При работе с кодом объектов MS SQL PROCEDURE, FUNCTION, TRIGGER, VIEW используется пользовательское форматирование.</li>
+      <li>Изменен алгоритм добавления NOT NULL для колонок (<a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/12'>используется UPDATE</a>). UPDATE добавлен в список опасных выражений.</li>
+      <li>Улучшено логирование ошибок.</li>
+      <li>Исправлена ошибка при чтении схемы MS SQL по JDBC при отсутствии необходимых прав.</li>
+      <li>Исправлена ошибка при чтении и парсинге RULE c командой SELECT.</li>
+      <li>Исправлена ошибка парсинга для USER в MS SQL.</li>
+      <li>Исправлена ошибка записи дробных значений FUNCTION COST и ROWS.</li>
+      <li>Исправлена ошибка закавычивания значений по-умолчанию у параметров процедур MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.2'>5.1.2</a>)</li>
+      <li>Исправлены ошибки в поддержке MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.3'>5.1.3</a>)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.1.1" id="pgCodeKeeper-5.1.1">pgCodeKeeper 5.1.1</h4>
     <p class="date">24 сентября 2018</p>
     <ul class="short-article">

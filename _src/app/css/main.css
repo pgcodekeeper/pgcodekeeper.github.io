@@ -12,6 +12,14 @@ html, body {
   outline-color: transparent !important;
 }
 
+.fork-me {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 /* MENU */
 .navbar-brand {
   padding: 10px;
@@ -22,6 +30,7 @@ html, body {
 }
 
 .navbar-default .navbar-toggle {
+  z-index: 1;
   border-color: #3e466e;
   background-color: #3e466e;
   transition: background-color .3s ease 0s, color;
@@ -60,7 +69,6 @@ html, body {
 .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #ef6e30;
-  background-color: #fff;
   cursor: pointer;
   text-decoration: none;
 }
@@ -1378,7 +1386,7 @@ blockquote {
   .navbar-collapse.collapse {
     overflow-x: hidden !important;
     overflow-y: visible !important;
-    height: 290px !important;
+    max-height: 290px !important;
   }
 
   .navbar-nav .open .dropdown-menu {

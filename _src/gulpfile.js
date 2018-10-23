@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     htmlRigger = require('gulp-rigger');
 
 var paths = {
@@ -70,7 +69,6 @@ gulp.task('js', function() {
 
 gulp.task('images', function() {
   return gulp.src(paths.dev.images + '/**/*')
-    .pipe(imagemin())
     .pipe(gulp.dest(paths.build.images));
 });
 

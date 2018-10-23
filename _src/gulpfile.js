@@ -46,11 +46,14 @@ gulp.task('html', function() {
     .pipe(gulp.dest(paths.build.main));
 });
 
-gulp.task('html-pgsqlblocks', ['html'], function() {
-  return gulp.src(paths.build.main + '/pgsqlblocks.html')
-    .pipe(rename('index.html'))
-    .pipe(gulp.dest(paths.build.main + '/pgsqlblocks/'));
-});
+gulp.task(
+  'html-pgsqlblocks',
+  gulp.series('html', function() {
+    return gulp.src(paths.build.main + '/pgsqlblocks.html')
+      .pipe(rename('index.html'))
+      .pipe(gulp.dest(paths.build.main + '/pgsqlblocks/'));
+  })
+);
 
 gulp.task('css', function() {
   return gulp.src(filesToConcat.css)
@@ -77,11 +80,11 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest(paths.build.fonts));
 });
 
-gulp.task('build', [
-  'html',
-  'html-pgsqlblocks',
-  'css',
-  'js',
-  'images',
-  'fonts'
-]);
+gulp.task(
+  'build',
+  gulp.series(
+    gulp.parallel('html', 'html-pgsqlblocks', 'css', 'js', 'images', 'fonts')
+  )
+);
+
+gulp.task('default', gulp.series('build'));

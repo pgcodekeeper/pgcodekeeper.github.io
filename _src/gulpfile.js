@@ -13,8 +13,8 @@ var paths = {
     templates: 'app/templates',
     css: 'app/css',
     js: 'app/js',
-    bowerComponents: 'app/bower_components',
-    images: 'app/images'
+    images: 'app/images',
+    nodeModules: 'node_modules'
   },
   build: {
     main: '..',
@@ -27,15 +27,15 @@ var paths = {
 
 var filesToConcat = {
   css: [
-    paths.dev.bowerComponents + '/html5-boilerplate/dist/css/normalize.css',
-    paths.dev.bowerComponents + '/html5-boilerplate/dist/css/main.css',
-    paths.dev.bowerComponents + '/bootstrap/dist/css/bootstrap.min.css',
+    paths.dev.nodeModules + '/html5-boilerplate/dist/css/normalize.css',
+    paths.dev.nodeModules + '/html5-boilerplate/dist/css/main.css',
+    paths.dev.nodeModules + '/bootstrap/dist/css/bootstrap.min.css',
     paths.dev.css + '/vendor/**/*.css',
     paths.dev.css + '/main.css'
   ],
   js: [
-    paths.dev.bowerComponents + '/jquery/dist/jquery.min.js',
-    paths.dev.bowerComponents + '/bootstrap/dist/js/bootstrap.min.js',
+    paths.dev.nodeModules + '/jquery/dist/jquery.min.js',
+    paths.dev.nodeModules + '/bootstrap/dist/js/bootstrap.min.js',
     paths.dev.js + '/vendor/**/*.js',
     paths.dev.js + '/main.js'
   ]
@@ -75,7 +75,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('fonts', function() {
-  return gulp.src(paths.dev.bowerComponents + '/bootstrap/dist/fonts/**/*')
+  return gulp.src(paths.dev.nodeModules + '/bootstrap/dist/fonts/**/*')
     .pipe(gulp.dest(paths.build.fonts));
 });
 

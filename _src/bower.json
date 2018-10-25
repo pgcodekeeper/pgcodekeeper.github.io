@@ -1,8 +1,0 @@
-{
-  "name": "pgcodekeeper.github.io",
-  "version": "1.0.0",
-  "dependencies": {
-    "html5-boilerplate": "~5.2.0",
-    "bootstrap": "~3.2.0"
-  }
-}

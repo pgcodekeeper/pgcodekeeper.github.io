@@ -58,7 +58,7 @@ gulp.task(
 gulp.task('css', function() {
   return gulp.src(filesToConcat.css)
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8', rebase: false}))
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.build.css));
 });

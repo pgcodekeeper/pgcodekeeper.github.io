@@ -42,6 +42,18 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.3.0" id="pgCodeKeeper-5.3.0">pgCodeKeeper 5.3.0</h4>
+    <p class="date">November 27, 2018</p>
+    <ul class="short-article">
+      <li>Added new mechanism that allows users to override privileges and owners of objects, stored in projects and libraries. Overrides are saved in the <i>OVERRIDES</i> directory, which the main project structure.<br>
+      Update Project dialog now has an option that saves selected differences into the overrides directory.</li>
+      <li>CLI mode uses overrides directory automatically.</li>
+      <li>Added support for user-defined type objects in MS SQL.</li>
+      <li>Added notifications for errors found in libraries.</li>
+      <li>Fixed an error when updating files for VIEWs with triggers.</li>
+      <li>Fixed REVOKE PUBLIC privilege being ignored for FUNCTIONs and TYPEs. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.2.1'>5.2.1</a>)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.2.0" id="pgCodeKeeper-5.2.0">pgCodeKeeper 5.2.0</h4>
     <p class="date">November 13, 2018</p>
     <ul class="short-article">

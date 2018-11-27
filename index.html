@@ -234,22 +234,16 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.2.0" id="pgCodeKeeper-5.2.0">pgCodeKeeper 5.2.0</h4>
-          <p class="date">November 13, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.3.0" id="pgCodeKeeper-5.3.0">pgCodeKeeper 5.3.0</h4>
+          <p class="date">November 27, 2018</p>
           <ul class="short-article">
-            <li>Added support for procedures in PostgreSQL 11. Also fixed reading functions via JDBC in PostgreSQL 11.<br>
-            Parser now supports new syntax added in PostgreSQL 11.</li>
-            <li>Added dependency processing for all MS SQL objects.</li>
-            <li>It is now possible to use zip-archives as libraries in pgCodeKeeper projects.</li>
-            <li>Library files can now be included by providing remote resource URLs.</li>
-            <li>It is now possible to include libraries in CLI using XML lists (<i>.dependencies</i> files, see <i>--src-lib-xml</i> option).</li>
-            <li>Default privileges are no longer written in project object files.</li>
-            <li>Table re-creation commands are now generated when its column order changes.</li>
-            <li>Fixed processing of sequence min and max values in MS SQL.</li>
-            <li>Fixed processing of configuration parameters of functions in PostgreSQL to comply with pg_dump fixes.</li>
-            <li>Fixed rules for allowed user-defined operator names to comply with PostgreSQL spec.</li>
-            <li>Fixed comparison of INCLUDE columns in indices. Column order is now ignored.</li>
-            <li>Disabled reading of EXTENSION owned operators. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.1.7'>5.1.7</a>)</li>
+            <li>Added new mechanism that allows users to override privileges and owners of objects, stored in projects and libraries. Overrides are saved in the <i>OVERRIDES</i> directory, which the main project structure.<br>
+            Update Project dialog now has an option that saves selected differences into the overrides directory.</li>
+            <li>CLI mode uses overrides directory automatically.</li>
+            <li>Added support for user-defined type objects in MS SQL.</li>
+            <li>Added notifications for errors found in libraries.</li>
+            <li>Fixed an error when updating files for VIEWs with triggers.</li>
+            <li>Fixed REVOKE PUBLIC privilege being ignored for FUNCTIONs and TYPEs. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.2.1'>5.2.1</a>)</li>
           </ul>
         </div>
         

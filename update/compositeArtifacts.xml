@@ -2,15 +2,16 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='pgCodeKeeper Central Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1543392198526'/>
+    <property name='p2.timestamp' value='1543573328749'/>
     <property name='p2.atomic.composite.loading' value='true'/>
   </properties>
-  <children size='6'>
+  <children size='7'>
     <child location='3.11.5.201709051522'/>
     <child location='4.6.1.201807191137'/>
     <child location='5.1.7.201810240618'/>
     <child location='5.2.1.201811200626'/>
     <child location='5.3.0.201811271428'/>
     <child location='5.3.1.201811280756'/>
+    <child location='5.3.2.201811301015'/>
   </children>
 </repository>

@@ -176,16 +176,19 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.3.0" id="pgCodeKeeper-5.3.0">pgCodeKeeper 5.3.0</h4>
-          <p class="date">November 27, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.3.4" id="pgCodeKeeper-5.3.4">pgCodeKeeper 5.3.4</h4>
+          <p class="date">December 11, 2018</p>
           <ul class="short-article">
-            <li>Added new mechanism that allows users to override privileges and owners of objects, stored in projects and libraries. Overrides are saved in the <i>OVERRIDES</i> directory, which the main project structure.<br>
-            Update Project dialog now has an option that saves selected differences into the overrides directory.</li>
-            <li>CLI mode uses overrides directory automatically.</li>
-            <li>Added support for user-defined type objects in MS SQL.</li>
-            <li>Added notifications for errors found in libraries.</li>
-            <li>Fixed an error when updating files for VIEWs with triggers.</li>
-            <li>Fixed REVOKE PUBLIC privilege being ignored for FUNCTIONs and TYPEs. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.2.1'>5.2.1</a>)</li>
+            <li>Added an option to override owners of library objects in Project library settings. This option is also applied in CLI when including libraries using XML files.<br>
+            Owners in project override files have priority over this option.</li>
+            <li>Fixed StackOverflowErrors when processing large DBs.</li>
+            <li>Fixed loss of dependency information for library objects.</li>
+            <li>Added support for special system function call syntaxes in MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.3'>5.3.3</a>)</li>
+            <li>Fixed mismatched source/target library XML options in CLI. (5.3.3)</li>
+            <li>Fixed missing operation cancellation checks when reading DB over JDBC. (5.3.3)</li>
+            <li>Fixed load order: overrides are loaded last, after libraries. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.2'>5.3.2</a>)</li>
+            <li>Fixed MS SQL functions export. (5.3.2)</li>
+            <li>Fixed an error while reading default values of MS SQL function arguments over JDBC. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.1'>5.3.1</a>)</li>
           </ul>
         </div>
         

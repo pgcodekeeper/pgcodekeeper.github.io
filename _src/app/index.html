@@ -176,19 +176,11 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.3.4" id="pgCodeKeeper-5.3.4">pgCodeKeeper 5.3.4</h4>
-          <p class="date">December 11, 2018</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.3.5" id="pgCodeKeeper-5.3.5">pgCodeKeeper 5.3.5</h4>
+          <p class="date">January 15, 2019</p>
           <ul class="short-article">
-            <li>Added an option to override owners of library objects in Project library settings. This option is also applied in CLI when including libraries using XML files.<br>
-            Owners in project override files have priority over this option.</li>
-            <li>Fixed StackOverflowErrors when processing large DBs.</li>
-            <li>Fixed loss of dependency information for library objects.</li>
-            <li>Added support for special system function call syntaxes in MS SQL. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.3'>5.3.3</a>)</li>
-            <li>Fixed mismatched source/target library XML options in CLI. (5.3.3)</li>
-            <li>Fixed missing operation cancellation checks when reading DB over JDBC. (5.3.3)</li>
-            <li>Fixed load order: overrides are loaded last, after libraries. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.2'>5.3.2</a>)</li>
-            <li>Fixed MS SQL functions export. (5.3.2)</li>
-            <li>Fixed an error while reading default values of MS SQL function arguments over JDBC. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.1'>5.3.1</a>)</li>
+            <li>Script execution progress is now reported in pgCodeKeeper console. Execution result and errors are too reported in the console.</li>
+            <li>Fixed missing dependencies from functions being called using EXEC in MS SQL.</li>
           </ul>
         </div>
         

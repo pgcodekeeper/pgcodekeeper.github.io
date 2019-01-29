@@ -234,11 +234,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.3.5" id="pgCodeKeeper-5.3.5">pgCodeKeeper 5.3.5</h4>
-          <p class="date">January 15, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.3.6" id="pgCodeKeeper-5.3.6">pgCodeKeeper 5.3.6</h4>
+          <p class="date">January 29, 2019</p>
           <ul class="short-article">
-            <li>Script execution progress is now reported in pgCodeKeeper console. Execution result and errors are too reported in the console.</li>
-            <li>Fixed missing dependencies from functions being called using EXEC in MS SQL.</li>
+            <li>Improved project loader performance using parallel parser launches.</li>
+            <li>In MS SQL migrations unmodified dependent objects are refreshed using <i>sp_refreshsqlmodule</i> instead of being re-created.</li>
+            <li>Added support for type modifiers of user types in PostgreSQL.</li>
+            <li>Fixed MS SQL parser for CREATE SCHEMA with object definitions.</li>
           </ul>
         </div>
         

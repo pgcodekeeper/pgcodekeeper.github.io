@@ -2,10 +2,10 @@
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='pgCodeKeeper Central Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1548848644332'/>
+    <property name='p2.timestamp' value='1549024867758'/>
     <property name='p2.atomic.composite.loading' value='true'/>
   </properties>
-  <children size='12'>
+  <children size='13'>
     <child location='3.11.5.201709051522'/>
     <child location='4.6.1.201807191137'/>
     <child location='5.1.7.201810240618'/>
@@ -18,5 +18,6 @@
     <child location='5.3.5.201901151345'/>
     <child location='5.3.6.201901290842'/>
     <child location='5.3.7.201901301136'/>
+    <child location='5.3.8.201902011232'/>
   </children>
 </repository>

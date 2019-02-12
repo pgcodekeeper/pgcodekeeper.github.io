@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.3.9" id="pgCodeKeeper-5.3.9">pgCodeKeeper 5.3.9</h4>
+    <p class="date">Feburary 12, 2019</p>
+    <ul class="short-article">
+      <li>Added support for user-defined aggregate functions.</li>
+      <li>Added support for PostgreSQL data type aliases. Aliases are converted into standard types "on the fly", different type aliases used in objects are treated as no-change.</li>
+      <li>Fixed "too many open files" error when launching parsers in parallel.</li>
+      <li>Fixed SQL error reporting when launching parsers in parallel.</li>
+      <li>SQL parser rules have been improved and optimized.</li>
+      <li>Fixed migrations generated for function dependent objects when its default parameters change. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.8'>5.3.8</a>)</li>
+      <li>Added parser support for empty SQL statements. (5.3.8)</li>
+      <li>Fixed consoles leak in program's UI. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.7'>5.3.7</a>)</li>
+      <li>Fixed MS SQL builer when launching parsers in parallel. (5.3.7)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.3.6" id="pgCodeKeeper-5.3.6">pgCodeKeeper 5.3.6</h4>
     <p class="date">January 29, 2019</p>
     <ul class="short-article">

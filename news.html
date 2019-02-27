@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.4.0" id="pgCodeKeeper-5.4.0">pgCodeKeeper 5.4.0</h4>
+    <p class="date">Feburary 26, 2019</p>
+    <ul class="short-article">
+      <li>All objects are now expected to be schema qualified, otherwise a warning is emitted. References to unqualified objects are treated as references to <i>pg_catalog</i> objects.</li>
+      <li>Added project builder for MS SQL.</li>
+      <li>Added support for indices on partitioned tables and materialized views.</li>
+      <li>Added support for TABLESPACEs for table constraints.</li>
+      <li>Improved dangerous statements mechanism. Scripts are now checked immediately prior to their execution.</li>
+      <li>Improved dependency processing for MS SQL objects. Changes in functions, procedures, views, triggers and also any changes to table columns trigger dependent object updates.</li>
+      <li>Improved and optimized SQL parser rules.</li>
+      <li>Fixed an error where FOREIGN KEYs were duplicated for table partitions in PostgreSQL 11.</li>
+      <li>Fixed an error when reading server name in FOREIGN TABLE.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.3.9" id="pgCodeKeeper-5.3.9">pgCodeKeeper 5.3.9</h4>
     <p class="date">Feburary 12, 2019</p>
     <ul class="short-article">

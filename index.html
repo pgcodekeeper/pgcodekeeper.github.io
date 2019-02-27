@@ -234,18 +234,18 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.3.9" id="pgCodeKeeper-5.3.9">pgCodeKeeper 5.3.9</h4>
-          <p class="date">Feburary 12, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.4.0" id="pgCodeKeeper-5.4.0">pgCodeKeeper 5.4.0</h4>
+          <p class="date">Feburary 26, 2019</p>
           <ul class="short-article">
-            <li>Added support for user-defined aggregate functions.</li>
-            <li>Added support for PostgreSQL data type aliases. Aliases are converted into standard types "on the fly", different type aliases used in objects are treated as no-change.</li>
-            <li>Fixed "too many open files" error when launching parsers in parallel.</li>
-            <li>Fixed SQL error reporting when launching parsers in parallel.</li>
-            <li>SQL parser rules have been improved and optimized.</li>
-            <li>Fixed migrations generated for function dependent objects when its default parameters change. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.8'>5.3.8</a>)</li>
-            <li>Added parser support for empty SQL statements. (5.3.8)</li>
-            <li>Fixed consoles leak in program's UI. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.3.7'>5.3.7</a>)</li>
-            <li>Fixed MS SQL builer when launching parsers in parallel. (5.3.7)</li>
+            <li>All objects are now expected to be schema qualified, otherwise a warning is emitted. References to unqualified objects are treated as references to <i>pg_catalog</i> objects.</li>
+            <li>Added project builder for MS SQL.</li>
+            <li>Added support for indices on partitioned tables and materialized views.</li>
+            <li>Added support for TABLESPACEs for table constraints.</li>
+            <li>Improved dangerous statements mechanism. Scripts are now checked immediately prior to their execution.</li>
+            <li>Improved dependency processing for MS SQL objects. Changes in functions, procedures, views, triggers and also any changes to table columns trigger dependent object updates.</li>
+            <li>Improved and optimized SQL parser rules.</li>
+            <li>Fixed an error where FOREIGN KEYs were duplicated for table partitions in PostgreSQL 11.</li>
+            <li>Fixed an error when reading server name in FOREIGN TABLE.</li>
           </ul>
         </div>
         

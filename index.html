@@ -234,18 +234,20 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.4.0" id="pgCodeKeeper-5.4.0">pgCodeKeeper 5.4.0</h4>
-          <p class="date">Feburary 26, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.4.6" id="pgCodeKeeper-5.4.6">pgCodeKeeper 5.4.6</h4>
+          <p class="date">March 19, 2019</p>
           <ul class="short-article">
-            <li>All objects are now expected to be schema qualified, otherwise a warning is emitted. References to unqualified objects are treated as references to <i>pg_catalog</i> objects.</li>
-            <li>Added project builder for MS SQL.</li>
-            <li>Added support for indices on partitioned tables and materialized views.</li>
-            <li>Added support for TABLESPACEs for table constraints.</li>
-            <li>Improved dangerous statements mechanism. Scripts are now checked immediately prior to their execution.</li>
-            <li>Improved dependency processing for MS SQL objects. Changes in functions, procedures, views, triggers and also any changes to table columns trigger dependent object updates.</li>
-            <li>Improved and optimized SQL parser rules.</li>
-            <li>Fixed an error where FOREIGN KEYs were duplicated for table partitions in PostgreSQL 11.</li>
-            <li>Fixed an error when reading server name in FOREIGN TABLE.</li>
+            <li>It is now possible to execute data queries in SQL editor. Received data is shown in Query Result view. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.4.5'>5.4.5</a>)</li>
+            <li>Added an option to continue reading DB schema when receiving objects in inconsistent state (see <a href='/news.html#pgCodeKeeper-4.5.1'>4.5.1 release</a> changes).</li>
+            <li>Git and DB user columns in Project Editor are now sortable.</li>
+            <li>Fixed errors in dependency search for MS SQL expressions and functions.</li>
+            <li>Fixed index creation code for partitioned tables (5.4.5)</li>
+            <li>Fixed naming for a black/white list rule option, that applies it to the object's contents. (5.4.5)</li>
+            <li>Disabled <i>sp_refreshsqlmodule</i> output for objects except VIEWs. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.4.4'>5.4.4</a>)</li>
+            <li>Added support for T-SQL scripts beginning with <i>GO</i> command. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.4.3'>5.4.3</a>)</li>
+            <li>Added support for PostgreSQL scripts lacking terminating semicolon. (5.4.3)</li>
+            <li>Fixed erroneous TABLESPACE parameters for FOREIGN KEYS. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.4.2'>5.4.2</a>)</li>
+            <li>Fixed error where no commands were executed when launching scripts. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.4.1'>5.4.1</a>)</li>
           </ul>
         </div>
         

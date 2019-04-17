@@ -176,16 +176,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.4.7" id="pgCodeKeeper-5.4.7">pgCodeKeeper 5.4.7</h4>
-          <p class="date">April 2, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.4.8" id="pgCodeKeeper-5.4.8">pgCodeKeeper 5.4.8</h4>
+          <p class="date">April 17, 2019</p>
           <ul class="short-article">
-            <li>Fixed dependency processing for MS SQL views, functions, procedures and triggers.</li>
-            <li>Fixed an error when comparing MS SQL sequences based on system types.</li>
-            <li>Fixed ad error when comparing PostgreSQL functions.</li>
-            <li>Fixed an error in MS SQL parser processor for DROP TRIGGER command.</li>
-            <li>Fixed privilege override option in project update dialog.</li>
-            <li>Fixed an error when sorting project editor by git or DB users.</li>
-            <li>Fixed UI freezes when launching large scripts.</li>
+            <li>Projects can now be bound to DB connections. Only selected connection can be used for bound project.</li>
+            <li>Each DB connection can now specify an external loader (<i>pg_dump</i> or other). Connection parameters are passed to the loader via environment variables as described in <i>pg_dump</i> manual.</li>
+            <li>Object change types in Project Editor are now shown based on selected migration direction.</li>
+            <li>Fixed incorrect comparison of indentations in text of MS SQL user types.</li>
           </ul>
         </div>
         

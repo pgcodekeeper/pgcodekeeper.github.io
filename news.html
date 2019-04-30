@@ -82,6 +82,17 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.4.9" id="pgCodeKeeper-5.4.9">pgCodeKeeper 5.4.9</h4>
+    <p class="date">April 30, 2019</p>
+    <ul class="short-article">
+      <li>When altering an index in CONCURRENTLY mode generated code is now optimized to minimize the time where the index is unavailable.</li>
+      <li>When altering a MS SQL index generated code now uses DROP_EXISTING without explicitly dropping the existing version.</li>
+      <li>Columns are now dropped only in the specified table using ONLY keyword.</li>
+      <li>SET NOT NULL operations are no longer generated with ONLY keyword, as they are impossible to execute only on the parent table.</li>
+      <li>When creating a NOT NULL column, separate commands for NOT NULL and DEFAULT are no longer generated.</li>
+      <li>MS SQL parser now supports multiple actions in ALTER TABLE commands.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.4.8" id="pgCodeKeeper-5.4.8">pgCodeKeeper 5.4.8</h4>
     <p class="date">April 17, 2019</p>
     <ul class="short-article">

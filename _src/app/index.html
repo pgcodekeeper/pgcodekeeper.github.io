@@ -176,13 +176,15 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.4.10" id="pgCodeKeeper-5.4.10">pgCodeKeeper 5.4.10</h4>
-          <p class="date">June 5, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.5.0" id="pgCodeKeeper-5.5.0">pgCodeKeeper 5.5.0</h4>
+          <p class="date">June 19, 2019</p>
           <ul class="short-article">
-            <li>Identical objects in project and library are not considered overrides, so that they don't block the workflow when the <i>Disallow overrides</i> option is set.</li>
-            <li>It is now possible to edit path or URL in the libraries list.</li>
-            <li>When overriding privileges with an "empty list" default privileges for the given object are used instead.</li>
-            <li>Fixed vulnerability when extracting zip archives.</li>
+            <li>SQL editor code templates have been updated. New SQL object wizard now creates new objects using templates for further editing convenience.</li>
+            <li>Code autocompletion in SQL editor has been split into categories: identifiers and keywords, and templates. Categories can be switched by repeatedly pressing the autocomplete hotkey (<i>Ctrl+Space</i>).</li>
+            <li>MS SQL JDBC driver has been updated. New version allows for NTLM domain authentication when supplied additional <a href='https://github.com/Microsoft/mssql-jdbc/pull/998'>connection properties</a>.</li>
+            <li>Fixed the condition for detecting changes in functions with default parameters. Previous condition used to trigger unnecessary dependency re-creation.</li>
+            <li>Fixed code generation when granting PUBLIC privileges to functions, procedures and types.</li>
+            <li>Fixed code generation for index comment when altering in CONCURRENTLY mode.</li>
           </ul>
         </div>
         

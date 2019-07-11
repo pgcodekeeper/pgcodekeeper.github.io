@@ -2,23 +2,14 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='pgCodeKeeper Central Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1562068401240'/>
+    <property name='p2.timestamp' value='1562068401241'/>
     <property name='p2.atomic.composite.loading' value='true'/>
   </properties>
-  <children size='27'>
+  <children size='18'>
     <child location='3.11.5.201709051522'/>
     <child location='4.6.1.201807191137'/>
     <child location='5.1.7.201810240618'/>
     <child location='5.2.1.201811200626'/>
-    <child location='5.3.0.201811271428'/>
-    <child location='5.3.1.201811280756'/>
-    <child location='5.3.2.201811301015'/>
-    <child location='5.3.3.201812050804'/>
-    <child location='5.3.4.201812111019'/>
-    <child location='5.3.5.201901151345'/>
-    <child location='5.3.6.201901290842'/>
-    <child location='5.3.7.201901301136'/>
-    <child location='5.3.8.201902011232'/>
     <child location='5.3.9.201902120737'/>
     <child location='5.4.0.201902261145'/>
     <child location='5.4.1.201902261321'/>

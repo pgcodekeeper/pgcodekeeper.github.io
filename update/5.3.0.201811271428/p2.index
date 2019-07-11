@@ -1,4 +1,0 @@
-#Tue Nov 27 17:35:18 MSK 2018
-version=1
-metadata.repository.factory.order=content.xml.xz,content.xml,\!
-artifact.repository.factory.order=artifacts.xml.xz,artifacts.xml,\!

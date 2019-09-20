@@ -91,6 +91,34 @@
       <li>Progress of script execution and getting changes is now shown in Windows task bar.</li>
     </ul>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.7.0" id="pgCodeKeeper-5.7.0">pgCodeKeeper 5.7.0</h4>
+    <p class="date">September 3, 2019</p>
+    <ul class="short-article">
+      <li>Added global and per-project preference to enable simplified VIEW format. Views read via JDBC won't contain excessive parenthesis with this setting enabled.</li>
+      <li>Improved PostgreSQL parser coverage, fixed errors.</li>
+      <li>Restored the notification about parser errors encountered during Get Changes operation.</li>
+      <li>Removed deprecated CLI <i>-l</i> (<i>--license</i>) parameter.</li>
+      <li>Added new CLI mode <i>--graph</i> that shows object dependencies.</li>
+      <li>Added Java VM property <i>ru.taximaxim.codekeeper.parser.poolsize</i>, that allows users to specify number of threads allocated to run SQL parsers in parallel.</li>
+      <li>Fixed an error with EXCLUDE CONSTRAINTs.</li>
+      <li>Fixed outdated syntax in VIEW statements.</li>
+      <li>Fixed an error where users couldn't execute SQL files on MS SQL databases.</li>
+      <li>Fixed an error with COMMENT ON INDEX code generation. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.6.1'>5.6.1</a>)</li>
+    </ul>
+
+    <h4 class="anchor" name="pgCodeKeeper-5.6.0" id="pgCodeKeeper-5.6.0">pgCodeKeeper 5.6.0</h4>
+    <p class="date">August 13, 2019</p>
+    <ul class="short-article">
+      <li>It is now possible to override certain global preferences in different projects.</li>
+      <li>Added parser support for SELECT WITH ORDINALITY syntax.</li>
+      <li>Project editor filter now shows correct change type based on selected target for changes application.</li>
+      <li>It is now possible to specify Java VM parameters when using CLI launcher scripts. All parameters given after <i>-vmargs</i> will be passed to the JVM itself.</li>
+      <li>Fixed incorrect name quoting in GRANT/REVOKE statements.</li>
+      <li>Fixed an error with <i>character varying</i> type in MS SQL.</li>
+      <li>Fixed function call dependency resolution when argument type has typmod. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.5.3'>5.5.3</a>)</li>
+      <li>Fixed an error when opening an SQL file outside of an Eclipse project. (5.5.3)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.5.2" id="pgCodeKeeper-5.5.2">pgCodeKeeper 5.5.2</h4>
     <p class="date">July 17, 2019</p>
     <ul class="short-article">

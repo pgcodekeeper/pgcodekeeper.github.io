@@ -176,13 +176,14 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.8.0" id="pgCodeKeeper-5.8.0">pgCodeKeeper 5.8.0</h4>
-          <p class="date">September 18, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.8.1" id="pgCodeKeeper-5.8.1">pgCodeKeeper 5.8.1</h4>
+          <p class="date">October 1, 2019</p>
           <ul class="short-article">
-            <li>Enabled analysis for function bodies written in SQL language: dependencies used in function bodies are tracked and errors in code are highlighted. Dependency tracking from function bodies to other functions is turned off by default (analogous to MS SQL). Same functionality for plpgSQL is planned in a near future release.</li>
-            <li>It is now possible to open an SQL editor to run queries without creating a file on disk.</li>
-            <li>In SQL editor it is now possible to switch between PostgreSQL and MS SQL code parsers and templates for files not in pgCodeKeeper projects.</li>
-            <li>Progress of script execution and getting changes is now shown in Windows task bar.</li>
+            <li>CLI mode now exits with an error when encountering errors in loaded SQL files.</li>
+            <li>Fixed an error when opening non-pgCodeKeeper project files in SQL editor.</li>
+            <li>SQL parser now supports XMLTABLE, TABLESAMPLE, SELECT INTO contructs.</li>
+            <li>MS SQL parser now supports UPDATE trigger function. Also, parser rules have been improved.</li>
+            <li>Added REFRESH MATERIALIZED VIEW code generation when WITH [NO] DATA state changes.</li>
           </ul>
         </div>
         

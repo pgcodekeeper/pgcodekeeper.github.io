@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.9.0" id="pgCodeKeeper-5.9.0">pgCodeKeeper 5.9.0</h4>
+    <p class="date">October 16, 2019</p>
+    <ul class="short-article">
+      <li>Enabled analysis for function bodies written in SQL language: dependencies used in function bodies are tracked and errors in code are highlighted. Dependency tracking from function bodies to other functions is turned off by default.<br>
+      Projects containing a lot of PL/pgSQL code may require more memory than before due to increased volume of parsed text.</li>
+      <li>Fixed an error when working with PostgreSQL 12. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.8.3'>5.8.3</a>)</li>
+      <li>Fixed an error reporting when workign with pgCodeKeeper project libraries and also with projects themselves when reading them in CLI. (5.8.3)</li>
+      <li>Fixed an error when using LIST identifier. (5.8.3)</li>
+      <li>Fixed Diff Wizard script encoding. (5.8.3)</li>
+      <li>Fixed an error when analyzing objects received from JDBC. (5.8.3)</li>
+      <li>Fixed an error when opening Diff Wizard's script. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.8.2'>5.8.2</a>)</li>
+      <li>Data format of copied query results changed for compatibility with both SQL and CSV (SQL strings are copied). (5.8.2)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.8.1" id="pgCodeKeeper-5.8.1">pgCodeKeeper 5.8.1</h4>
     <p class="date">October 1, 2019</p>
     <ul class="short-article">

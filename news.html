@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.9.1" id="pgCodeKeeper-5.9.1">pgCodeKeeper 5.9.1</h4>
+    <p class="date">October 31, 2019</p>
+    <ul class="short-article">
+      <li>CLI is now able to run the generated script on a database (options <i>--run-on</i> and <i>--run-on-target</i>).</li>
+      <li>Fixed errors in PL/plSQL parser, optimized code analysis.<a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/61'>#61</a></li>
+      <li>Fixed issues in code generation when altering OWNED BY property of sequences, dropping sequences, and in some other cases.<a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/42'>#42</a></li>
+      <li>Fixed an issue where order of column dependencies creation was incorrect when creating a table.<a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/60'>#60</a></li>
+      <li>Fixed an issue with dependency detection in expression using COALESCE, NULLIF, etc.</li>
+      <li>Fixed code generation when working on partitioned indexes.<a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/58'>#58</a></li>
+      <li>Improved Query Result view UI: added a context menu for tabs, and it is now possible to close tabs with middle mouse button.</li>
+      <li>Improved parser error messages.</li>
+      <li>Added dependencies of Full Text Search objects to functions used by them.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.9.0" id="pgCodeKeeper-5.9.0">pgCodeKeeper 5.9.0</h4>
     <p class="date">October 16, 2019</p>
     <ul class="short-article">

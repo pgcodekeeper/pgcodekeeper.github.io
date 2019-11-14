@@ -42,6 +42,18 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.9.2" id="pgCodeKeeper-5.9.2">pgCodeKeeper 5.9.2</h4>
+    <p class="date">November 14, 2019</p>
+    <ul class="short-article">
+      <li>Database passwords are now stored in Eclipse's encrypted <a href='https://help.eclipse.org/2019-09/topic/org.eclipse.platform.doc.user/reference/ref-securestorage-start.htm'>Secure storage</a>. Passwords in .pgpass file are still supported.</li>
+      <li>It is now possible to free parser cache memory after a period of inactivity or on-demand. Default inactivity interval is 30 minutes and may be changed in the program settings.<br>
+      Parser cache significantly speeds up SQL parsing but may consume hundreds of MBs of Java heap space which may be undesirable if parsing rarely.</li>
+      <li>Fixed an error with function default privileges when changing owners.</li>
+      <li>Fixed order of generated commands in cases with cyclic dependencies between functions and tables.</li>
+      <li>Added a workaround for potential GUI deadlock on Linux</li>
+      <li>Added column dependencies to pgDependencies view graph.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.9.1" id="pgCodeKeeper-5.9.1">pgCodeKeeper 5.9.1</h4>
     <p class="date">October 31, 2019</p>
     <ul class="short-article">

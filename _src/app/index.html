@@ -184,6 +184,7 @@
             Parser cache significantly speeds up SQL parsing but may consume hundreds of MBs of Java heap space which may be undesirable if parsing rarely.</li>
             <li>Fixed an error with function default privileges when changing owners.</li>
             <li>Fixed order of generated commands in cases with cyclic dependencies between functions and tables.</li>
+            <li>Added a dependency from SELECT queries to PRIMARY KEYs whose columns are used in GROUP BY section.</li>
             <li>Added a workaround for potential GUI deadlock on Linux</li>
             <li>Added column dependencies to pgDependencies view graph.</li>
           </ul>

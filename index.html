@@ -237,17 +237,18 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.9.2" id="pgCodeKeeper-5.9.2">pgCodeKeeper 5.9.2</h4>
-          <p class="date">November 14, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.9.4" id="pgCodeKeeper-5.9.4">pgCodeKeeper 5.9.4</h4>
+          <p class="date">November 29, 2019</p>
           <ul class="short-article">
-            <li>Database passwords are now stored in Eclipse's encrypted <a href='https://help.eclipse.org/2019-09/topic/org.eclipse.platform.doc.user/reference/ref-securestorage-start.htm'>Secure storage</a>. Passwords in .pgpass file are still supported.</li>
-            <li>It is now possible to free parser cache memory after a period of inactivity or on-demand. Default inactivity interval is 30 minutes and may be changed in the program settings.<br>
-            Parser cache significantly speeds up SQL parsing but may consume hundreds of MBs of Java heap space which may be undesirable if parsing rarely.</li>
-            <li>Fixed an error with function default privileges when changing owners.</li>
-            <li>Fixed order of generated commands in cases with cyclic dependencies between functions and tables.</li>
-            <li>Added a dependency from SELECT queries to PRIMARY KEYs whose columns are used in GROUP BY section.</li>
-            <li>Added a workaround for potential GUI deadlock on Linux</li>
-            <li>Added column dependencies to pgDependencies view graph.</li>
+            <li>It is now possible to override settings before launching Get Changes or generating a migration script. Overridden setting are only used once and don't affect program and project preferences.</li>
+            <li>Overridable settings are also added to the Diff Wizard.</li>
+            <li>Added support for MEMORY_OPTIMIZED MS SQL tables.</li>
+            <li>Expression analysis has been optimized: debug logging has been turned off, analysis is now run using multiple threads, VIEW analysis is now done in a single pass and doesn't require a dependency graph.<br>
+            Expression analysis an the final step when loading any DB schema. These optimizations reduces analysis time 4x relative to the last version (depends on CPU count).</li>
+            <li>Fixed code generation when changing ANSI_NULLS and QUOTED_IDENTIFIER properties in MS SQL.</li>
+            <li>Fixed execution of MS SQL scripts containing a single batch of commands.</li>
+            <li>Improved error reporting when saving passwords in Eclipse's secure storage.</li>
+            <li>Fixed parsing of RETURN QUERY EXPLAIN (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.9.3'>5.9.3</a>).</li>
           </ul>
         </div>
         

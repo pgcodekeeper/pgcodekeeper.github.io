@@ -176,18 +176,12 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.9.4" id="pgCodeKeeper-5.9.4">pgCodeKeeper 5.9.4</h4>
-          <p class="date">November 29, 2019</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.9.5" id="pgCodeKeeper-5.9.5">pgCodeKeeper 5.9.5</h4>
+          <p class="date">December 9, 2019</p>
           <ul class="short-article">
-            <li>It is now possible to override settings before launching Get Changes or generating a migration script. Overridden setting are only used once and don't affect program and project preferences.</li>
-            <li>Overridable settings are also added to the Diff Wizard.</li>
-            <li>Added support for MEMORY_OPTIMIZED MS SQL tables.</li>
-            <li>Expression analysis has been optimized: debug logging has been turned off, analysis is now run using multiple threads, VIEW analysis is now done in a single pass and doesn't require a dependency graph.<br>
-            Expression analysis an the final step when loading any DB schema. These optimizations reduces analysis time 4x relative to the last version (depends on CPU count).</li>
-            <li>Fixed code generation when changing ANSI_NULLS and QUOTED_IDENTIFIER properties in MS SQL.</li>
-            <li>Fixed execution of MS SQL scripts containing a single batch of commands.</li>
-            <li>Improved error reporting when saving passwords in Eclipse's secure storage.</li>
-            <li>Fixed parsing of RETURN QUERY EXPLAIN (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.9.3'>5.9.3</a>).</li>
+            <li>Optimized migration script generation for complex/large object dependency graphs.</li>
+            <li>Improved error messages when saving passwords in secure storage.</li>
+            <li>Improved cancellability when reading DB via JDBC.</li>
           </ul>
         </div>
         

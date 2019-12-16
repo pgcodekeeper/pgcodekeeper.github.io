@@ -803,11 +803,8 @@ blockquote {
   display: table;
 }
 .need-help {
-  display: inline-block;
-  float: left;
-  margin-top: 5px;
-  padding-left: 20px;
-  text-align: left;
+  padding-top: 5px;
+  text-align: center;
 }
 
 /* SCROLL UP, SCROLL DOWN */

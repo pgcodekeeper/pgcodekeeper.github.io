@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-5.9.8" id="pgCodeKeeper-5.9.8">pgCodeKeeper 5.9.8</h4>
+    <p class="date">January 28, 2020</p>
+    <ul class="short-article">
+      <li>Added support for new object properties introduced in PostgreSQL 12.</li>
+      <li>Dependencies are now tracked in default value expressions in MS SQL.</li>
+      <li>Added <i>--ignore-errors</i> CLI switch to ignore parser and code analysis errors.</li>
+      <li>Dependency tracking for PostgreSQL function bodies was disabled due to unstable behaviour.</li>
+      <li>Improved error reporting in expression analysis.</li>
+      <li>Added support for <a href='https://github.com/pgcodekeeper/pgcodekeeper/issues/63'>newline-split strings</a> in PostgreSQL.</li>
+      <li>Improved whitespace-agnostic PostgreSQL VIEW comparison.</li>
+      <li>Fixed an error when analysing RETURNING DML statement inside a CTE. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.9.7'>5.9.7</a>)</li>
+      <li>Fixed Windows CLI bat launcher failing when passed special character containing arguments from PowerShell. (5.9.7)</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-5.9.6" id="pgCodeKeeper-5.9.6">pgCodeKeeper 5.9.6</h4>
     <p class="date">December 16, 2019</p>
     <ul class="short-article">

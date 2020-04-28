@@ -237,15 +237,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.9.11" id="pgCodeKeeper-5.9.11">pgCodeKeeper 5.9.11</h4>
-          <p class="date">April 16, 2020</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.9.12" id="pgCodeKeeper-5.9.12">pgCodeKeeper 5.9.12</h4>
+          <p class="date">April 29, 2020</p>
           <ul class="short-article">
-            <li>Added a warning when Java heap space is insufficient for large projects.</li>
-            <li>Improved output of command log and error messages when executing a script.</li>
-            <li>Improved command list in SQL Editor's Outline, and also in Project Explorer.</li>
-            <li>Fixed an error in query results UI.</li>
-            <li>Fixed an error when parsing <i>WITH (reloptions)</i> in indices, tables, etc.</li>
-            <li>Fixed missing links for objects used in function bodies and triggers.</li>
+            <li>Ignore lists now have a <i>QUALIFIED</i> flag that matches rules against object qualified names.</li>
+            <li>Project builder now uses included libraries when performing a full build, and doesn't mark references to library objects as errors.</li>
+            <li>Fixed DB connection list UI and other list UIs on Windows.</li>
+            <li>Fixed a crash when parsing an empty migration script.</li>
           </ul>
         </div>
         

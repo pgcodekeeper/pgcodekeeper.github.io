@@ -237,12 +237,17 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.9.13" id="pgCodeKeeper-5.9.13">pgCodeKeeper 5.9.13</h4>
-          <p class="date">May 19, 2020</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.10.0" id="pgCodeKeeper-5.10.0">pgCodeKeeper 5.10.0</h4>
+          <p class="date">June 2, 2020</p>
           <ul class="short-article">
-            <li>Fixed order when adding new columns into a table to preserve the order specified by user.</li>
-            <li>Fixed false differences in changed order of VIEW column comments.</li>
-            <li>Improved DB selection dropdown UI. Increased the list width in Eclipse toolbar.</li>
+            <li>Reworked object references lookup. Now object refernces are collected in  analysis stage of function bodies, view queries, and all other expressions. Imprecise method of text-search in expressions was retired.</li>
+            <li>It is now possible to filter Project Editor by columns. Only tables with changes to their columns will be shown.</li>
+            <li>Fixed an error in SQL parser in SELECT aliases.</li>
+            <li>Fixed object references in COMMENT ON.</li>
+            <li>Improved support for SQL string escape schemas.</li>
+            <li>Fixed a crash when parsing MS SQL scripts.</li>
+            <li>Excluded CAST objects belonging to extensions from JDBC loader. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v5.9.14'>5.9.14</a>)</li>
+            <li>Fixed DB toolbar combo content when switching editors. (5.9.14)</li>
           </ul>
         </div>
         

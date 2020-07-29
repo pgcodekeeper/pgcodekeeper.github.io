@@ -176,16 +176,15 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.10.4" id="pgCodeKeeper-5.10.4">pgCodeKeeper 5.10.4</h4>
-          <p class="date">July 15, 2020</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.10.5" id="pgCodeKeeper-5.10.5">pgCodeKeeper 5.10.5</h4>
+          <p class="date">July 29, 2020</p>
           <ul class="short-article">
-            <li>Fixed an error when reading foreign table schemas via JDBC.</li>
-            <li>Fixed compatibility with PostgreSQL 9.4 when reading schema via JDBC.</li>
-            <li>Fixed order of commands for dependencies between functions.</li>
-            <li>Fixed object location path checks to be case-insensitive.</li>
-            <li>Fixed errors in expression analysis.</li>
-            <li>Fixed a crash when parsing a malformed MS SQL command.</li>
-            <li>Fixed export of types when initializing a MS SQL project.</li>
+            <li>Added standalone pgCodeKeeper packages that do not require an existing Eclipse installation. Packages are available on <a href='https://github.com/pgcodekeeper/pgcodekeeper/releases'>Github</a>.<br>
+            Previous update site versions are also available on Github. Main <a href='http://pgcodekeeper.org/update/'>update site</a> now contains only the latest version.</li>
+            <li>Added a setting to create migration scripts only for selected objects without changing any dependencies. In CLI, all objects that passed through the allowed object and ignore list filters are considered "selected", or all changed objects if no filters are defined.</li>
+            <li>Added a setting to ignore differences in table column order.</li>
+            <li>Improved COMMENT ON command generation.</li>
+            <li>Fixed dependencies between operators and their functions.</li>
           </ul>
         </div>
         

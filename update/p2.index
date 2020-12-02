@@ -1,4 +1,4 @@
-#Thu Aug 27 18:03:10 MSK 2020
+#Wed Dec 02 15:28:55 MSK 2020
 version=1
 metadata.repository.factory.order=content.xml.xz,content.xml,\!
 artifact.repository.factory.order=artifacts.xml.xz,artifacts.xml,\!

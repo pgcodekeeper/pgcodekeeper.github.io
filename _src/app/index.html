@@ -176,14 +176,19 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.10.8" id="pgCodeKeeper-5.10.8">pgCodeKeeper 5.10.8</h4>
-          <p class="date">December 2, 2020</p>
+          <h4 class="anchor" name="pgCodeKeeper-5.11.0" id="pgCodeKeeper-5.11.0">pgCodeKeeper 5.11.0</h4>
+          <p class="date">March 18, 2021</p>
           <ul class="short-article">
-            <li>Added an option for data migration when re-creating tables.</li>
-            <li>Added an option to copy selected objects' names in Project editor.</li>
-            <li>Fixed <i>Deselect Child Elements</i> menu behaviour in Project editor.</li>
-            <li>Fixed table column dependencies of indices and constraints.</li>
-            <li>Fixed error when running some SQL commands.</li>
+            <li>Starting with this version, pgCodeKeeper requires Eclipse 2020-06 (4.16) or higher.</li>
+            <li>Improved Project editor interface, fixed rendering errors on Windows. See <a href="https://pgcodekeeper.readthedocs.io/ru/latest/db_store.html">docs</a>.</li>
+            <li>Improved object dependency graph CLI mode. Now the output can be filtered by object types and it is also sorted by object type.<br/>
+            See CLI help on <i>--graph-filter-object</i>.</li>
+            <li>Added support for function calls involving <i>null</i>, <i>anyelement</i>, etc in expression analysis.</li>
+            <li>Fixed a crash when analysing WITH RECURSIVE expressions.</li>
+            <li>Fixed references lookup for functions with INOUT arguments.</li>
+            <li>Fixed index comparison when CONCURRENTLY option for code generation is enabled.</li>
+            <li>Fixed a crash when reading IDENITY SEQUENCE over JDBC.</li>
+            <li>Fixed errors in identifier parser.</li>
           </ul>
         </div>
         

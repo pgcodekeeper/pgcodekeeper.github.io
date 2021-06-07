@@ -176,11 +176,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-5.11.1" id="pgCodeKeeper-5.11.1">pgCodeKeeper 5.11.1</h4>
-          <p class="date">March 22, 2021</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.0.0" id="pgCodeKeeper-6.0.0">pgCodeKeeper 6.0.0</h4>
+          <p class="date">June 7, 2021</p>
           <ul class="short-article">
-            <li>Added full support for new object syntaxes introduced in PostgreSQL 13.</li>
-            <li>Project editor now clearly shows currently selected source for schema comparison and destination for application of selected changes.</li>
+            <li>Added code formatting feature for functions in plpgsql and sql languages. Implemented so far: indentation and newline formatting, tabs to spaces replacement, spaces around operators, trailing whitespace removal. Formatting functionality will be extended in future.</li>
+            <li>Fixed error when reading a DB schema via JDBC when objects of different kinds have same oid's.</li>
+            <li>Project Editor now has a drop down list of DB connections for convenient connection selection.</li>
+            <li>Project Editor now remembers last direction for changes application when reopened.</li>
           </ul>
         </div>
         

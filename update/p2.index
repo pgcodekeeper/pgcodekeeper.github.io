@@ -1,4 +1,4 @@
-#Mon Jun 07 15:55:37 MSK 2021
+#Mon Aug 16 14:56:53 MSK 2021
 version=1
 metadata.repository.factory.order=content.xml.xz,content.xml,\!
 artifact.repository.factory.order=artifacts.xml.xz,artifacts.xml,\!

@@ -82,6 +82,20 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-6.1.0" id="pgCodeKeeper-6.1.0">pgCodeKeeper 6.1.0</h4>
+    <p class="date">August 16, 2021</p>
+    <ul class="short-article">
+      <li>It is now possible to selectively load schemas when reading a project or a DB via JDBC. Skipping schemas accelerates DB or project loading. Objects in ignored schemas cannot be used when generation migration scripts. See <a href='https://pgcodekeeper.readthedocs.io/en/latest/white_black_list_schemas.html'>docs</a> for further info.</li>
+      <li>Added developer documentation describing overall project structure and work process in <a href='https://github.com/pgcodekeeper/pgcodekeeper#readme'>README</a>.</li>
+      <li>Improved function links in SQL editor, and also function dependencies.</li>
+      <li>Fixed a false diff on functions with GRANT TO PUBLIC privileges.</li>
+      <li>Added a DB type filter to the drop-down list in Project Editor.</li>
+      <li>Fixed drop-down DB list rendering in Project Editor when running under KDE.</li>
+      <li>Fixed an error in table data migration code generation.</li>
+      <li>Fixed a parser error for ALTER TABLE SWITCH TO in MS SQL.</li>
+      <li>Removed extraneous Show In menu in Project Explorer.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-6.0.0" id="pgCodeKeeper-6.0.0">pgCodeKeeper 6.0.0</h4>
     <p class="date">June 7, 2021</p>
     <ul class="short-article">

@@ -82,6 +82,19 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-6.2.0" id="pgCodeKeeper-6.2.0">pgCodeKeeper 6.2.0</h4>
+    <p class="date">October 12, 2021</p>
+    <ul class="short-article">
+      <li>Added support for SERVER and FOREIGN DATA WRAPPER objects.</li>
+      <li>Added SQL code refactoring feature. Users can now rename objects in SQL code together with references to those objects. This feature is available in context menu of SQL editor or with a hotkey <i>Alt+Shift+R</i>.</li>
+      <li>Added object references search feature for SQL code. Users can now search for all recognized references to the currently selected object in SQL editor. This feature is available in context menu of SQL editor or with a hotkey <i>Ctrl+Shift+G</i>.</li>
+      <li>Added a quick fix for misplaced object errors. It is available in the error tooltip or in <i>Quick Fix</i> context menu in SQL editor. This quick fix moves the object's file to its expected location in the project.</li>
+      <li>Added an option to autoformat object code when comparing them and saving them into projects.</li>
+      <li>Fixed erroneous Java 11 requirement in CLI version.</li>
+      <li>Fixed code generation when migrating data of tables containing IDENTITY columns.</li>
+      <li>Improved tooltip rendering in SQL editor.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-6.1.0" id="pgCodeKeeper-6.1.0">pgCodeKeeper 6.1.0</h4>
     <p class="date">August 16, 2021</p>
     <ul class="short-article">

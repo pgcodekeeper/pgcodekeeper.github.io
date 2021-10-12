@@ -237,18 +237,17 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.1.0" id="pgCodeKeeper-6.1.0">pgCodeKeeper 6.1.0</h4>
-          <p class="date">August 16, 2021</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.2.0" id="pgCodeKeeper-6.2.0">pgCodeKeeper 6.2.0</h4>
+          <p class="date">October 12, 2021</p>
           <ul class="short-article">
-            <li>It is now possible to selectively load schemas when reading a project or a DB via JDBC. Skipping schemas accelerates DB or project loading. Objects in ignored schemas cannot be used when generation migration scripts. See <a href='https://pgcodekeeper.readthedocs.io/en/latest/white_black_list_schemas.html'>docs</a> for further info.</li>
-            <li>Added developer documentation describing overall project structure and work process in <a href='https://github.com/pgcodekeeper/pgcodekeeper#readme'>README</a>.</li>
-            <li>Improved function links in SQL editor, and also function dependencies.</li>
-            <li>Fixed a false diff on functions with GRANT TO PUBLIC privileges.</li>
-            <li>Added a DB type filter to the drop-down list in Project Editor.</li>
-            <li>Fixed drop-down DB list rendering in Project Editor when running under KDE.</li>
-            <li>Fixed an error in table data migration code generation.</li>
-            <li>Fixed a parser error for ALTER TABLE SWITCH TO in MS SQL.</li>
-            <li>Removed extraneous Show In menu in Project Explorer.</li>
+            <li>Added support for SERVER and FOREIGN DATA WRAPPER objects.</li>
+            <li>Added SQL code refactoring feature. Users can now rename objects in SQL code together with references to those objects. This feature is available in context menu of SQL editor or with a hotkey <i>Alt+Shift+R</i>.</li>
+            <li>Added object references search feature for SQL code. Users can now search for all recognized references to the currently selected object in SQL editor. This feature is available in context menu of SQL editor or with a hotkey <i>Ctrl+Shift+G</i>.</li>
+            <li>Added a quick fix for misplaced object errors. It is available in the error tooltip or in <i>Quick Fix</i> context menu in SQL editor. This quick fix moves the object's file to its expected location in the project.</li>
+            <li>Added an option to autoformat object code when comparing them and saving them into projects.</li>
+            <li>Fixed erroneous Java 11 requirement in CLI version.</li>
+            <li>Fixed code generation when migrating data of tables containing IDENTITY columns.</li>
+            <li>Improved tooltip rendering in SQL editor.</li>
           </ul>
         </div>
         

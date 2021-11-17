@@ -42,6 +42,23 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-6.3.0" id="pgCodeKeeper-6.3.0">pgCodeKeeper 6.3.0</h4>
+    <p class="date">November 17, 2021</p>
+    <ul class="short-article">
+      <li>
+      Added <a href='https://www.postgresql.org/docs/14/release-14.html'>PostgreSQL 14</a> support:
+        <ul>
+          <li>parser support for new SQL and PL/pgSQL syntaxes</li>
+          <li>support for SQL-standard function bodies, not wrapped as string literals</li>
+          <li>support for COMPRESSION option in table columns</li>
+          <li>support for MULTIRANGE and SUCSRIPT options in types</li>
+          <li>support for keywords used as column names in SELECT without AS</li>
+          <li>removed support of postfix unary operators</li>
+        </ul>
+      </li>
+      <li>Fixed an error when parsing SELECT ... INTO in PL/pgSQL IF-statement.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-6.2.0" id="pgCodeKeeper-6.2.0">pgCodeKeeper 6.2.0</h4>
     <p class="date">October 12, 2021</p>
     <ul class="short-article">

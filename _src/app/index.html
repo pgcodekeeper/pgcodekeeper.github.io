@@ -176,17 +176,21 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.2.0" id="pgCodeKeeper-6.2.0">pgCodeKeeper 6.2.0</h4>
-          <p class="date">October 12, 2021</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.3.0" id="pgCodeKeeper-6.3.0">pgCodeKeeper 6.3.0</h4>
+          <p class="date">November 17, 2021</p>
           <ul class="short-article">
-            <li>Added support for SERVER and FOREIGN DATA WRAPPER objects.</li>
-            <li>Added SQL code refactoring feature. Users can now rename objects in SQL code together with references to those objects. This feature is available in context menu of SQL editor or with a hotkey <i>Alt+Shift+R</i>.</li>
-            <li>Added object references search feature for SQL code. Users can now search for all recognized references to the currently selected object in SQL editor. This feature is available in context menu of SQL editor or with a hotkey <i>Ctrl+Shift+G</i>.</li>
-            <li>Added a quick fix for misplaced object errors. It is available in the error tooltip or in <i>Quick Fix</i> context menu in SQL editor. This quick fix moves the object's file to its expected location in the project.</li>
-            <li>Added an option to autoformat object code when comparing them and saving them into projects.</li>
-            <li>Fixed erroneous Java 11 requirement in CLI version.</li>
-            <li>Fixed code generation when migrating data of tables containing IDENTITY columns.</li>
-            <li>Improved tooltip rendering in SQL editor.</li>
+            <li>
+            Added <a href='https://www.postgresql.org/docs/14/release-14.html'>PostgreSQL 14</a> support:
+              <ul>
+                <li>parser support for new SQL and PL/pgSQL syntaxes</li>
+                <li>support for SQL-standard function bodies, not wrapped as string literals</li>
+                <li>support for COMPRESSION option in table columns</li>
+                <li>support for MULTIRANGE and SUCSRIPT options in types</li>
+                <li>support for keywords used as column names in SELECT without AS</li>
+                <li>removed support of postfix unary operators</li>
+              </ul>
+            </li>
+            <li>Fixed an error when parsing SELECT ... INTO in PL/pgSQL IF-statement.</li>
           </ul>
         </div>
         

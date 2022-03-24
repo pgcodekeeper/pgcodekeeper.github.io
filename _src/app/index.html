@@ -176,21 +176,18 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.3.0" id="pgCodeKeeper-6.3.0">pgCodeKeeper 6.3.0</h4>
-          <p class="date">November 17, 2021</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.4.0" id="pgCodeKeeper-6.4.0">pgCodeKeeper 6.4.0</h4>
+          <p class="date">March, 2022</p>
           <ul class="short-article">
-            <li>
-            Added <a href='https://www.postgresql.org/docs/14/release-14.html'>PostgreSQL 14</a> support:
-              <ul>
-                <li>parser support for new SQL and PL/pgSQL syntaxes</li>
-                <li>support for SQL-standard function bodies, not wrapped as string literals</li>
-                <li>support for COMPRESSION option in table columns</li>
-                <li>support for MULTIRANGE and SUCSRIPT options in types</li>
-                <li>support for keywords used as column names in SELECT without AS</li>
-                <li>removed support of postfix unary operators</li>
-              </ul>
-            </li>
-            <li>Fixed an error when parsing SELECT ... INTO in PL/pgSQL IF-statement.</li>
+            <li>It is now possible to recursively load pgCodeKeeper libraries, which are referenced by other libraries added to the project. Library must be in a project (or project archive) format to have its own dependences, which must be listed in its <i>.dependencies</i> file.<br>
+            This option is disabled by default so that behaviour of existing projects doesn't change. Users can enable this new mechanism in project settings.<br>
+            In a general case, for library dependencies to be loaded, container of that library must have its <i>loadNested</i> flag set in <i>.dependencies</i> file. For instance, in this dependency chain: <i>project → lib1 → lib2 → lib3</i>, <i>lib2</i> will be loaded if <i>project</i> has the option enabled, and <i>lib3</i> will be loaded if the option is set in both <i>project</i> and <i>lib1</i>.</li>
+            <li>Added a tree view of referenced libraries and their structure in Project Explorer.</li>
+            <li>Added an option to save DB passwords in plain text in Eclipse workspace instead of Eclipse secure storage for cases where latter was unstable. Users can also use passwords stored in <i>.pgpass</i> file.</li>
+            <li>Added an option to limit number of rows returned by executed SELECT statements.</li>
+            <li>Non-relocatable extensions are now re-created when necessary.</li>
+            <li>Improved SQL code formatter, fixed errors.</li>
+            <li>Fixed an error where a newline was lost at the beginning of some expressions.</li>
           </ul>
         </div>
         

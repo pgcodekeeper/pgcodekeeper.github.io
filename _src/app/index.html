@@ -176,21 +176,14 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.4.0" id="pgCodeKeeper-6.4.0">pgCodeKeeper 6.4.0</h4>
-          <p class="date">March 24, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.4.2" id="pgCodeKeeper-6.4.2">pgCodeKeeper 6.4.2</h4>
+          <p class="date">April 11, 2022</p>
           <ul class="short-article">
-            <li>It is now possible to recursively load pgCodeKeeper libraries, which are referenced by other libraries added to the project. Library must be in a project (or project archive) format to have its own dependences, which must be listed in its <i>.dependencies</i> file.<br>
-            This option is disabled by default so that behaviour of existing projects doesn't change. Users can enable this new mechanism in project settings.<br>
-            In a general case, for library dependencies to be loaded, container of that library must have its <i>loadNested</i> flag set in <i>.dependencies</i> file. For instance, in this dependency chain: <i>project → lib1 → lib2 → lib3</i>, <i>lib2</i> will be loaded if <i>project</i> has the option enabled, and <i>lib3</i> will be loaded if the option is set in both <i>project</i> and <i>lib1</i>.</li>
-            <li>Added a tree view of referenced libraries and their structure in Project Explorer.</li>
-            <li>Added an option to save DB passwords in plain text in Eclipse workspace instead of Eclipse secure storage for cases where latter was unstable. Users can also use passwords stored in <i>.pgpass</i> file.</li>
-            <li>Added an option to limit number of rows returned by executed SELECT statements.</li>
-            <li>Non-relocatable extensions are now re-created when necessary.</li>
-            <li>Improved SQL code formatter, fixed errors.</li>
-            <li>Fixed an error where a newline was lost at the beginning of some expressions.</li>
-            <li>Fixed reading SQL-standard function bodies via JDBC. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.3.1'>6.3.1</a>)</li>
-            <li>Fixed installation on Eclipse 2021-12. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.3.2'>6.3.2</a>)</li>
-            <li>Fixed data loss in data migration when column type or attributes change. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.3.3'>6.3.3</a>)</li>
+            <li>Updated all library dependencies of the core program.<br>
+            New mssql-jdbc driver (10.2) enables <a href='https://github.com/microsoft/mssql-jdbc/releases/tag/v10.1.0'>encryption by default</a>. To preserve old behavior now we set property <i>trustServerCertificate=true</i> for MSSQL connections by default. To enable server certificate validation set <i>trustServerCertificate=false</i> in connection properties or connection string.</li>
+            <li>Fixed an error in code generated when changing a function into a procedure and vice versa.</li>
+            <li>Fixed an error when opening a temporary SQL editor on Windows.</li>
+            <li>Fixed an error when parsing certain <i>foreign</i> options and other object options. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.4.1'>6.4.1</a>)</li>
           </ul>
         </div>
         

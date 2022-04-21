@@ -176,14 +176,12 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.4.2" id="pgCodeKeeper-6.4.2">pgCodeKeeper 6.4.2</h4>
-          <p class="date">April 11, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.4.3" id="pgCodeKeeper-6.4.3">pgCodeKeeper 6.4.3</h4>
+          <p class="date">April 21, 2022</p>
           <ul class="short-article">
-            <li>Updated all library dependencies of the core program.<br>
-            New mssql-jdbc driver (10.2) enables <a href='https://github.com/microsoft/mssql-jdbc/releases/tag/v10.1.0'>encryption by default</a>. To preserve old behavior now we set property <i>trustServerCertificate=true</i> for MSSQL connections by default. To enable server certificate validation set <i>trustServerCertificate=false</i> in connection properties or connection string.</li>
-            <li>Fixed an error in code generated when changing a function into a procedure and vice versa.</li>
-            <li>Fixed an error when opening a temporary SQL editor on Windows.</li>
-            <li>Fixed an error when parsing certain <i>foreign</i> options and other object options. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.4.1'>6.4.1</a>)</li>
+            <li>Fixed order of operations in migration scripts when deleting a column with its CONSTRAINT. Fixed errors when reading CONSTRAINTS objects.</li>
+            <li>Creating a script only with selected objects (CLI <i>--selected-only</i>) no longer hides <i>refreshsqlmodule</i> MS SQL commands and doesn't move them to the end of the script.</li>
+            <li>Changing SEQUENCE START value now generates ALTER ... START command instead of RESTART.</li>
           </ul>
         </div>
         

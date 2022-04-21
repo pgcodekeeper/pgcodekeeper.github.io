@@ -42,6 +42,14 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-6.4.3" id="pgCodeKeeper-6.4.3">pgCodeKeeper 6.4.3</h4>
+    <p class="date">April 21, 2022</p>
+    <ul class="short-article">
+      <li>Fixed order of operations in migration scripts when deleting a column with its CONSTRAINT. Fixed errors when reading CONSTRAINTS objects.</li>
+      <li>Creating a script only with selected objects (CLI <i>--selected-only</i>) no longer hides <i>refreshsqlmodule</i> MS SQL commands and doesn't move them to the end of the script.</li>
+      <li>Changing SEQUENCE START value now generates ALTER ... START command instead of RESTART.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-6.4.2" id="pgCodeKeeper-6.4.2">pgCodeKeeper 6.4.2</h4>
     <p class="date">April 11, 2022</p>
     <ul class="short-article">

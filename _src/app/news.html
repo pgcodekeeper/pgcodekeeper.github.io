@@ -42,6 +42,18 @@
   <div id="release-block" class="container">
     <h1>Releases</h1>
 
+    <h4 class="anchor" name="pgCodeKeeper-6.5.0" id="pgCodeKeeper-6.5.0">pgCodeKeeper 6.5.0</h4>
+    <p class="date">July 11, 2022</p>
+    <ul class="short-article">
+      <li>It is now possible to group DB connections into user-defined groups. Groups are rendered as submenus to easily find required DB connection when choosing one.</li>
+      <li>It is now possible to import/export DB connections list.</li>
+      <li>It is now possible to generate DROP/CREATE commands with IF (NOT) EXISTS options, and also drop some objects immediately before creating them.</li>
+      <li>Added support for USER MAPPING objects.</li>
+      <li>Fixed a missing dependency in composite types.</li>
+      <li>Fixed object creation order: indices are created before constraints.</li>
+      <li>Fixed expression analysis and dependency search in SELECT ... LATERAL commands.</li>
+    </ul>
+
     <h4 class="anchor" name="pgCodeKeeper-6.4.3" id="pgCodeKeeper-6.4.3">pgCodeKeeper 6.4.3</h4>
     <p class="date">April 21, 2022</p>
     <ul class="short-article">

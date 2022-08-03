@@ -176,16 +176,16 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.5.0" id="pgCodeKeeper-6.5.0">pgCodeKeeper 6.5.0</h4>
-          <p class="date">July 11, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.5.2" id="pgCodeKeeper-6.5.2">pgCodeKeeper 6.5.2</h4>
+          <p class="date">August 3, 2022</p>
           <ul class="short-article">
-            <li>It is now possible to group DB connections into user-defined groups. Groups are rendered as submenus to easily find required DB connection when choosing one.</li>
-            <li>It is now possible to import/export DB connections list.</li>
-            <li>It is now possible to generate DROP/CREATE commands with IF (NOT) EXISTS options, and also drop some objects immediately before creating them.</li>
-            <li>Added support for USER MAPPING objects.</li>
-            <li>Fixed a missing dependency in composite types.</li>
-            <li>Fixed object creation order: indices are created before constraints.</li>
-            <li>Fixed expression analysis and dependency search in SELECT ... LATERAL commands.</li>
+            <li>Added PRE/POST scripts for migrations. Users may create directories named <i>PRE</i> and <i>POST</i> in projects, contents of which will be added to the beginning and end of the main migration script. PRE/POST scripts are also available in global settings and in CLI options.</li>
+            <li>Expression analysis dependency resolution now supports function calls with named parameter notation.</li>
+            <li>Added support for DISABLE TRIGGER options.</li>
+            <li>Added parser support for reserved keywords in object qualified names.</li>
+            <li>Improved rendering of DB selection menu in Eclipse toolbar.</li>
+            <li>Fixed an error when reading USER MAPPING with objects privileges disabled. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.5.1'>6.5.1</a>)</li>
+            <li>Fixed rendering of DB selection menu in SQL Editor. (6.5.1)</li>
           </ul>
         </div>
         

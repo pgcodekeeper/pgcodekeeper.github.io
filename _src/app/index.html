@@ -176,16 +176,13 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.5.2" id="pgCodeKeeper-6.5.2">pgCodeKeeper 6.5.2</h4>
-          <p class="date">August 3, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.5.3" id="pgCodeKeeper-6.5.3">pgCodeKeeper 6.5.3</h4>
+          <p class="date">August 5, 2022</p>
           <ul class="short-article">
-            <li>Added PRE/POST scripts for migrations. Users may create directories named <i>PRE</i> and <i>POST</i> in projects, contents of which will be added to the beginning and end of the main migration script. PRE/POST scripts are also available in global settings and in CLI options.</li>
-            <li>Expression analysis dependency resolution now supports function calls with <a href='https://www.postgresql.org/docs/11/sql-syntax-calling-funcs.html#SQL-SYNTAX-CALLING-FUNCS-NAMED'>named parameter notation</a>.</li>
-            <li>Added support for DISABLE TRIGGER options.</li>
-            <li>Added parser support for reserved keywords in object qualified names.</li>
-            <li>Improved rendering of DB selection menu in Eclipse toolbar.</li>
-            <li>Fixed an error when reading USER MAPPING with objects privileges disabled. (<a href='https://github.com/pgcodekeeper/pgcodekeeper/releases/tag/v6.5.1'>6.5.1</a>)</li>
-            <li>Fixed rendering of DB selection menu in SQL Editor. (6.5.1)</li>
+            <li>Added recursive processing for nested directories with PRE/POST scripts.</li>
+            <li>Fixed an error when PRE/POST files and directories did not exist in UI.</li>
+            <li>Fixed a file location dialog when saving global PRE/POST scripts for the first time.</li>
+            <li>Set minimum width for DB selection menu in Eclipse toolbar.</li>
           </ul>
         </div>
         

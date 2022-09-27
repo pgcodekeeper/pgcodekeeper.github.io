@@ -237,13 +237,18 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.5.3" id="pgCodeKeeper-6.5.3">pgCodeKeeper 6.5.3</h4>
-          <p class="date">August 5, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-6.6.0" id="pgCodeKeeper-6.6.0">pgCodeKeeper 6.6.0</h4>
+          <p class="date">September 27, 2022</p>
           <ul class="short-article">
-            <li>Added recursive processing for nested directories with PRE/POST scripts.</li>
-            <li>Fixed an error when PRE/POST files and directories did not exist in UI.</li>
-            <li>Fixed a file location dialog when saving global PRE/POST scripts for the first time.</li>
-            <li>Set minimum width for DB selection menu in Eclipse toolbar.</li>
+            <li>It is now possible to generate the creation of CONSTRAINTs using NOT VALID/VALIDATE in migration scripts (CLI option <i>--generate-constraint-not-valid</i>).</li>
+            <li>It is now possible to change the trustServerCertificate parameter for MS SQL connections.</li>
+            <li>It is now possible to roll forward selected objects in the project editor without checked marks.</li>
+            <li>Added support for COLLATION objects.</li>
+            <li>Added CLI option <i>--update-project</i> to update project in <i>--parse mode</i>.</li>
+            <li>Added CLI option <i>--clear-lib-cache</i> to clear libraries cache.</li>
+            <li>Added a marker for the current group in the database selection menu.</li>
+            <li>Improved quick fix mechanism for FUNCTION, USER MAPPING, CAST objects.</li>
+            <li>Disabled re-launches of the parser by right-clicking in the SQL editor.</li>
           </ul>
         </div>
         

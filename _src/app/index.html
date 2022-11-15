@@ -176,18 +176,20 @@
       <div class="row">
       
         <div class="col-sm-6 col-lg-6">
-          <h4 class="anchor" name="pgCodeKeeper-6.6.0" id="pgCodeKeeper-6.6.0">pgCodeKeeper 6.6.0</h4>
-          <p class="date">September 27, 2022</p>
+          <h4 class="anchor" name="pgCodeKeeper-7.0.0" id="pgCodeKeeper-7.0.0">pgCodeKeeper 7.0.0</h4>
+          <p class="date">November 14, 2022</p>
           <ul class="short-article">
-            <li>It is now possible to generate the creation of CONSTRAINTs using NOT VALID/VALIDATE in migration scripts (CLI option <i>--generate-constraint-not-valid</i>).</li>
-            <li>It is now possible to change the trustServerCertificate parameter for MS SQL connections.</li>
-            <li>It is now possible to roll forward selected objects in the project editor without checked marks.</li>
-            <li>Added support for COLLATION objects.</li>
-            <li>Added CLI option <i>--update-project</i> to update project in <i>--parse mode</i>.</li>
-            <li>Added CLI option <i>--clear-lib-cache</i> to clear libraries cache.</li>
-            <li>Added a marker for the current group in the database selection menu.</li>
-            <li>Improved quick fix mechanism for FUNCTION, USER MAPPING, CAST objects.</li>
-            <li>Disabled re-launches of the parser by right-clicking in the SQL editor.</li>
+            <li>Increased minimum JAVA version to 11.</li>
+            <li>Stopped support for PostgreSQL versions below 10.</li>
+            <li>Added support for PostgreSQL 15.</li>
+            <li>Added a switch to show columns in the pgDependencies view.</li>
+            <li>Added search by qualified object name.</li>
+            <li>Added missing references to objects in MS SQL.</li>
+            <li>Disabled data migration for foreign tables.</li>
+            <li>Fixed a bug related with installing pgCodeKeeper in the latest version of Eclipse.</li>
+            <li>Fixed a bug in MS SQL tables query.</li>
+            <li>Removed feedback form through Eclipse.</li>
+            <li>Сhanged the resource reading mechanism.</li>
           </ul>
         </div>
         

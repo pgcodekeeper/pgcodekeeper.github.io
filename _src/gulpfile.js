@@ -10,6 +10,7 @@ var paths = {
   dev: {
     main: 'app',
     templates: 'app/templates',
+    templatesRu: 'app/templates-ru',
     css: 'app/css',
     js: 'app/js',
     images: 'app/images',
@@ -41,7 +42,10 @@ var filesToConcat = {
 };
 
 gulp.task('html', function() {
-  return gulp.src(paths.dev.main + '/*.html')
+    return gulp.src([
+    paths.dev.main + '/*.html',
+    '!' + paths.dev.main + '/*.ru.html'
+  ])
     .pipe(htmlRigger())
     .pipe(gulp.dest(paths.build.main));
 });

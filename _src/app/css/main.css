@@ -281,6 +281,17 @@ a:focus {
   word-wrap: break-word;
 }
 
+.instructions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333;
+  letter-spacing: -.004em;
+}
+
 #last {
   height: 250px;
   padding: 15px;
@@ -788,6 +799,14 @@ blockquote {
 }
 
 #how-install .feature-title {
+  margin-top: 200px;
+  margin-bottom: 10px;
+  font-family: 'poiret one', sans-serif;
+  text-align: center;
+}
+
+#release-block .feature-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-family: 'poiret one', sans-serif;
   text-align: center;

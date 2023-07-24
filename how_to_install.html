@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>How to install</title>
+  <meta name="description" content="pgCodeKeeper install instructions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="279889809024519">
+  <meta property="og:url" content="http://pgcodekeeper.org/how_to_install.html">
+  <meta property="og:image" content="http://pgcodekeeper.org/images/logo1.png">
+  <meta property="og:site_name" content="pgCodeKeeper">
+  <meta property="og:title" content="pgCodeKeeper Releases">
+  <meta property="og:description" content="pgCodeKeeper install instructions">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="pgCodeKeeper Releases">
+  <meta itemprop="description" content="pgCodeKeeper install instructions">
+  <meta itemprop="image" content="http://pgcodekeeper.org/images/logo1.png">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="http://pgcodekeeper.org/how_to_install.html">
+  <meta name="twitter:title" content="pgCodeKeeper install instructions">
+  <meta name="twitter:description" content="http://pgcodekeeper.org/how_to_install.html">
+  <meta name="twitter:image" content="http://pgcodekeeper.org/images/logo1.png">
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.min.css">
+</head>
+<body id="en-version">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+    <a class="lang main-menu" href="https://pgcodekeeper.ru">RU</a>
+    <a href="https://github.com/pgcodekeeper/pgcodekeeper"><img class="fork-me" src="/images/fork-me.png" alt="Fork me on GitHub"></a>
+  
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#home">
+          <img class="media-object brand-image" src="/images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left main-menu">
+          <li><a href="/#home">Home</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/index.html">pgCodeKeeper</a></li>
+              <li><a href="/pgsqlblocks.html">pgSqlBlocks</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/news.html">News</a></li>
+              <li><a href="/articles.html">Articles</a></li>
+            </ul>
+          </li>
+          <!--
+            Temporary commented out while a user documntation is out of date.
+          <li><a href="/doc/">User manual</a></li>
+          -->
+          <li><a href="https://pgcodekeeper.readthedocs.io" target="_blank">Documentation</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /header -->
+
+  <div id="release-block" class="container">
+    <h1>How to install</h1>
+    <p class="instructions">First, you should install <a href='https://adoptium.net/temurin/releases/'>Java SDK</a> for your platform (required to run Eclipse) and install <a href='https://eclipse.org/downloads/'>Eclipse</a>.</p>
+    <h4 class="feature-title">Eclipse Marketplace</h4>
+    <ol>
+      <li class="instructions"> The easiest way to install pgCodeKeeper is Eclipse Marketplace: launch Eclipse, version 4.6 or higher, with the installed Eclipse Marketplace, and select <strong>Help > Eclipse Markeplace…</strong>.</li>
+      <li class="instructions"> Enter “pgCodeKeeper” into the search box.</li>
+      <li class="instructions">Select the pgCodeKeeper package, review the Terms of service, and click Finish for the installation of the latest pgCodeKeeper version to begin.</li>
+      <li class="instructions">After the installation is finished, restart Eclipse to apply the changes.</li>
+      <li class="instructions">Launch Eclipse and select: <strong>Window > Perspective > Open Perspective > Other > pgCodeKeeper</strong>.</li>
+    </ol>
+
+    <h4 class="feature-title">Update site</h4>
+    <ol>
+      <li class="instructions">Another way to install pgCodeKeeper is the update website: launch Eclipse, version 4.6 or higher, select <strong>Help > Install New Software…</strong> Plug-in installation (with the help of the update web-site) wizard will appear on the screen.</li>
+      <li class="instructions">In the <strong>Work With</strong> field specify the path to the update website: <a href='https://eclipse.org/downloads/'>http://pgcodekeeper.org/update/</a>.</li>
+      <li class="instructions">After pressing Enter you’ll see the available plug-ins in the list below.
+      </li>
+      <li class="instructions">Select the pgCodeKeeper package, review the Terms of service, and click Finish for the installation of the latest pgCodeKeeper version to begin.</li>
+      <li class="instructions">After the installation is finished, restart Eclipse to apply the changes.</li>
+      <li class="instructions">Launch Eclipse and select <strong>Window > Perspective > Open Perspective > Other > pgCodeKeeper</strong>.</li>
+    </ol>
+
+    <h4 class="feature-title">Separate pgCodeKeeper build</h4>
+    <p class="instructions">You can install pgCodeKeeper with a separate build. You can download pgCodeKeeper build <a href='https://github.com/pgcodekeeper/pgcodekeeper/releases'>here</a>. Apart from regular installation, you can install pgCodeKeeper in your Eclipse IDE.</p>
+
+    <h4 class="feature-title">CLI version</h4>
+    <p class="instructions"> pgCodeKeeper CLI version is available on <a href='https://github.com/pgcodekeeper/pgcodekeeper/releases'>Github</a>.</p>
+  </div>
+
+  <div class="go-up" title="Up" id='ToTop'><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+  <div class="go-down" title="Down" id='OnBottom'><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
+
+  <!-- footer -->
+  <footer id="main-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-left">
+            <p class="copyright">&copy; LLC "TAXTELECOM" 2023</p>
+        </div>
+           <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+            <p class="license-footer">The source code for pgCodeKeeper is available for free on GitHub. <wbr>Under the terms of the <a href="/license.html"> Apache License, Version 2.0</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/js/main.min.js"></script>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEXCEW6LBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-GEXCEW6LBZ');
+  </script>
+  <!-- /footer -->
+</body>
+</html>
